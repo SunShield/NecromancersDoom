@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94377f28f87a4463bfb401865f056e96, type: 3}
+  m_Name: All Data
+  m_EditorClassIdentifier: 
+  Battles:
+  - {fileID: 11400000, guid: 9488219ebee4d3a4c98681fb7e6bb198, type: 2}
+  Units:
+  - {fileID: 11400000, guid: 3b9be07aca97a7e4291e9cadba772e4b, type: 2}
+  Skills: []
+  Effects: []
