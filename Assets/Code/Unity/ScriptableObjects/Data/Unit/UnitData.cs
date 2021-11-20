@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Unit
 {
@@ -13,7 +14,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Unit
 
 		[BoxGroup(MainVerticalGroupName)][FoldoutGroup(BasicUnitDataFoldoutGroupName)][HorizontalGroup(BasicDataHorizontalGroupName, Width = 130)]
 		[HideLabel][PreviewField(ObjectFieldAlignment.Left, Height = 128f)]
-		public Battles.Entities.Concrete.Unit Prefab;
+		public GameObject Prefab;
 
 		[VerticalGroup(BasicDataVerticalGroupName)]
 		[LabelWidth(45)]

@@ -9,7 +9,6 @@ namespace NDoom.Unity.Environment.SceneManagement.Preparation
 
 		protected override void PrepareSceneInternal()
 		{
-			_battle.StartBattle("TestBattle");
 		}
 	}
 }

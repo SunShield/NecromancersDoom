@@ -1,25 +1,21 @@
-﻿using NDoom.Core.DataManagement.DataStructure.Spawn;
-using NDoom.Core.DataManagement.Storaging;
-using NDoom.Unity.Battles.Entities.Spawning;
-using NDoom.Unity.Environment.Main;
-using Zenject;
+﻿using NDoom.Unity.Environment.Main;
 
 namespace NDoom.Unity.Battles
 {
 	public class BattleStarter : ExtendedMonoBehaviour
 	{
-		[Inject] private GlobalBattleEntityManager _battleEntityManager;
-		[Inject] private LoadedSpawnDataStorage _storage;
-
-		public void StartBattle(string battleName)
-		{
-			var battleSpawnData = _storage.BattleDatas[battleName];
-			SpawnBattle(battleSpawnData);
-		}
-
-		private void SpawnBattle(BattleLoadedSpawnData battleLoadedData)
-		{
-			//_battleEntityManager.FullySpawnBattle(battleLoadedData);
-		}
 	}
+
+	//private void SetTileLocalePosition(Tile entityUnity, Battlefield battlefield)
+	//{
+	//	var directionMultiplier = battlefield.Side == BattlefieldSide.Left ? 1 : -1;
+
+	//	var xShift = battlefield.transform.position.x + -((float)(battlefield.Cols - 1) / 2) * BattleEntitySpawnConsts.TileUnitsSize * directionMultiplier;
+	//	var yShift = battlefield.transform.position.y + ((float)(battlefield.Rows - 1) / 2) * BattleEntitySpawnConsts.TileUnitsSize;
+
+	//	var tileX = xShift + entityUnity.Col * BattleEntitySpawnConsts.TileUnitsSize * directionMultiplier;
+	//	var tileY = yShift + -entityUnity.Row * BattleEntitySpawnConsts.TileUnitsSize;
+
+	//	entityUnity.transform.localPosition = new Vector2(tileX, tileY);
+	//}
 }

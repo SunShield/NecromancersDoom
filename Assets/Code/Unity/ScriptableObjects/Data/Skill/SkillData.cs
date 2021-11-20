@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using NDoom.Unity.Battles.Entities.Concrete;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -18,7 +17,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Skills
 
 		[BoxGroup(MainVerticalGroupName)][FoldoutGroup(BasicSkillDataFoldoutGroupName)][HorizontalGroup(BasicDataHorizontalGroupName, Width = 130)]
 		[HideLabel][PreviewField(ObjectFieldAlignment.Left, Height = 128f)]
-		public Skill Prefab;
+		public GameObject Prefab;
 
 		[VerticalGroup(BasicDataVerticalGroupName)][FoldoutGroup(BasicDataVerticalFoldoutGroupName)]
 		[LabelWidth(45)]

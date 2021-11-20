@@ -1,5 +1,4 @@
-﻿using NDoom.Unity.Battles.Entities.Concrete.Data;
-using Sirenix.OdinInspector;
+﻿using Sirenix.OdinInspector;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Battle
 {
@@ -13,9 +12,9 @@ namespace NDoom.Unity.ScriptableObjects.Data.Battle
 		[HideLabel]
 		public string Name;
 
-		[VerticalGroup(SideVerticalGroupName)]
-		[HideLabel]
-		public BattlefieldSide Side;
+		//[VerticalGroup(SideVerticalGroupName)]
+		//[HideLabel]
+		//public BattlefieldSide Side;
 
 		[VerticalGroup(PosVerticalGroupName)]
 		[HideLabel]

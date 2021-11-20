@@ -1,5 +1,4 @@
-﻿using NDoom.Core.DataManagement.Storaging;
-using NDoom.Core.Environment.EventSystem;
+﻿using NDoom.Core.Environment.EventSystem;
 using NDoom.Unity.Data;
 using NDoom.Unity.Environment.Main;
 using NDoom.Unity.Environment.SceneManagement.Switching;
@@ -21,9 +20,6 @@ namespace NDoom.Unity.Environment.DI
 		private void BindNonUnityClasses()
 		{
 			Container.Bind<EventBus>().AsSingle().NonLazy();
-			Container.Bind<FunctionalDataStorage>().AsSingle().NonLazy();
-			Container.Bind<LoadedSpawnDataStorage>().AsSingle().NonLazy();
-			Container.Bind<DataStorageFiller>().AsSingle().NonLazy();
 		}
 
 		private void BindUnityClasses()
