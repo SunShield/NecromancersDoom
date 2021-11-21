@@ -11,7 +11,7 @@ namespace NDoom.Unity.EntitySystem.Interfaces
 	public interface IPositionableEntity<TPositionData, TAncestor, TChild> : IChildEntity<TAncestor, TChild>
 		where TPositionData : EntityPositionData
 		where TAncestor : IAncestorEntity<TChild, TAncestor>	
-		where TChild : IChildEntity<TAncestor, TChild>
+		where TChild : IPositionableEntity<TPositionData, TAncestor, TChild>
 	{
 		void SetPosition(TPositionData data);
 	}

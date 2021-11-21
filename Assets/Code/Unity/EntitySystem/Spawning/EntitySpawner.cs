@@ -35,16 +35,16 @@ namespace NDoom.Unity.EntitySystem.Spawning
 		{
 			var type = entity.GetType();
 			if (!_reflectionDataStorage.Contains(type)) return;
-			_reflectionDataStorage[type].GraphicalDataSetDelegate.DynamicInvoke(
-				new object[] {entity, _graphicalDataStorage.Get(entity)});
+			var graphicalData = _graphicalDataStorage.Get(entity);
+			_reflectionDataStorage[type].GraphicalDataSetDelegate.DynamicInvoke(new object[] {entity, graphicalData});
 		}
 
 		private void SetEntityFunctionalDataIfNeeded(TEntity entity)
 		{
 			var type = entity.GetType();
 			if (!_reflectionDataStorage.Contains(type)) return;
-			_reflectionDataStorage[type].GraphicalDataSetDelegate.DynamicInvoke(
-				new object[] {entity, _functionalDataStorage.Get(entity)});
+			var functionalData = _functionalDataStorage.Get(entity);
+			_reflectionDataStorage[type].GraphicalDataSetDelegate.DynamicInvoke(new object[] {entity, functionalData});
 		}
 
 		protected abstract TEntity GetPrefab(string name);

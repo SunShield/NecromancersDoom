@@ -47,8 +47,9 @@ namespace NDoom.Unity.EntitySystem.Reflection
 			if (graphicalInterface == null) return null;
 
 			var graphicalSetMethod = graphicalInterface.GetMethod(EntityReflectionConsts.Graphical.GraphicalMethodName);
-			var graphicalDataType = graphicalInterface.GetGenericArguments()[0];
-			var graphicalDelegateType = typeof(Action<,>).MakeGenericType(entityType, graphicalDataType);
+			var graphicalDataType = graphicalInterface.GetGenericArguments()[EntityReflectionConsts.Graphical.GraphicalDataGenericArgIndex];
+			var processedGraphicalDataType = graphicalInterface.GetGenericArguments()[EntityReflectionConsts.Graphical.ProcessedGraphicalDataGenericArgIndex];
+			var graphicalDelegateType = typeof(Action<,>).MakeGenericType(entityType, processedGraphicalDataType);
 			graphicalDelegate = graphicalSetMethod.CreateDelegate(graphicalDelegateType);
 			return graphicalDataType;
 		}
