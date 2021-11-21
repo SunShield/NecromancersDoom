@@ -1,7 +1,6 @@
-﻿using NDoom.Unity.EntitySystem.DataStructure.Storaging;
-using NDoom.Unity.EntitySystem.Reflection;
-using NDoom.Unity.EntitySystem.Spawning.Args;
+﻿using NDoom.Unity.EntitySystem.Spawning.Args;
 using NDoom.Unity.Environment.Main;
+using UnityEngine;
 using Zenject;
 
 namespace NDoom.Unity.EntitySystem.Spawning
@@ -10,44 +9,25 @@ namespace NDoom.Unity.EntitySystem.Spawning
 		where TEntity : Entity
 		where TSpawnArgs : EntitySpawnArgs
 	{
+		[SerializeField] private TEntity _prefab;
+
 		[Inject] private DiContainer _container;
-		[Inject] private EntityReflectionDataStorage _reflectionDataStorage;
-		[Inject] private FunctionalEntityDataStorage _functionalDataStorage;
-		[Inject] private GraphicalEntityDataStorage _graphicalDataStorage;
 		
 		public TEntity Spawn(TSpawnArgs args)
 		{
 			TEntity entity = CreateEntity(args.Name);
-			SetEntityGraphicalDataIfNeeded(entity);
-			SetEntityFunctionalDataIfNeeded(entity);
+			entity.InitializeEntity(args.Name);
 			ProcessEntityPostCreate(entity, args);
 			return entity;
 		}
 
 		public TEntity CreateEntity(string name)
 		{
-			var entity = _container.InstantiatePrefab(GetPrefab(name));
+			var entity = _container.InstantiatePrefab(_prefab);
 			entity.name = GetEntityName(name);
 			return entity.GetComponent<TEntity>();
 		}
 
-		private void SetEntityGraphicalDataIfNeeded(TEntity entity)
-		{
-			var type = entity.GetType();
-			if (!_reflectionDataStorage.Contains(type)) return;
-			var graphicalData = _graphicalDataStorage.Get(entity);
-			_reflectionDataStorage[type].GraphicalDataSetDelegate.DynamicInvoke(new object[] {entity, graphicalData});
-		}
-
-		private void SetEntityFunctionalDataIfNeeded(TEntity entity)
-		{
-			var type = entity.GetType();
-			if (!_reflectionDataStorage.Contains(type)) return;
-			var functionalData = _functionalDataStorage.Get(entity);
-			_reflectionDataStorage[type].GraphicalDataSetDelegate.DynamicInvoke(new object[] {entity, functionalData});
-		}
-
-		protected abstract TEntity GetPrefab(string name);
 		protected abstract string GetEntityName(string name);
 		protected abstract void ProcessEntityPostCreate(TEntity entity, TSpawnArgs args);
 	}

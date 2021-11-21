@@ -6,9 +6,10 @@ namespace NDoom.Unity.EntitySystem.Interfaces
 	/// Interface for all the entities able to be initialized with different graphics
 	/// </summary>
 	/// <typeparam name="TGraphicalData"></typeparam>
-	public interface IGraphicalEntity<TGraphicalData> : IEntity
+	public interface IGraphicalEntity<TGraphicalData, TProcessedGraphicalData> : IEntity
 		where TGraphicalData : EntityGraphicalData
+		where TProcessedGraphicalData : EntityProcessedGraphicalData
 	{
-		void SetGraphics(TGraphicalData graphicalData);
+		void SetGraphics(TProcessedGraphicalData graphicalData);
 	}
 }

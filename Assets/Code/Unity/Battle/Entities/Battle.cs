@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
 {
-	public class Battle : Entity, IAncestorEntity<Battlefield, Battle>, IGraphicalEntity<BattleGraphicalData>
+	public class Battle : Entity, IAncestorEntity<Battlefield, Battle>, IGraphicalEntity<BattleGraphicalData, BattleProcessedGraphicalData>
 	{
 		private readonly Dictionary<BattlefieldSide, Battlefield> _battlefields =
 			new Dictionary<BattlefieldSide, Battlefield>()
@@ -25,10 +25,7 @@ namespace NDoom.Unity.Battles.Entities
 
 		public void AddChild(Battlefield entity) => _battlefields[entity.Side] = entity;
 		public void RemoveChild(Battlefield entity) => _battlefields[entity.Side] = null;
-
-		public void SetGraphics(BattleGraphicalData graphicalData)
-		{
-			
-		}
+		public void SetGraphics(BattleProcessedGraphicalData graphicalData)
+			=> graphicalData.BattleBg.transform.parent = GraphicsOrigin;
 	}
 }
