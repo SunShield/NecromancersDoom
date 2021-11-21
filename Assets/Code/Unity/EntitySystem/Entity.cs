@@ -1,4 +1,5 @@
-﻿using NDoom.Unity.EntitySystem.Interfaces;
+﻿using System;
+using NDoom.Unity.EntitySystem.Interfaces;
 using NDoom.Unity.Environment.Main;
 
 namespace NDoom.Unity.EntitySystem

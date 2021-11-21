@@ -10,6 +10,6 @@ namespace NDoom.Unity.EntitySystem.Interfaces
 		where TFunctionalData : EntityFunctionalData
 	{
 		public TFunctionalData FunctionalData { get; }
-		void SetFunctionalDat(TFunctionalData functionalData);
+		void SetFunctionalData(TFunctionalData functionalData);
 	}
 }

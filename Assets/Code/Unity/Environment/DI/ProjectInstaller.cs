@@ -1,5 +1,8 @@
 ﻿using NDoom.Core.Environment.EventSystem;
 using NDoom.Unity.Data;
+using NDoom.Unity.EntitySystem;
+using NDoom.Unity.EntitySystem.DataStructure.Storaging;
+using NDoom.Unity.EntitySystem.Reflection;
 using NDoom.Unity.Environment.Main;
 using NDoom.Unity.Environment.SceneManagement.Switching;
 using UnityEngine;
@@ -19,6 +22,11 @@ namespace NDoom.Unity.Environment.DI
 
 		private void BindNonUnityClasses()
 		{
+			Container.Bind<EntitySystemMain>().AsSingle().NonLazy();
+			Container.Bind<EntityReflectionDataStorage>().AsSingle().NonLazy();
+			Container.Bind<EntityReflectionDataBuilder>().AsSingle().NonLazy();
+			Container.Bind<GraphicalEntityDataStorage>().AsSingle().NonLazy();
+			Container.Bind<FunctionalEntityDataStorage>().AsSingle().NonLazy();
 			Container.Bind<EventBus>().AsSingle().NonLazy();
 		}
 

@@ -4,7 +4,7 @@
 	/// Base class for all the graphica stuff needed for entitites.
 	/// Mainly those hold prefab references, but in can vary
 	/// </summary>
-	public abstract class EntityGraphicalData : IEntityData
+	public class EntityGraphicalData : IEntityData
 	{
 		
 	}

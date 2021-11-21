@@ -1,4 +1,5 @@
-﻿using NDoom.Unity.Environment.SceneManagement.Preparation;
+﻿using NDoom.Unity.Battles;
+using NDoom.Unity.Environment.SceneManagement.Preparation;
 using Zenject;
 
 namespace NDoom.Unity.Environment.DI
@@ -7,6 +8,7 @@ namespace NDoom.Unity.Environment.DI
 	{
 		public override void InstallBindings()
 		{
+			Container.Bind<BattleStarter>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 			Container.BindInterfacesAndSelfTo<BattleScenePreparer>().FromComponentInHierarchy().AsSingle().NonLazy();
 		}
 	}

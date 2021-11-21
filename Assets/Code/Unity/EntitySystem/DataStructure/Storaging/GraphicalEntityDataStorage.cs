@@ -4,11 +4,11 @@ using NDoom.Unity.EntitySystem.Reflection;
 
 namespace NDoom.Unity.EntitySystem.DataStructure.Storaging
 {
-	public class FunctionalEntityDataStorage : AbsctractEntityDataStorage<EntityFunctionalData>
+	public class GraphicalEntityDataStorage : AbsctractEntityDataStorage<EntityGraphicalData>
 	{
 		protected override Func<EntityReflectionData, bool> ReflectionDataCheckDelegate
-			=> rd => rd.FunctionalDataType == null;
+			=> rd => rd.GraphicalDataType == null;
 		protected override Func<EntityReflectionData, Type> GetTypeForDataTypeMapDelegate
-			=> rd => rd.FunctionalDataType;
+			=> rd => rd.GraphicalDataType;
 	}
 }
