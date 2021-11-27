@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
-using NDoom.Unity.Battles.Entities.Data.Functional;
-using NDoom.Unity.Battles.Entities.Data.Positioning;
+﻿using NDoom.Unity.Battles.Entities.Data.Positioning;
+using NDoom.Unity.Battles.Entities.Data.Structural;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
 
 namespace NDoom.Unity.Battles.Entities
 {
 	public class Battlefield 
-		: Entity, IPositionableEntity<BattlefieldPositioningData, Battle, Battlefield>, 
-			IAncestorEntity<Tile, Battlefield>, IFunctionalEntity<BattlefieldFunctionalData>
+		: Entity, 
+		  IPositionableEntity<BattlefieldPositioningData, Battle, Battlefield>, 
+		  IAncestorEntity<Tile, Battlefield>, 
+		  IStructurableEntity<BattlefieldStructuralData>
 	{
 		private Tile[,] _tiles;
 
@@ -17,15 +18,13 @@ namespace NDoom.Unity.Battles.Entities
 		public int Rows { get; private set; }
 		public int Cols { get; private set; }
 
-		protected override void InitializeEntity() {}
-
 		public void SetPosition(BattlefieldPositioningData data) => Side = data.Side;
 		public void BindToAncestor(Battle battle) => Battle = battle;
 
-		public void SetFromFunctionalData(BattlefieldFunctionalData functionalData)
+		public void SetSize(int rows, int cols)
 		{
-			Rows = functionalData.Rows;
-			Cols = functionalData.Cols;
+			Rows = rows;
+			Cols = cols;
 			InitTiles();
 		}
 

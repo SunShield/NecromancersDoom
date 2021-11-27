@@ -21,11 +21,11 @@ namespace NDoom.Unity.EntitySystem
 		public void InitializeEntity(string name)
 		{
 			SetName(name);
-			InitializeEntity();
+			InitializeEntityInternal();
 		}
 
 		private void SetName(string name) => Name = name;
-		protected abstract void InitializeEntity();
+		protected virtual void InitializeEntityInternal() {}
 
 		protected sealed override void InitializeInternal() => SetId();
 		protected void SetId() => GlobalId = GetId();

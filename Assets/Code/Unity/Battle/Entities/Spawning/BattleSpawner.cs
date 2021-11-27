@@ -11,7 +11,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		[Inject] private BattleGraphicalDataStorage _storage;
 		[Inject] private BattleGraphicalDataConverter _converter;
 
-		protected override string GetEntityName(string name) => $"Battle [{name}]";
+		protected override string GetEntityName(BattleSpawnArgs args) => $"Battle [{args.Name}]";
 
 		protected override void ProcessEntityPostCreate(Battle entity, BattleSpawnArgs args)
 		{

@@ -1,9 +1,10 @@
-﻿using NDoom.Unity.EntitySystem.Spawning.Args;
+﻿using NDoom.Unity.Battles.Entities.Data.Structural;
+using NDoom.Unity.EntitySystem.Spawning.Args;
 
 namespace NDoom.Unity.Battles.Entities.Spawning.Args
 {
-	public class BattleSpawnArgs : EntitySpawnArgs
+	public class BattleSpawnArgs : EntitySpawnArgs, IStructurableEntitySpawnArgs<BattleStructuralData>
 	{
-		
+		public BattleStructuralData StructuralData { get; set; }
 	}
 }

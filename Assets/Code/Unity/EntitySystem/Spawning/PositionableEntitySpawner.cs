@@ -4,7 +4,8 @@ using NDoom.Unity.EntitySystem.Spawning.Args;
 
 namespace NDoom.Unity.EntitySystem.Spawning
 {
-	public abstract class PositionableEntitySpawner<TPositionableEntity, TSpawnArgs, TAncestor, TPositionData> : ChildEntitySpawner<TPositionableEntity, TSpawnArgs, TAncestor>
+	public abstract class PositionableEntitySpawner<TPositionableEntity, TSpawnArgs, TAncestor, TPositionData> 
+		: ChildEntitySpawner<TPositionableEntity, TSpawnArgs, TAncestor>
 		where TSpawnArgs : PositionableEntitySpawnArgs<TAncestor, TPositionableEntity, TPositionData>
 		where TAncestor : IAncestorEntity<TPositionableEntity, TAncestor>
 		where TPositionableEntity : Entity, IPositionableEntity<TPositionData, TAncestor, TPositionableEntity>

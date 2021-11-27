@@ -15,20 +15,20 @@ namespace NDoom.Unity.EntitySystem.Spawning
 		
 		public TEntity Spawn(TSpawnArgs args)
 		{
-			TEntity entity = CreateEntity(args.Name);
+			TEntity entity = CreateEntity(args);
 			entity.InitializeEntity(args.Name);
 			ProcessEntityPostCreate(entity, args);
 			return entity;
 		}
 
-		public TEntity CreateEntity(string name)
+		public TEntity CreateEntity(TSpawnArgs args)
 		{
 			var entity = _container.InstantiatePrefab(_prefab);
-			entity.name = GetEntityName(name);
+			entity.name = GetEntityName(args);
 			return entity.GetComponent<TEntity>();
 		}
 
-		protected abstract string GetEntityName(string name);
+		protected abstract string GetEntityName(TSpawnArgs args);
 		protected abstract void ProcessEntityPostCreate(TEntity entity, TSpawnArgs args);
 	}
 }

@@ -4,13 +4,15 @@ using NDoom.Unity.EntitySystem.Interfaces;
 
 namespace NDoom.Unity.Battles.Entities
 {
-	public class Tile : Entity, IPositionableEntity<TilePositioningData, Battlefield, Tile>
+	public class Tile 
+		: Entity, 
+		  IPositionableEntity<TilePositioningData, Battlefield, Tile>
 	{
 		public Battlefield Battlefield { get; private set; }
 		public int Row { get; private set; }
 		public int Col { get; private set; }
 
-		protected override void InitializeEntity()
+		protected override void InitializeEntityInternal()
 		{
 		}
 
