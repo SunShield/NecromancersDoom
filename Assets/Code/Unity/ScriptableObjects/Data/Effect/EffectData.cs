@@ -1,4 +1,6 @@
-﻿namespace NDoom.Unity.ScriptableObjects.Data.Effect
+﻿using NDoom.Unity.EntitySystem.Loadable;
+
+namespace NDoom.Unity.ScriptableObjects.Data.Effect
 {
 	public class EffectData : NamedData
 	{

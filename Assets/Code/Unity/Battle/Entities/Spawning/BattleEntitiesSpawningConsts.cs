@@ -14,6 +14,8 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 					{ BattlefieldSide.Left, new Vector2(-8f, 0f) },
 					{ BattlefieldSide.Left, new Vector2(8f, 0f) }
 				};
+
+			public const float TileUnitsSize = 1.28f;
 		}
 	}
 }

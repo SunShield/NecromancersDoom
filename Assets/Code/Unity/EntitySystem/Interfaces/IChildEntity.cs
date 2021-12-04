@@ -4,6 +4,6 @@
 		where TAncestor : IAncestorEntity<TChild, TAncestor>
 		where TChild : IChildEntity<TAncestor, TChild>
 	{
-		void BindToAncestor(TAncestor battle);
+		void BindToAncestor(TAncestor ancestor);
 	}
 }

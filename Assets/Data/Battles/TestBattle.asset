@@ -58,5 +58,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+  Background: {fileID: 21300000, guid: 627ad319f714a13469fbc2b3ac5a8a09, type: 3}
   Name: TestBattle
-  Size: {x: 7, y: 4}
+  LeftBattlefieldSize: {x: 0, y: 0}
+  RightBattlefieldSize: {x: 0, y: 0}

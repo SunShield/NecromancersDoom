@@ -22,19 +22,24 @@ namespace NDoom.Unity.Battles.Entities
 			};
 		public IReadOnlyDictionary<BattlefieldSide, Battlefield> Battlefields => _battlefields;
 
-		private Transform BattlefieldsOrigin { get; set; }
-		private Transform GraphicsOrigin { get; set; }
-
+		[SerializeField] private Transform _graphicsOrigin;
+		[SerializeField] private Transform _battlefieldsOrigin;
+		
 		protected override void InitializeEntityInternal() {}
 
 		public void AddChild(Battlefield entity)
 		{
 			_battlefields[entity.Side] = entity;
-			entity.transform.parent = BattlefieldsOrigin;
+			entity.transform.parent = _battlefieldsOrigin;
 		}
 
 		public void RemoveChild(Battlefield entity) => _battlefields[entity.Side] = null;
+
 		public void SetGraphics(BattleProcessedGraphicalData graphicalData)
-			=> graphicalData.BattleBg.transform.parent = GraphicsOrigin;
+		{
+			var graphicsInstanceTran = graphicalData.BattleBg.transform;
+			graphicsInstanceTran.parent = _graphicsOrigin;
+			graphicsInstanceTran.position = Vector3.zero;
+		}
 	}
 }

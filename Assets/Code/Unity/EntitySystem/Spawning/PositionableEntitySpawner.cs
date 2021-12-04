@@ -16,6 +16,6 @@ namespace NDoom.Unity.EntitySystem.Spawning
 			entity.SetPosition(args.Position);
 		}
 
-		protected virtual void ProcessEntityPostPositionSet(TPositionableEntity entity, TSpawnArgs args) { }
+		protected virtual void ProcessEntityPostPositionSet(TPositionableEntity tile, TSpawnArgs args) { }
 	}
 }

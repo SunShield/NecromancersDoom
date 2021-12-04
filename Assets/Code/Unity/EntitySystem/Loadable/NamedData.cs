@@ -1,6 +1,6 @@
 ﻿using Sirenix.OdinInspector;
 
-namespace NDoom.Unity.ScriptableObjects.Data
+namespace NDoom.Unity.EntitySystem.Loadable
 {
 	public abstract class NamedData : SerializedScriptableObject
 	{

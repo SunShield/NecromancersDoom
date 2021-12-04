@@ -2,6 +2,7 @@
 using NDoom.Unity.Battles.Entities.Data.Structural;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
+using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
 {
@@ -11,6 +12,7 @@ namespace NDoom.Unity.Battles.Entities
 		  IAncestorEntity<Tile, Battlefield>, 
 		  IStructurableEntity<BattlefieldStructuralData>
 	{
+		[SerializeField] private Transform _tilesOrigin;
 		private Tile[,] _tiles;
 
 		public Battle Battle { get; private set; }
@@ -19,7 +21,7 @@ namespace NDoom.Unity.Battles.Entities
 		public int Cols { get; private set; }
 
 		public void SetPosition(BattlefieldPositioningData data) => Side = data.Side;
-		public void BindToAncestor(Battle battle) => Battle = battle;
+		public void BindToAncestor(Battle ancestor) => Battle = ancestor;
 
 		public void SetSize(int rows, int cols)
 		{
@@ -29,7 +31,13 @@ namespace NDoom.Unity.Battles.Entities
 		}
 
 		private void InitTiles() => _tiles = new Tile[Rows, Cols];
-		public void AddChild(Tile tile) => _tiles[tile.Row, tile.Col] = tile;
+
+		public void AddChild(Tile tile)
+		{
+			_tiles[tile.Row, tile.Col] = tile;
+			tile.transform.parent = _tilesOrigin;
+		}
+
 		public void RemoveChild(Tile tile) => _tiles[tile.Row, tile.Col] = null;
 	}
 }

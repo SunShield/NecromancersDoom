@@ -17,7 +17,6 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		{
 			var graphicalData = _storage[args.Name];
 			var processedData = _converter.Process(graphicalData);
-			processedData.BattleBg.transform.position = entity.transform.position;
 			entity.SetGraphics(processedData);
 		}
 	}

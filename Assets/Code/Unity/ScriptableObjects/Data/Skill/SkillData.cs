@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using NDoom.Unity.EntitySystem.Loadable;
 using Sirenix.OdinInspector;
 using UnityEngine;
 

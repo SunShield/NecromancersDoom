@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using NDoom.Unity.EntitySystem.Loadable;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Unit
