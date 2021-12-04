@@ -1,6 +1,6 @@
 ﻿using NDoom.Unity.Battles;
-using NDoom.Unity.Battles.Entities.Data.Graphical.Converters;
-using NDoom.Unity.EntitySystem.DataStructure.Storaging.Concrete;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
+using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Environment.SceneManagement.Preparation;
 using Zenject;
 

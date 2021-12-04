@@ -1,5 +1,5 @@
-﻿using NDoom.Unity.Battles.Entities.Data.Functional;
-using NDoom.Unity.Battles.Entities.Data.Graphical;
+﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
 using UnityEngine;

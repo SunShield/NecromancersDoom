@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using NDoom.Unity.Battles.Entities.Data.Positioning;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities.Spawning

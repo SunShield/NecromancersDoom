@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.Battles.Entities.Data.Positioning;
+﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using Sirenix.OdinInspector;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Battle

@@ -1,7 +1,7 @@
 ﻿using NDoom.Unity.EntitySystem.DataStructure.Data.Converters;
 using Zenject;
 
-namespace NDoom.Unity.Battles.Entities.Data.Graphical.Converters
+namespace NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters
 {
 	public class UnitGraphicalDataConverter : GraphicalDataConverter<UnitGraphicalData, UnitProcessedGraphicalData>
 	{

@@ -27,38 +27,16 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|NDoom.Unity.ScriptableObjects.Data.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Skeleton
-    - Name: Side
-      Entry: 3
       Data: 0
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 0
-    - Name: X
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  Background: {fileID: 21300000, guid: 627ad319f714a13469fbc2b3ac5a8a09, type: 3}
+  Background: {fileID: 3470819074605407629, guid: 3c4d9844d965d0a46b5df4a28b6b7e47, type: 3}
   Name: TestBattle
   LeftBattlefieldSize: {x: 0, y: 0}
+  LeftBattlefieldOffset: {x: 0, y: 0}
   RightBattlefieldSize: {x: 0, y: 0}
+  RightBattlefieldOffset: {x: 0, y: 0}

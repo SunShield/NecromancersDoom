@@ -1,6 +1,6 @@
-﻿using NDoom.Unity.Battles.Entities.Data.Graphical.Converters;
+﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
+using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Battles.Entities.Spawning.Args;
-using NDoom.Unity.EntitySystem.DataStructure.Storaging.Concrete;
 using NDoom.Unity.EntitySystem.Spawning;
 using Zenject;
 

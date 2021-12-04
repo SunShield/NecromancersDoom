@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.Battles.Entities.Data.Positioning;
+﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Entities.Spawning.Args;
 using NDoom.Unity.EntitySystem.Spawning;
 using UnityEngine;
