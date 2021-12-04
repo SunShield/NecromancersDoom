@@ -1,13 +1,12 @@
-﻿using NDoom.Unity.EntitySystem.DataStructure.Data;
+﻿using System.Collections.Generic;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
+using NDoom.Unity.EntitySystem.DataStructure.Data;
 using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities.Data.Concrete.Structural
 {
 	public class BattleStructuralData : EntityStructuralData
 	{
-		public Vector2 LeftBattlefieldOffset { get; set; }
-		public Vector2 RightBattlefieldOffset { get; set; }
-		public Vector2Int LeftBattlefieldSize { get; set; }
-		public Vector2Int RightBattlefieldSize { get; set; }
+		public Dictionary<BattlefieldSide, (Vector2Int battlefieldSize, Vector2 battlefieldOffset)> BattlefieldDatas;
 	}
 }

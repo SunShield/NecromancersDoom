@@ -14,8 +14,9 @@ namespace NDoom.Unity.EntitySystem.Spawning
 		protected sealed override void ProcessEntityPostChildBinding(TPositionableEntity entity, TSpawnArgs args)
 		{
 			entity.SetPosition(args.Position);
+			ProcessEntityPostPositionSet(entity, args);
 		}
 
-		protected virtual void ProcessEntityPostPositionSet(TPositionableEntity tile, TSpawnArgs args) { }
+		protected virtual void ProcessEntityPostPositionSet(TPositionableEntity entity, TSpawnArgs args) { }
 	}
 }

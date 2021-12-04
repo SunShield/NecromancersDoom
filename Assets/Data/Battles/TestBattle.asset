@@ -36,7 +36,7 @@ MonoBehaviour:
       Data: 
   Background: {fileID: 3470819074605407629, guid: 3c4d9844d965d0a46b5df4a28b6b7e47, type: 3}
   Name: TestBattle
-  LeftBattlefieldSize: {x: 0, y: 0}
+  LeftBattlefieldSize: {x: 7, y: 4}
   LeftBattlefieldOffset: {x: 0, y: 0}
-  RightBattlefieldSize: {x: 0, y: 0}
+  RightBattlefieldSize: {x: 7, y: 4}
   RightBattlefieldOffset: {x: 0, y: 0}

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
@@ -66,10 +67,11 @@ namespace NDoom.Unity.ScriptableObjects.Data.Battle
 		{
 			return new BattleStructuralData()
 			{
-				LeftBattlefieldSize = LeftBattlefieldSize,
-				LeftBattlefieldOffset = LeftBattlefieldOffset,
-				RightBattlefieldSize = RightBattlefieldSize,
-				RightBattlefieldOffset = RightBattlefieldOffset
+				BattlefieldDatas = new Dictionary<BattlefieldSide, (Vector2Int battlefieldSize, Vector2 battlefieldOffset)>()
+				{
+					{ BattlefieldSide.Left,  (LeftBattlefieldSize,  LeftBattlefieldOffset) },
+					{ BattlefieldSide.Right, (RightBattlefieldSize, RightBattlefieldOffset) }
+				}
 			};
 		}
 	}

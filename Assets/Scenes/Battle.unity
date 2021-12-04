@@ -354,6 +354,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2033294514}
   - component: {fileID: 2033294515}
+  - component: {fileID: 2033294517}
+  - component: {fileID: 2033294516}
   m_Layer: 0
   m_Name: '[Spawning]'
   m_TagString: Untagged
@@ -397,6 +399,50 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _prefab: {fileID: 1428591272174185611, guid: 9b4949b50e417ec4c832a0303b5cca51, type: 3}
+--- !u!114 &2033294516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033294513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3847c1b547684ecbb3fa792cc8188502, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _prefab: {fileID: 6577048693519574173, guid: 1be9c02437009404db80f4849a93d4cd, type: 3}
+--- !u!114 &2033294517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033294513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7134c2c8e7354038b61e95d7b1ab5bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _prefab: {fileID: -3435168365157999118, guid: ecfcff17460c4894db61a9bc301d2018, type: 3}
 --- !u!1001 &4439825128643403092
 PrefabInstance:
   m_ObjectHideFlags: 0

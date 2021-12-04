@@ -9,6 +9,6 @@ namespace NDoom.Unity.Battles.Entities.Spawning.Args
 	{
 		public int Rows { get; set; }
 		public int Cols { get; set; }
-		public Vector2 Offset { get; private set; }
+		public Vector2 Offset { get; set; }
 	}
 }

@@ -12,6 +12,7 @@ namespace NDoom.Unity.EntitySystem.Spawning
 		{
 			args.Ancestor.AddChild(entity);
 			entity.BindToAncestor(args.Ancestor);
+			ProcessEntityPostChildBinding(entity, args);
 		}
 
 		protected virtual void ProcessEntityPostChildBinding(TChild entity, TSpawnArgs args) {}

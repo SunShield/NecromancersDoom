@@ -12,7 +12,7 @@ namespace NDoom.Unity.Battles.Entities
 		  IAncestorEntity<Unit, Tile>
 	{
 		[SerializeField] private Transform _unitsOrigin;
-		public Dictionary<int, Unit> _units = new Dictionary<int, Unit>();
+		private Dictionary<int, Unit> _units = new Dictionary<int, Unit>();
 
 		public Battlefield Battlefield { get; private set; }
 		public int Row { get; private set; }

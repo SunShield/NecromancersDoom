@@ -10,10 +10,10 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 	{
 		protected override string GetEntityName(BattlefieldSpawnArgs args) => $"Battlefield [{args.Position.Side}]";
 
-		protected override void ProcessEntityPostPositionSet(Battlefield tile, BattlefieldSpawnArgs args)
+		protected override void ProcessEntityPostPositionSet(Battlefield entity, BattlefieldSpawnArgs args)
 		{
-			SetBattlefieldSize(tile, args);
-			SetBattlefieldPos(tile, args.Position.Side, args.Offset);
+			SetBattlefieldSize(entity, args);
+			SetBattlefieldPos(entity, args.Position.Side, args.Offset);
 		}
 
 		private static void SetBattlefieldSize(Battlefield entity, BattlefieldSpawnArgs args)

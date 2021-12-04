@@ -10,7 +10,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 	{
 		protected override string GetEntityName(TileSpawnArgs args) => $"Tile [{args.Position.Row}, {args.Position.Col}]";
 
-		protected override void ProcessEntityPostPositionSet(Tile tile, TileSpawnArgs args)
+		protected override void ProcessEntityPostPositionSet(Tile entity, TileSpawnArgs args)
 		{
 			var battlefield = args.Ancestor;
 			var directionMultiplier = battlefield.Side == BattlefieldSide.Left ? 1 : -1;
@@ -18,10 +18,10 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			var xShift = battlefield.transform.position.x + -((float)(battlefield.Cols - 1) / 2) * Consts.TileUnitsSize * directionMultiplier;
 			var yShift = battlefield.transform.position.y + ((float)(battlefield.Rows - 1) / 2) * Consts.TileUnitsSize;
 
-			var tileX = xShift + tile.Col * Consts.TileUnitsSize * directionMultiplier;
-			var tileY = yShift + -tile.Row * Consts.TileUnitsSize;
+			var tileX = xShift + entity.Col * Consts.TileUnitsSize * directionMultiplier;
+			var tileY = yShift + -entity.Row * Consts.TileUnitsSize;
 
-			tile.transform.localPosition = new Vector2(tileX, tileY);
+			entity.transform.localPosition = new Vector2(tileX, tileY);
 		}
 	}
 }

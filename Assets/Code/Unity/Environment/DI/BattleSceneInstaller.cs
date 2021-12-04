@@ -15,7 +15,7 @@ namespace NDoom.Unity.Environment.DI
 
 		private void BindNonUnityClasses()
 		{
-			
+			Container.Bind<BattleEntititesSpawnFacade>().AsSingle().NonLazy();
 		}
 
 		private void BindUnityClasses()
@@ -24,6 +24,8 @@ namespace NDoom.Unity.Environment.DI
 			Container.BindInterfacesAndSelfTo<BattleScenePreparer>().FromComponentInHierarchy().AsSingle().NonLazy();
 
 			Container.Bind<BattleSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+			Container.Bind<BattlefieldSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+			Container.Bind<TileSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 		}
 	}
 }
