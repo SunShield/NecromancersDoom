@@ -2,7 +2,7 @@
 
 namespace NDoom.Unity.EntitySystem.DataStructure.Storaging
 {
-	public abstract class AbstractEntityFunctionalDataStorage<TFunctionalData> : AbstractDataStorage<TFunctionalData>
+	public abstract class AbstractFunctionalDataStorage<TFunctionalData> : AbstractDataStorage<TFunctionalData>
 		where TFunctionalData : EntityFunctionalData
 	{
 	}

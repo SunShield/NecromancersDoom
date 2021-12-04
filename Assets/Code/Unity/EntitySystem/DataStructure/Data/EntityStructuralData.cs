@@ -1,6 +1,6 @@
 ﻿namespace NDoom.Unity.EntitySystem.DataStructure.Data
 {
-	public abstract class EntityStructuralData
+	public abstract class EntityStructuralData : IEntityData
 	{
 		
 	}

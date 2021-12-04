@@ -1,13 +1,14 @@
 ﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
-using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem.Spawning.Args;
+using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities.Spawning.Args
 {
 	public class BattlefieldSpawnArgs
-		: PositionableEntitySpawnArgs<Battle, Battlefield, BattlefieldPositioningData>,
-		  IStructurableEntitySpawnArgs<BattlefieldStructuralData>
+		: PositionableEntitySpawnArgs<Battle, Battlefield, BattlefieldPositioningData>
 	{
-		public BattlefieldStructuralData StructuralData { get; set; }
+		public int Rows { get; set; }
+		public int Cols { get; set; }
+		public Vector2 Offset { get; private set; }
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
 using Sirenix.OdinInspector;
@@ -7,7 +8,10 @@ using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Battle
 {
-	public class BattleData : NamedData, IGraphicalDataConvertible<BattleGraphicalData>
+	public class BattleData 
+		: NamedData,
+			IStructuralDataConvertible<BattleStructuralData>,
+			IGraphicalDataConvertible<BattleGraphicalData>
 	{
 		private const string MainGroupName = "Main";
 		private const string MainGroupHorizontal = MainGroupName + "/Hor";
@@ -55,6 +59,17 @@ namespace NDoom.Unity.ScriptableObjects.Data.Battle
 			return new BattleGraphicalData()
 			{
 				Prefab = Background
+			};
+		}
+
+		public BattleStructuralData ToStructuralData()
+		{
+			return new BattleStructuralData()
+			{
+				LeftBattlefieldSize = LeftBattlefieldSize,
+				LeftBattlefieldOffset = LeftBattlefieldOffset,
+				RightBattlefieldSize = RightBattlefieldSize,
+				RightBattlefieldOffset = RightBattlefieldOffset
 			};
 		}
 	}

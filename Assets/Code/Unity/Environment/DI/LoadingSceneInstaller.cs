@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.EntitySystem.Spawning;
+﻿using NDoom.Unity.Data;
 using NDoom.Unity.Environment.Initialization;
 using Zenject;
 
@@ -8,6 +8,7 @@ namespace NDoom.Unity.Environment.DI
 	{
 		public override void InstallBindings()
 		{
+			Container.Bind<AllDataLoader>().AsSingle().NonLazy();
 			Container.BindInterfacesAndSelfTo<AppInitializer>().FromComponentInHierarchy().AsSingle().NonLazy();
 		}
 	}

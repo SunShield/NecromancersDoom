@@ -3,7 +3,7 @@ using NDoom.Unity.EntitySystem.DataStructure.Storaging;
 
 namespace NDoom.Unity.Battles.Entities.Data.Storaging
 {
-	public class UnitFunctionalDataStorage : AbstractEntityFunctionalDataStorage<UnitFunctionalData>
+	public class UnitFunctionalDataStorage : AbstractFunctionalDataStorage<UnitFunctionalData>
 	{
 		
 	}

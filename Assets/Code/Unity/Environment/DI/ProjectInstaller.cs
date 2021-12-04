@@ -1,4 +1,6 @@
 ﻿using NDoom.Core.Environment.EventSystem;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
+using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Data;
 using NDoom.Unity.Environment.Main;
 using NDoom.Unity.Environment.SceneManagement.Switching;
@@ -20,6 +22,13 @@ namespace NDoom.Unity.Environment.DI
 		private void BindNonUnityClasses()
 		{
 			Container.Bind<EventBus>().AsSingle().NonLazy();
+
+			Container.Bind<BattleGraphicalDataStorage>().AsSingle().NonLazy();
+			Container.Bind<BattleGraphicalDataConverter>().AsSingle().NonLazy();
+			Container.Bind<UnitGraphicalDataStorage>().AsSingle().NonLazy();
+			Container.Bind<UnitGraphicalDataConverter>().AsSingle().NonLazy();
+			Container.Bind<UnitFunctionalDataStorage>().AsSingle().NonLazy();
+			Container.Bind<BattleStructuralDataStorage>().AsSingle().NonLazy();
 		}
 
 		private void BindUnityClasses()

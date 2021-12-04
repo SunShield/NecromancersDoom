@@ -9,8 +9,7 @@ namespace NDoom.Unity.Battles.Entities
 	public class Battlefield 
 		: Entity, 
 		  IPositionableEntity<BattlefieldPositioningData, Battle, Battlefield>, 
-		  IAncestorEntity<Tile, Battlefield>, 
-		  IStructurableEntity<BattlefieldStructuralData>
+		  IAncestorEntity<Tile, Battlefield>
 	{
 		[SerializeField] private Transform _tilesOrigin;
 		private Tile[,] _tiles;

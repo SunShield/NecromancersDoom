@@ -13,11 +13,11 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		protected override void ProcessEntityPostPositionSet(Battlefield tile, BattlefieldSpawnArgs args)
 		{
 			SetBattlefieldSize(tile, args);
-			SetBattlefieldPos(tile, args.Position.Side, args.StructuralData.Offset);
+			SetBattlefieldPos(tile, args.Position.Side, args.Offset);
 		}
 
 		private static void SetBattlefieldSize(Battlefield entity, BattlefieldSpawnArgs args)
-			=> entity.SetSize(args.StructuralData.Rows, args.StructuralData.Cols);
+			=> entity.SetSize(args.Rows, args.Cols);
 
 		private void SetBattlefieldPos(Battlefield entity, BattlefieldSide side, Vector2 offset)
 		{
