@@ -15,8 +15,6 @@ namespace NDoom.Unity.EntitySystem.Components
 
 		private void SetParent(TEntity entity) => Parent = entity;
 
-		public virtual void InitializeComponent() { }
-		public virtual void UpdateComponent() { }
-		public virtual void FixedUpdateComponent() { }
+		protected virtual void InitializeComponent() { }
 	}
 }

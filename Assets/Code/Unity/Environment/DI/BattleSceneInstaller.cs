@@ -15,6 +15,7 @@ namespace NDoom.Unity.Environment.DI
 
 		private void BindNonUnityClasses()
 		{
+			Container.Bind<SkillExecutionActionsCreator>().AsSingle().NonLazy();
 			Container.Bind<BattleEntititesSpawnFacade>().AsSingle().NonLazy();
 		}
 

@@ -25,7 +25,7 @@ namespace NDoom.Unity.Battles.Entities
 		[SerializeField] private Transform _graphicsOrigin;
 		[SerializeField] private Transform _battlefieldsOrigin;
 		
-		protected override void InitializeEntityInternal() {}
+		protected override void InitializeEntityPreSpawn() {}
 
 		public void AddChild(Battlefield entity)
 		{

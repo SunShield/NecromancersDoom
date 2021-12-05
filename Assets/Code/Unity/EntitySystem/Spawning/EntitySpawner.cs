@@ -18,6 +18,7 @@ namespace NDoom.Unity.EntitySystem.Spawning
 			TEntity entity = CreateEntity(args);
 			entity.InitializeEntity(args.Name);
 			ProcessEntityPostCreate(entity, args);
+			entity.InitializeEntityPostSpawn();
 			return entity;
 		}
 

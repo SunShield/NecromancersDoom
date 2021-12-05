@@ -12,9 +12,17 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		[Inject] private SkillGraphicalDataStorage _graphicalDataStorage;
 		[Inject] private SkillFunctionalDataStorage _functionalDataStorage;
 
+		[Inject] private SkillExecutionActionsCreator _actionsCreator;
+
 		protected override string GetEntityName(SkillSpawnArgs args) => $"Skill [{args.Name}]";
 
 		protected override void ProcessEntityPostChildBinding(Skill entity, SkillSpawnArgs args)
+		{
+			SetEntityData(entity, args);
+			SetSkillExecutionActions(entity);
+		}
+
+		private void SetEntityData(Skill entity, SkillSpawnArgs args)
 		{
 			SetSkillGraphics(entity);
 			SetSkillPosition(entity, args);
@@ -37,6 +45,12 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		{
 			var data = _functionalDataStorage[entity.Name];
 			entity.SetFromFunctionalData(data);
+		}
+
+		private void SetSkillExecutionActions(Skill entity)
+		{
+			var actions = _actionsCreator.Create(entity.Name);
+			entity.SetExecutionActions(actions);
 		}
 	}
 }

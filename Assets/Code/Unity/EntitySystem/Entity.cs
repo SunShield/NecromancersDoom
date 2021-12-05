@@ -20,11 +20,13 @@ namespace NDoom.Unity.EntitySystem
 		public void InitializeEntity(string name)
 		{
 			SetName(name);
-			InitializeEntityInternal();
+			InitializeEntityPreSpawn();
 		}
 
+		public virtual void InitializeEntityPostSpawn() { }
+
 		private void SetName(string name) => Name = name;
-		protected virtual void InitializeEntityInternal() {}
+		protected virtual void InitializeEntityPreSpawn() {}
 
 		protected sealed override void InitializeInternal() => SetId();
 		protected void SetId() => GlobalId = GetId();
