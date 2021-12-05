@@ -86,6 +86,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _graphicsOrigin: {fileID: 5103869673152681171}
+  _skillsOrigin: {fileID: 4857195301237374726}
 --- !u!1 &5103869673152681170
 GameObject:
   m_ObjectHideFlags: 0

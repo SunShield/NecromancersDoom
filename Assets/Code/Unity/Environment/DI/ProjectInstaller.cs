@@ -29,6 +29,10 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<UnitGraphicalDataConverter>().AsSingle().NonLazy();
 			Container.Bind<UnitFunctionalDataStorage>().AsSingle().NonLazy();
 			Container.Bind<BattleStructuralDataStorage>().AsSingle().NonLazy();
+			Container.Bind<UnitStructuralDataStorage>().AsSingle().NonLazy();
+			Container.Bind<SkillFunctionalDataStorage>().AsSingle().NonLazy();
+			Container.Bind<SkillGraphicalDataConverter>().AsSingle().NonLazy();
+			Container.Bind<SkillGraphicalDataStorage>().AsSingle().NonLazy();
 		}
 
 		private void BindUnityClasses()

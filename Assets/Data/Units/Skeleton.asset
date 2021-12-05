@@ -20,6 +20,28 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  Prefab: {fileID: 767479912064513584, guid: 35f9973fafa08bd4ca4a28a1f2f9d460, type: 3}
+    SerializationNodes:
+    - Name: Skills
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Unit.UnitSkillData,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|NDoom.Unity.ScriptableObjects.Data.Unit.UnitSkillData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: TestSkill
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Prefab: {fileID: 4685378497904991586, guid: cd4bfecf1c05ab046a085fc722849411, type: 3}
   Name: Skeleton

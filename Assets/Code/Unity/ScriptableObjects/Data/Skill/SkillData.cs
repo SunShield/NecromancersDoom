@@ -1,11 +1,17 @@
 ﻿using System.Collections.Generic;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
 using NDoom.Unity.EntitySystem.Loadable;
+using NDoom.Unity.EntitySystem.Loadable.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Skills
 {
-	public class SkillData : NamedData
+	public class SkillData : 
+		NamedData, 
+		IGraphicalDataConvertible<SkillGraphicalData>, 
+		IFunctionalDataConvertible<SkillFunctionalData>
 	{
 		private const string MainVerticalGroupName = "Skill";
 		private const string BasicSkillDataFoldoutGroupName = MainVerticalGroupName + "/Basic Data";
@@ -37,10 +43,25 @@ namespace NDoom.Unity.ScriptableObjects.Data.Skills
 		public float Duration;
 
 		[VerticalGroup(BasicDataVerticalGroupName)]
-		[TableList]
-		public List<SkillParam> SkillParams;
+		[TableList(ShowPaging = true, NumberOfItemsPerPage = 3)]
+		public List<SkillParam> SkillParams = new List<SkillParam>();
 
 		[VerticalGroup(BasicDataVerticalGroupName)] [TableList]
-		public List<SkillAffectorData> Affectors;
+		public List<SkillAffectorData> Affectors = new List<SkillAffectorData>();
+
+		public SkillGraphicalData ToGraphicalData()
+		{
+			return new SkillGraphicalData() { Prefab = Prefab };
+		}
+
+		public SkillFunctionalData ToFunctionalData()
+		{
+			return new SkillFunctionalData()
+			{
+				Prewarm = Prewarm,
+				Cooldown = Cooldown,
+				Duration = Duration
+			};
+		}
 	}
 }

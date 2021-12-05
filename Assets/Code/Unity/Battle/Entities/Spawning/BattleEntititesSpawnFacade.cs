@@ -12,11 +12,13 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 	public class BattleEntititesSpawnFacade
 	{
 		[Inject] private BattleStructuralDataStorage _battleStructuralDataStorage;
+		[Inject] private UnitStructuralDataStorage _unitStructuralDataStorage;
 
 		[Inject] private BattleSpawner _battleSpawner;
 		[Inject] private BattlefieldSpawner _battlefieldSpawner;
 		[Inject] private TileSpawner _tileSpawner;
 		[Inject] private UnitSpawner _unitSpawner;
+		[Inject] private SkillSpawner _skillSpawner;
 
 		public void SpawnBattle(string battleName)
 		{
@@ -90,16 +92,17 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			foreach (var unitData in structuralData.UnitDatas)
 			{
 				var tile = battle.Battlefields[unitData.side][unitData.row, unitData.col];
-				var args = CreateUnitSpawnArgs(unitData.unitName, tile);
-				var unit = _unitSpawner.Spawn(args);
+				SpawnUnit(unitData.unitName, tile);
 			}
 		}
 
-		// TODO: implement when Registry will be reimplemented
-		//public Unit SpawnUnit(string unitName, BattlefieldSide size, int row, int col)
-		//{
-		//	var tile = battle.Battlefields[unitData.side][unitData.row, unitData.col];
-		//}
+		private void SpawnUnit(string unitName, Tile tile)
+		{
+			var args = CreateUnitSpawnArgs(unitName, tile);
+			var unit = _unitSpawner.Spawn(args);
+			var structuralData = _unitStructuralDataStorage[unitName];
+			SpawnSkills(unit, structuralData);
+		}
 
 		private UnitSpawnArgs CreateUnitSpawnArgs(string unitName, Tile tile)
 		{
@@ -107,6 +110,29 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			{
 				Name = unitName,
 				Ancestor = tile
+			};
+		}
+
+		private void SpawnSkills(Unit unit, UnitStructuralData data)
+		{
+			foreach (var skill in data.Skills)
+			{
+				SpawnSkill(skill, unit);
+			}
+		}
+
+		private void SpawnSkill(string skillName, Unit unit)
+		{
+			var args = CreateSkillSpawnArgs(skillName, unit);
+			var skill = _skillSpawner.Spawn(args);
+		}
+
+		private SkillSpawnArgs CreateSkillSpawnArgs(string skillName, Unit unit)
+		{
+			return new SkillSpawnArgs()
+			{
+				Name = skillName,
+				Ancestor = unit
 			};
 		}
 	}

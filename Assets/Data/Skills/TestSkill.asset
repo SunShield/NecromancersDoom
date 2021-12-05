@@ -22,13 +22,33 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: SkillParams
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Skills.SkillParam,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: Affectors
-      Entry: 6
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Skills.SkillAffectorData,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
-  Prefab: {fileID: 0}
-  Name: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Prefab: {fileID: 5826956084795943171, guid: 6922dd1d1314b064ab453c707c0297d8, type: 3}
+  Name: TestSkill
   Prewarm: 0
   Cooldown: 0
   Duration: 0
