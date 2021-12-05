@@ -25,11 +25,12 @@ namespace NDoom.Unity.Data
 		private void LoadGraphicalData()
 		{
 			AllData.Battles.ForEach(data => _battleGraphicalDataStorage.Add(data.DataName, data.ToGraphicalData()));
+			AllData.Units.ForEach(data => _unitGraphicalDataStorage.Add(data.DataName, data.ToGraphicalData()));
 		}
 
 		private void LoadFunctionalData()
 		{
-
+			AllData.Units.ForEach(data => _unitFunctionalDataStorage.Add(data.DataName, data.ToFunctionalData()));
 		}
 
 		private void LoadStructuralData()

@@ -1,7 +1,7 @@
 ﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
-using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
@@ -12,7 +12,7 @@ namespace NDoom.Unity.Battles.Entities
 		  IAncestorEntity<Tile, Battlefield>
 	{
 		[SerializeField] private Transform _tilesOrigin;
-		private Tile[,] _tiles;
+		[SerializeField] [ReadOnly] private Tile[,] _tiles;
 
 		public Battle Battle { get; private set; }
 		public BattlefieldSide Side { get; private set; }
@@ -38,5 +38,7 @@ namespace NDoom.Unity.Battles.Entities
 		}
 
 		public void RemoveChild(Tile tile) => _tiles[tile.Row, tile.Col] = null;
+
+		public Tile this[int row, int col] => _tiles[row, col];
 	}
 }

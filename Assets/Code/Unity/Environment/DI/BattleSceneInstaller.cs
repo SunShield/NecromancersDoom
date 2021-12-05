@@ -26,6 +26,7 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<BattleSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.Bind<BattlefieldSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.Bind<TileSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+			Container.Bind<UnitSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 		}
 	}
 }

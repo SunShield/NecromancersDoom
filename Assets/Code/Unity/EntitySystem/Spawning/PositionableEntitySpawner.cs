@@ -11,7 +11,7 @@ namespace NDoom.Unity.EntitySystem.Spawning
 		where TPositionableEntity : Entity, IPositionableEntity<TPositionData, TAncestor, TPositionableEntity>
 		where TPositionData : EntityPositionData
 	{
-		protected sealed override void ProcessEntityPostChildBinding(TPositionableEntity entity, TSpawnArgs args)
+		protected sealed override void ProcessEntityPreChildBinding(TPositionableEntity entity, TSpawnArgs args)
 		{
 			entity.SetPosition(args.Position);
 			ProcessEntityPostPositionSet(entity, args);

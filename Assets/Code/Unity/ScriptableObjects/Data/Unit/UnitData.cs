@@ -1,10 +1,16 @@
-﻿using NDoom.Unity.EntitySystem.Loadable;
+﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.EntitySystem.Loadable;
+using NDoom.Unity.EntitySystem.Loadable.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Unit
 {
-	public class UnitData : NamedData
+	public class UnitData 
+		: NamedData, 
+			IGraphicalDataConvertible<UnitGraphicalData>,
+			IFunctionalDataConvertible<UnitFunctionalData>
 	{
 		private const string MainVerticalGroupName = "Unit";
 		private const string BasicUnitDataFoldoutGroupName = MainVerticalGroupName + "/Basic Data";
@@ -20,5 +26,18 @@ namespace NDoom.Unity.ScriptableObjects.Data.Unit
 		[VerticalGroup(BasicDataVerticalGroupName)]
 		[LabelWidth(45)]
 		public string Name;
+
+		public UnitGraphicalData ToGraphicalData()
+		{
+			return new UnitGraphicalData()
+			{
+				Prefab = Prefab
+			};
+		}
+
+		public UnitFunctionalData ToFunctionalData()
+		{
+			return new UnitFunctionalData();
+		}
 	}
 }

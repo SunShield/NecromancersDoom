@@ -10,11 +10,13 @@ namespace NDoom.Unity.EntitySystem.Spawning
 	{
 		protected sealed override void ProcessEntityPostCreate(TChild entity, TSpawnArgs args)
 		{
+			ProcessEntityPreChildBinding(entity, args);
 			args.Ancestor.AddChild(entity);
 			entity.BindToAncestor(args.Ancestor);
 			ProcessEntityPostChildBinding(entity, args);
 		}
 
+		protected virtual void ProcessEntityPreChildBinding(TChild entity, TSpawnArgs args) {}
 		protected virtual void ProcessEntityPostChildBinding(TChild entity, TSpawnArgs args) {}
 	}
 }

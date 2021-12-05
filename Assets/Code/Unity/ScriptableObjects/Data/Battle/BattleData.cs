@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
@@ -71,7 +72,8 @@ namespace NDoom.Unity.ScriptableObjects.Data.Battle
 				{
 					{ BattlefieldSide.Left,  (LeftBattlefieldSize,  LeftBattlefieldOffset) },
 					{ BattlefieldSide.Right, (RightBattlefieldSize, RightBattlefieldOffset) }
-				}
+				},
+				UnitDatas = Units.Select(dataUnit => (dataUnit.Name, dataUnit.Side, dataUnit.Position.Y, dataUnit.Position.X)).ToList()
 			};
 		}
 	}

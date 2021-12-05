@@ -8,5 +8,6 @@ namespace NDoom.Unity.Battles.Entities.Data.Concrete.Structural
 	public class BattleStructuralData : EntityStructuralData
 	{
 		public Dictionary<BattlefieldSide, (Vector2Int battlefieldSize, Vector2 battlefieldOffset)> BattlefieldDatas;
+		public List<(string unitName, BattlefieldSide side, int row, int col)> UnitDatas;
 	}
 }

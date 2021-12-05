@@ -16,12 +16,15 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		[Inject] private BattleSpawner _battleSpawner;
 		[Inject] private BattlefieldSpawner _battlefieldSpawner;
 		[Inject] private TileSpawner _tileSpawner;
+		[Inject] private UnitSpawner _unitSpawner;
 
 		public void SpawnBattle(string battleName)
 		{
 			var args = CreateBattleSpawnArgs(battleName);
 			var battle = _battleSpawner.Spawn(args);
-			SpawnBattlefields(battle, _battleStructuralDataStorage[battleName]);
+			var structureData = _battleStructuralDataStorage[battleName];
+			SpawnBattlefields(battle, structureData);
+			SpawnUnitsForBattle(battle, structureData);
 		}
 
 		private BattleSpawnArgs CreateBattleSpawnArgs(string battleName)
@@ -79,6 +82,31 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 				Ancestor = battlefield,
 				Position = new TilePositioningData() { Row = row, Col = col },
 				Name = "Tile"
+			};
+		}
+
+		private void SpawnUnitsForBattle(Battle battle, BattleStructuralData structuralData)
+		{
+			foreach (var unitData in structuralData.UnitDatas)
+			{
+				var tile = battle.Battlefields[unitData.side][unitData.row, unitData.col];
+				var args = CreateUnitSpawnArgs(unitData.unitName, tile);
+				var unit = _unitSpawner.Spawn(args);
+			}
+		}
+
+		// TODO: implement when Registry will be reimplemented
+		//public Unit SpawnUnit(string unitName, BattlefieldSide size, int row, int col)
+		//{
+		//	var tile = battle.Battlefields[unitData.side][unitData.row, unitData.col];
+		//}
+
+		private UnitSpawnArgs CreateUnitSpawnArgs(string unitName, Tile tile)
+		{
+			return new UnitSpawnArgs()
+			{
+				Name = unitName,
+				Ancestor = tile
 			};
 		}
 	}
