@@ -16,5 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9488219ebee4d3a4c98681fb7e6bb198, type: 2}
   Units:
   - {fileID: 11400000, guid: 3b9be07aca97a7e4291e9cadba772e4b, type: 2}
-  Skills: []
+  Skills:
+  - {fileID: 11400000, guid: b42eaf68093a82e4da6777a7060a4ba1, type: 2}
   Effects: []

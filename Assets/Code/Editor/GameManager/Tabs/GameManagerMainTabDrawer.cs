@@ -1,23 +1,12 @@
-﻿using Sirenix.OdinInspector.Editor;
+﻿using NDoom.Editor.GameManager.Drawers;
+using NDoom.Unity.ScriptableObjects.Data;
 
 namespace NDoom.Editor.GameManager.Tabs
 {
-	public class GameManagerMainTabDrawer : GameManagerTabDrawer
+	public class GameManagerMainTabDrawer : GameManagerScriptableObjectTabDrawer<MainData>
 	{
-		public override object DrawableContent => null;
 		public override bool HasMenuTree => false;
-
-		public override void OnDrawEditors()
-		{
-		}
-
-		protected override void InitializeInternal()
-		{
-		}
-
-		public override void OnMenuTree(OdinMenuTree tree)
-		{
-			throw new System.NotImplementedException();
-		}
+		protected override ScriptableObjectDrawer<MainData> Drawer { get; } = new MainDataDrawer();
+		protected override string DataPath => GameManagerConstants.MainDataPath;
 	}
 }

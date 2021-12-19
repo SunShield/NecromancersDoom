@@ -18,6 +18,7 @@ namespace NDoom.Editor.GameManager
 			{ GameManagerTab.Skills,  new GameManagerSkillsTabDrawer() },
 			{ GameManagerTab.Units,   new GameManagerUnitsTabDrawer() },
 			{ GameManagerTab.Effects, new GameManagerEffectsTabDrawer() },
+			{ GameManagerTab.Tags   , new GameManagerTagsTabDrawer() },
 		};
 
 		[LabelText("Current Tab")][LabelWidth(100)][EnumToggleButtons][ShowInInspector]

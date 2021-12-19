@@ -2,7 +2,7 @@
 
 namespace NDoom.Editor.GameManager.Tabs
 {
-	public class GameManagerEffectsTabDrawer : GameManagerScriptableObjectTabDrawer<EffectData>
+	public class GameManagerEffectsTabDrawer : GameManagerNamedDataTabDrawer<EffectData>
 	{
 		protected override string DataPath => GameManagerConstants.EffectsDataPath;
 	}

@@ -3,9 +3,9 @@ using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
-namespace NDoom.Editor.GameManager
+namespace NDoom.Editor.GameManager.Drawers
 {
-	public class ScriptableObjectDrawer<TData>
+	public class NamedDataDrawer<TData>
 		where TData : SerializedScriptableObject
 	{
 		[InlineEditor(InlineEditorObjectFieldModes.CompletelyHidden)][SerializeField] 

@@ -2,7 +2,7 @@
 
 namespace NDoom.Editor.GameManager.Tabs
 {
-	public class GameManagerSkillsTabDrawer : GameManagerScriptableObjectTabDrawer<SkillData>
+	public class GameManagerSkillsTabDrawer : GameManagerNamedDataTabDrawer<SkillData>
 	{
 		protected override string DataPath => GameManagerConstants.SkillsDataPath;
 	}

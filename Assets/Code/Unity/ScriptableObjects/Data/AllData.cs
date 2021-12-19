@@ -15,6 +15,8 @@ namespace NDoom.Unity.ScriptableObjects.Data
 		public List<UnitData> Units;
 		public List<SkillData> Skills;
 		public List<EffectData> Effects;
+		public MainData MainData;
+		public ValueTagsData TagsData;
 
 		public void Add(SerializedScriptableObject obj)
 		{

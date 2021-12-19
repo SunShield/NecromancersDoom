@@ -1,28 +1,28 @@
-﻿using Sirenix.OdinInspector;
+﻿using NDoom.Editor.GameManager.Drawers;
+using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 
 namespace NDoom.Editor.GameManager.Tabs
 {
-	public abstract class GameManagerScriptableObjectTabDrawer<TData> : GameManagerTabDrawer
-		where TData : SerializedScriptableObject
+	public abstract class GameManagerScriptableObjectTabDrawer<TScriptableObject> : GameManagerTabDrawer
+		where TScriptableObject : SerializedScriptableObject
 	{
-		public ScriptableObjectDrawer<TData> Drawer { get; private set; } = new ScriptableObjectDrawer<TData>();
-		public sealed override object DrawableContent => Drawer;
-		public sealed override bool HasMenuTree => true;
-
+		protected abstract ScriptableObjectDrawer<TScriptableObject> Drawer { get; }
+		public override object DrawableContent => Drawer;
 		protected abstract string DataPath { get; }
 
-		public override void OnDrawEditors() => Drawer.SetSelected(Manager.MenuTree.Selection.SelectedValue);
-
-		protected sealed override void InitializeInternal()
+		public override void OnDrawEditors()
 		{
-			Drawer.Initialize();
-			Drawer.SetPath(DataPath);
 		}
 
 		public override void OnMenuTree(OdinMenuTree tree)
 		{
-			tree.AddAllAssetsAtPath("", DataPath, typeof(TData));
+		}
+
+		protected override void InitializeInternal()
+		{
+			Drawer.Initialize();
+			Drawer.SetDrawnItem(DataPath);
 		}
 	}
 }

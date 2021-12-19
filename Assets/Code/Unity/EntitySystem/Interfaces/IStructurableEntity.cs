@@ -5,6 +5,5 @@ namespace NDoom.Unity.EntitySystem.Interfaces
 	public interface IStructurableEntity<TStructuralData>
 		where TStructuralData : EntityStructuralData
 	{
-		
 	}
 }

@@ -6,6 +6,7 @@
 		Battles,
 		Units,
 		Skills,
-		Effects
+		Effects,
+		Tags
 	}
 }
