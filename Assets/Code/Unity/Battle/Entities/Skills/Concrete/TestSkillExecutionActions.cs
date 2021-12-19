@@ -9,7 +9,7 @@ namespace NDoom.Unity.Battles.Entities.Skills.Concrete
 		protected override IEnumerator ExecuteInternal()
 		{
 			yield return new WaitForSeconds(1f);
-			GameDebugger.Log("TEST", "Executed");
+			GameDebugger.Log("TEST", Parameters["TestParameter"].InnerValue);
 		}
 	}
 }

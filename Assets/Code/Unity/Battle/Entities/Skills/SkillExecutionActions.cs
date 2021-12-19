@@ -1,4 +1,6 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
+using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.Environment.Main;
 using Zenject;
 
@@ -12,11 +14,13 @@ namespace NDoom.Unity.Battles.Entities.Skills
 	public abstract class SkillExecutionActions
 	{
 		[Inject] private CoroutineRunner _coroutineRunner;
+		protected Skill Owner { get; private set; }
 
 		public bool IsExecuting { get; private set; }
+		public IReadOnlyDictionary<string, TaggedParameter> Parameters => Owner.Data.Parameters;
 
 		// TODO: pass params here
-		public void Initialize() { }
+		public void Initialize(Skill skill) => Owner = skill;
 
 		/// <summary>
 		/// This method can be used to prevent execution of skill if some battlefield conditions are not met

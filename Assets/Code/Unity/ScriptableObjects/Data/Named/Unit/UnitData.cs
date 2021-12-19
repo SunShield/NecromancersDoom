@@ -5,7 +5,9 @@ using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
+using NDoom.Unity.ScriptableObjects.Data.Single;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
@@ -34,7 +36,8 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		public string Name;
 
 		[FoldoutGroup(UnitSkillDataFoldoutGroupName)]
-		[TableList]
+		[ListDrawerSettings(NumberOfItemsPerPage = 1)]
+		[ValueDropdown("GetSkills")]
 		public List<UnitSkillData> Skills = new List<UnitSkillData>();
 
 		public UnitGraphicalData ToGraphicalData()
@@ -54,8 +57,19 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		{
 			return new UnitStructuralData()
 			{
-				Skills = Skills.Select(skill => skill.Name).ToList()
+				Skills = Skills.Select(skill => (skill.Name, skill.ParamValues)).ToList()
 			};
+		}
+
+		public ValueDropdownList<UnitSkillData> GetSkills()
+		{
+			var result = new ValueDropdownList<UnitSkillData>();
+			var skillsData = AssetDatabase.LoadAssetAtPath<AllData>(@"Assets/Data/All Data.asset").Skills;
+			foreach (var skillData in skillsData)
+			{
+				result.Add(skillData.Name, new UnitSkillData(skillData.Name, skillData.SkillParams.ToDictionary(param => param.Name, param => param.DefaultValue)));
+			}
+			return result;
 		}
 	}
 }

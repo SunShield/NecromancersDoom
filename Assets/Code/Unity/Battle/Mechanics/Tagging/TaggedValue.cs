@@ -6,7 +6,7 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 	/// Tagged values are aclually... Values with certain tags applied to them
 	/// Those tags determine how values will be affected by certain effects.
 	/// </summary>
-	public struct TaggedValue
+	public struct TaggedParameter
 	{
 		/// <summary>
 		/// Name here is more for cosmetic, debugging and semantical purposes, then
@@ -15,23 +15,29 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 		public string Name { get; private set; }
 
 		public HashSet<ValueTag> Tags { get; }
-		public float InnerValue { get; private set; }
+		public float InnerValue { get; set; }
 
-		public TaggedValue(string name, IEnumerable<ValueTag> tags)
+		public TaggedParameter(string name, IEnumerable<ValueTag> tags)
 		{
 			Tags = new HashSet<ValueTag>();
 			InnerValue = 0;
 			Name = name;
 		}
 
-		public TaggedValue(string name, IEnumerable<ValueTag> tags, float value) : this(name, tags) => InnerValue = value;
-		public TaggedValue(TaggedValue value) : this(value.Name, value.Tags, value.InnerValue) {}
+		public TaggedParameter(string name, IEnumerable<ValueTag> tags, float value) : this(name, tags) => InnerValue = value;
+		public TaggedParameter(TaggedParameter parameter) : this(parameter.Name, parameter.Tags, parameter.InnerValue) {}
 
-		public static TaggedValue operator +(TaggedValue value, float another) => new TaggedValue(value.Name, value.Tags, value.InnerValue + another);
-		public static TaggedValue operator +(float another, TaggedValue value) => new TaggedValue(value.Name, value.Tags, value.InnerValue + another);
-		public static TaggedValue operator -(TaggedValue value, float another) => new TaggedValue(value.Name, value.Tags, value.InnerValue - another);
-		public static TaggedValue operator *(TaggedValue value, float another) => new TaggedValue(value.Name, value.Tags, value.InnerValue * another);
-		public static TaggedValue operator *(float another, TaggedValue value) => new TaggedValue(value.Name, value.Tags, value.InnerValue * another);
-		public static TaggedValue operator /(TaggedValue value, float another) => new TaggedValue(value.Name, value.Tags, value.InnerValue / another);
+		public static TaggedParameter operator +(TaggedParameter parameter, float another) 
+			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue + another);
+		public static TaggedParameter operator +(float another, TaggedParameter parameter) 
+			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue + another);
+		public static TaggedParameter operator -(TaggedParameter parameter, float another)
+			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue - another);
+		public static TaggedParameter operator *(TaggedParameter parameter, float another) 
+			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue * another);
+		public static TaggedParameter operator *(float another, TaggedParameter parameter) 
+			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue * another);
+		public static TaggedParameter operator /(TaggedParameter parameter, float another) 
+			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue / another);
 	}
 }

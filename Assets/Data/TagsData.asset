@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 18
     - Name: 
       Entry: 7
       Data: 1|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
@@ -54,7 +54,7 @@ MonoBehaviour:
       Data: 3|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
     - Name: Name
       Entry: 1
-      Data: Elemental
+      Data: Physical
     - Name: Ancestors
       Entry: 7
       Data: 4|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
@@ -75,7 +75,7 @@ MonoBehaviour:
       Data: 5|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
     - Name: Name
       Entry: 1
-      Data: Speed
+      Data: Natural
     - Name: Ancestors
       Entry: 7
       Data: 6|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
@@ -96,13 +96,343 @@ MonoBehaviour:
       Data: 7|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
     - Name: Name
       Entry: 1
-      Data: Healing
+      Data: Magical
     - Name: Ancestors
       Entry: 7
       Data: 8|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Speed
+    - Name: Ancestors
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 11|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Healing
+    - Name: Ancestors
+      Entry: 7
+      Data: 12|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 13|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Piercing
+    - Name: Ancestors
+      Entry: 7
+      Data: 14|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Physical
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Slashing
+    - Name: Ancestors
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Physical
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Crushing
+    - Name: Ancestors
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Physical
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 19|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Fire
+    - Name: Ancestors
+      Entry: 7
+      Data: 20|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Natural
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 21|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Cold
+    - Name: Ancestors
+      Entry: 7
+      Data: 22|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Natural
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 23|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Acid
+    - Name: Ancestors
+      Entry: 7
+      Data: 24|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Natural
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Poison
+    - Name: Ancestors
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Natural
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 27|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Lightning
+    - Name: Ancestors
+      Entry: 7
+      Data: 28|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Natural
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 29|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Energy
+    - Name: Ancestors
+      Entry: 7
+      Data: 30|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Magical
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 31|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Light
+    - Name: Ancestors
+      Entry: 7
+      Data: 32|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Magical
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 33|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Dark
+    - Name: Ancestors
+      Entry: 7
+      Data: 34|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Magical
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 35|NDoom.Unity.ScriptableObjects.Data.Single.Tags.ValueTagData, Assembly-CSharp
+    - Name: Name
+      Entry: 1
+      Data: Psychic
+    - Name: Ancestors
+      Entry: 7
+      Data: 36|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 1
+      Data: Magical
     - Name: 
       Entry: 13
       Data: 

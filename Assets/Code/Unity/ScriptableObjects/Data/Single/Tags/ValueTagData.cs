@@ -20,14 +20,15 @@ namespace NDoom.Unity.ScriptableObjects.Data.Single.Tags
 		[ValueDropdown("GetValues")]
 		public List<string> Ancestors;
 
-		public string[] GetValues()
+		public List<string> GetValues()
 		{
 			// TODO: Later, move this data structure to the Editor and create a separate runtime-only data structure?
 			// Or find another approach to get rid of this reference;
 			var data = AssetDatabase.LoadAssetAtPath<AllData>(@"Assets/Data/All Data.asset");
 			var tags = data.TagsData.Tags;
 			if (tags == null || tags.Count < 1) return null;
-			return data.TagsData.Tags.Select(tag => tag.Name).ToArray();
+			var possibleTags = data.TagsData.Tags.Select(tag => tag.Name).ToList();
+			return possibleTags;
 		}
 	}
 }

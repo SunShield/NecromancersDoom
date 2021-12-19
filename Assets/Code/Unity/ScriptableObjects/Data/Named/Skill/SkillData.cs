@@ -1,9 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
+using NDoom.Unity.ScriptableObjects.Data.Single;
+using NDoom.Unity.ScriptableObjects.Data.Single.Tags;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
@@ -60,8 +65,55 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 			{
 				Prewarm = Prewarm,
 				Cooldown = Cooldown,
-				Duration = Duration
+				Duration = Duration,
+				Parameters = ConstructParameters()
 			};
+		}
+
+		private Dictionary<string, TaggedParameter> ConstructParameters()
+		{
+			var result = new Dictionary<string, TaggedParameter>();
+			foreach (var skillParam in SkillParams)
+			{
+				var parameter = ConstructParameter(skillParam);
+				result.Add(skillParam.Name, parameter);
+			}
+
+			return result;
+		}
+
+		private TaggedParameter ConstructParameter(SkillParam param)
+		{
+			var tags = new HashSet<string>();
+			foreach (var tagGroup in param.Tags)
+			{
+				if (!string.IsNullOrEmpty(tagGroup.Tag1) && !tags.Contains(tagGroup.Tag1)) tags.Add(tagGroup.Tag1);
+				if (!string.IsNullOrEmpty(tagGroup.Tag2) && !tags.Contains(tagGroup.Tag2)) tags.Add(tagGroup.Tag2);
+				if (!string.IsNullOrEmpty(tagGroup.Tag3) && !tags.Contains(tagGroup.Tag3)) tags.Add(tagGroup.Tag3);
+			}
+
+			var tagsData = AssetDatabase.LoadAssetAtPath<AllData>(@"Assets/Data/All Data.asset").TagsData;
+			foreach (var tag in tags)
+			{
+				AddTagAndItsAncestorsToHashset(tag, tags, tagsData);
+			}
+
+			var parameter = new TaggedParameter(param.Name, tags.Select(tag => new ValueTag(tag)));
+			return parameter;
+		}
+
+		private void AddTagAndItsAncestorsToHashset(string tag, HashSet<string> tags, ValueTagsData tagsData)
+		{
+			if (string.IsNullOrEmpty(tag)) return;
+			if(!tags.Contains(tag)) tags.Add(tag);
+
+			var ancestors = tagsData.Tags.First(tagData => tagData.Name == tag).Ancestors;
+			if (ancestors == null) return;
+
+			foreach (var ancestor in ancestors)
+			{
+				AddTagAndItsAncestorsToHashset(ancestor, tags, tagsData);
+			}
 		}
 	}
 }

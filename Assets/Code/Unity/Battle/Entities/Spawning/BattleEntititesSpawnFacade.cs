@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
@@ -117,21 +118,22 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		{
 			foreach (var skill in data.Skills)
 			{
-				SpawnSkill(skill, unit);
+				SpawnSkill(skill.skillName, skill.parameterValues, unit);
 			}
 		}
 
-		private void SpawnSkill(string skillName, Unit unit)
+		private void SpawnSkill(string skillName, Dictionary<string, float> paramValues, Unit unit)
 		{
-			var args = CreateSkillSpawnArgs(skillName, unit);
+			var args = CreateSkillSpawnArgs(skillName, paramValues, unit);
 			var skill = _skillSpawner.Spawn(args);
 		}
 
-		private SkillSpawnArgs CreateSkillSpawnArgs(string skillName, Unit unit)
+		private SkillSpawnArgs CreateSkillSpawnArgs(string skillName, Dictionary<string, float> paramValues, Unit unit)
 		{
 			return new SkillSpawnArgs()
 			{
 				Name = skillName,
+				ParamValues = new Dictionary<string, float>(paramValues),
 				Ancestor = unit
 			};
 		}

@@ -55,12 +55,12 @@ namespace NDoom.Unity.Data
 
 		private void LoadTagsData()
 		{
-			var dataTagsDict = AllData.TagsData.Tags.ToDictionary(tag => tag.Name);
-			TagsData.Tags = dataTagsDict.Keys.Select(tagName => new ValueTag(tagName)).ToDictionary(tag => tag.Name);
-			TagsData.Tags.Keys.ForEach(
-				tag => dataTagsDict[tag].Ancestors.ForEach(
-					ancestor => TagsData.Tags[tag].Ancestors.Add(TagsData.Tags[ancestor])));
-			var t = 5;
+			//var dataTagsDict = AllData.TagsData.Tags.ToDictionary(tag => tag.Name);
+			//TagsData.Tags = dataTagsDict.Keys.Select(tagName => new ValueTag(tagName)).ToDictionary(tag => tag.Name);
+			//TagsData.Tags.Keys.ForEach(
+			//	tag => dataTagsDict[tag].Ancestors.ForEach(
+			//		ancestor => TagsData.Tags[tag].Ancestors.Add(TagsData.Tags[ancestor])));
+			//var t = 5;
 		}
 	}
 }

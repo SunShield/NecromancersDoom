@@ -16,7 +16,7 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 		/// For example, tag "Cold" is a child of a tag "Elemental",
 		/// Tag "AngularSpeed" is a child of tag "Motion" etc.
 		/// </summary>
-		public HashSet<ValueTag> Ancestors { get; } = new HashSet<ValueTag>();
+		//public HashSet<ValueTag> Ancestors { get; } = new HashSet<ValueTag>();
 
 		public string Name { get; set; }
 

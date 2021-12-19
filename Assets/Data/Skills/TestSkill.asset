@@ -32,27 +32,26 @@ MonoBehaviour:
       Entry: 7
       Data: 1|NDoom.Unity.ScriptableObjects.Data.Named.Skills.SkillParam, Assembly-CSharp
     - Name: Name
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: TestParameter
     - Name: Tags
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListParamHolder,
+      Data: 2|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListTagHolder,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListParamHolder,
-        Assembly-CSharp
-    - Name: Param1
-      Entry: 6
+      Data: NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListTagHolder, Assembly-CSharp
+    - Name: Tag1
+      Entry: 1
+      Data: Damage
+    - Name: Tag2
+      Entry: 1
       Data: 
-    - Name: Param2
-      Entry: 6
-      Data: 
-    - Name: Param3
-      Entry: 6
+    - Name: Tag3
+      Entry: 1
       Data: 
     - Name: 
       Entry: 8

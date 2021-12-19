@@ -1,6 +1,7 @@
 ﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
 using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Battles.Entities.Spawning.Args;
+using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.EntitySystem.Spawning;
 using Zenject;
 
@@ -26,7 +27,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		{
 			SetSkillGraphics(entity);
 			SetSkillPosition(entity, args);
-			SetSkillFunctionalData(entity);
+			SetSkillFunctionalData(entity, args);
 		}
 
 		private void SetSkillGraphics(Skill entity)
@@ -41,9 +42,17 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			entity.transform.position = args.Ancestor.transform.position;
 		}
 
-		private void SetSkillFunctionalData(Skill entity)
+		private void SetSkillFunctionalData(Skill entity, SkillSpawnArgs args)
 		{
 			var data = _functionalDataStorage[entity.Name];
+			foreach (var paramValue in args.ParamValues.Keys)
+			{
+				var overridenParam = new TaggedParameter(data.Parameters[paramValue])
+				{
+					InnerValue = args.ParamValues[paramValue]
+				};
+				data.Parameters[paramValue] = overridenParam;
+			}
 			entity.SetFromFunctionalData(data);
 		}
 
@@ -51,6 +60,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		{
 			var actions = _actionsCreator.Create(entity.Name);
 			entity.SetExecutionActions(actions);
+			actions.Initialize(entity);
 		}
 	}
 }
