@@ -1,5 +1,9 @@
-﻿using NDoom.Unity.Battles.Entities.Data.Storaging;
-using NDoom.Unity.ScriptableObjects.Data;
+﻿using System.Linq;
+using NDoom.Unity.Battles.Entities.Data.Concrete;
+using NDoom.Unity.Battles.Entities.Data.Storaging;
+using NDoom.Unity.Battles.Mechanics.Tagging;
+using NDoom.Unity.ScriptableObjects.Data.Single;
+using Sirenix.Utilities;
 using Zenject;
 
 namespace NDoom.Unity.Data
@@ -18,6 +22,8 @@ namespace NDoom.Unity.Data
 		[Inject] private BattleStructuralDataStorage _battleStructuralDataStorage;
 		[Inject] private UnitStructuralDataStorage _unitStructuralDataStorage;
 
+		[Inject] private TagsData TagsData;
+
 		private AllData AllData => _allDataReferenceHolder.AllData;
 
 		public void LoadAllData()
@@ -25,6 +31,7 @@ namespace NDoom.Unity.Data
 			LoadGraphicalData();
 			LoadFunctionalData();
 			LoadStructuralData();
+			LoadTagsData();
 		}
 
 		private void LoadGraphicalData()
@@ -44,6 +51,16 @@ namespace NDoom.Unity.Data
 		{
 			AllData.Battles.ForEach(data => _battleStructuralDataStorage.Add(data.DataName, data.ToStructuralData()));
 			AllData.Units.ForEach(data => _unitStructuralDataStorage.Add(data.DataName, data.ToStructuralData()));
+		}
+
+		private void LoadTagsData()
+		{
+			var dataTagsDict = AllData.TagsData.Tags.ToDictionary(tag => tag.Name);
+			TagsData.Tags = dataTagsDict.Keys.Select(tagName => new ValueTag(tagName)).ToDictionary(tag => tag.Name);
+			TagsData.Tags.Keys.ForEach(
+				tag => dataTagsDict[tag].Ancestors.ForEach(
+					ancestor => TagsData.Tags[tag].Ancestors.Add(TagsData.Tags[ancestor])));
+			var t = 5;
 		}
 	}
 }

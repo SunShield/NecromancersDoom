@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.ScriptableObjects.Data.Battle;
+﻿using NDoom.Unity.ScriptableObjects.Data.Named.Battle;
 
 namespace NDoom.Editor.GameManager.Tabs
 {

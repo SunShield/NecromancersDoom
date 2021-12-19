@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.ScriptableObjects.Data.Skills;
+﻿using NDoom.Unity.ScriptableObjects.Data.Named.Skills;
 
 namespace NDoom.Editor.GameManager.Tabs
 {

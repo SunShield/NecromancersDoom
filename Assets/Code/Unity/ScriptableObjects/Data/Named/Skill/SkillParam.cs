@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Sirenix.OdinInspector;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Skills
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 {
 	public class SkillParam
 	{

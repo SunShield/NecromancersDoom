@@ -8,7 +8,7 @@ using NDoom.Unity.EntitySystem.Loadable.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Unit
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 {
 	public class UnitData 
 		: NamedData, 
@@ -20,7 +20,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Unit
 		private const string BasicUnitDataFoldoutGroupName = MainVerticalGroupName + "/Basic Data";
 		private const string BasicDataHorizontalGroupName = BasicUnitDataFoldoutGroupName + "/Horizontal";
 		private const string BasicDataVerticalGroupName = BasicDataHorizontalGroupName + "/Vertical";
-		private const string UnitMainDataFoldoutGroupName = BasicDataVerticalGroupName + "/MainData";
+		private const string UnitMainDataFoldoutGroupName = BasicDataVerticalGroupName + "/MainDataSo";
 		private const string UnitSkillDataFoldoutGroupName = BasicDataVerticalGroupName + "/Skills";
 		
 		public override string DataName => Name;

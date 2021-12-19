@@ -8,7 +8,7 @@
 		public const string UnitsDataPath = @"Assets/Data/Units";
 		public const string SkillsDataPath = @"Assets/Data/Skills";
 		public const string EffectsDataPath = @"Assets/Data/Effects";
-		public const string MainDataPath = @"Assets/Data/MainData.asset";
+		public const string MainDataPath = @"Assets/Data/MainDataSo.asset";
 		public const string ValueTagsDataPath = @"Assets/Data/TagsData.asset";
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using NDoom.Unity.Environment.Main;
-using NDoom.Unity.ScriptableObjects.Data;
+using NDoom.Unity.ScriptableObjects.Data.Single;
 using UnityEngine;
 
 namespace NDoom.Unity.Data

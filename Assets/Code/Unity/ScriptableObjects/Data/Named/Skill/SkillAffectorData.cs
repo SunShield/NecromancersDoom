@@ -1,7 +1,7 @@
 ﻿using NDoom.Unity.Battles.Affection;
 using Sirenix.OdinInspector;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Skills
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 {
 	public class SkillAffectorData
 	{

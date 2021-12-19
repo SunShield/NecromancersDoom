@@ -1,4 +1,4 @@
-﻿namespace NDoom.Unity.ScriptableObjects.Data.Unit
+﻿namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 {
 	public class UnitSkillData
 	{

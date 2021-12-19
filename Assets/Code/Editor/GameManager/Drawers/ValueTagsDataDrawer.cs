@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.ScriptableObjects.Data;
+﻿using NDoom.Unity.ScriptableObjects.Data.Single.Tags;
 
 namespace NDoom.Editor.GameManager.Drawers
 {

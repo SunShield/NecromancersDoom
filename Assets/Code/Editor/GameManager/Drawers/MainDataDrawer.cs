@@ -1,12 +1,12 @@
-﻿using NDoom.Unity.ScriptableObjects.Data;
+﻿using NDoom.Unity.ScriptableObjects.Data.Single;
 
 namespace NDoom.Editor.GameManager.Drawers
 {
-	public class MainDataDrawer : ScriptableObjectDrawer<MainData>
+	public class MainDataDrawer : ScriptableObjectDrawer<MainDataSo>
 	{
-		protected override void RegisterAsset(MainData asset)
+		protected override void RegisterAsset(MainDataSo asset)
 		{
-			AllData.MainData = asset;
+			AllData.m_mainDataSo = asset;
 		}
 	}
 }

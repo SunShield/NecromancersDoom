@@ -8,7 +8,7 @@ using NDoom.Unity.EntitySystem.Loadable.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Battle
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 {
 	public class BattleData 
 		: NamedData,

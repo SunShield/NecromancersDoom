@@ -6,7 +6,7 @@ using NDoom.Unity.EntitySystem.Loadable.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Skills
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 {
 	public class SkillData : 
 		NamedData, 

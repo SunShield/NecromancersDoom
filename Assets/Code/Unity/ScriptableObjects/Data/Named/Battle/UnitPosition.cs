@@ -1,6 +1,6 @@
 ﻿using Sirenix.OdinInspector;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Battle
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 {
 	public struct UnitPosition
 	{

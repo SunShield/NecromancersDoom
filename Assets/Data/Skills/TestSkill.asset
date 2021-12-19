@@ -23,11 +23,49 @@ MonoBehaviour:
     SerializationNodes:
     - Name: SkillParams
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Skills.SkillParam,
+      Data: 0|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Skills.SkillParam,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|NDoom.Unity.ScriptableObjects.Data.Named.Skills.SkillParam, Assembly-CSharp
+    - Name: Name
+      Entry: 6
+      Data: 
+    - Name: Tags
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListParamHolder,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListParamHolder,
+        Assembly-CSharp
+    - Name: Param1
+      Entry: 6
+      Data: 
+    - Name: Param2
+      Entry: 6
+      Data: 
+    - Name: Param3
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -36,7 +74,7 @@ MonoBehaviour:
       Data: 
     - Name: Affectors
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Skills.SkillAffectorData,
+      Data: 3|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Skills.SkillAffectorData,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12

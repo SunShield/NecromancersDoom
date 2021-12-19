@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.ScriptableObjects.Data.Effect;
+﻿using NDoom.Unity.ScriptableObjects.Data.Named.Effect;
 
 namespace NDoom.Editor.GameManager.Tabs
 {

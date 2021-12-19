@@ -1,4 +1,5 @@
 ﻿using NDoom.Core.Environment.EventSystem;
+using NDoom.Unity.Battles.Entities.Data.Concrete;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
 using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Battles.Entities.Spawning;
@@ -34,6 +35,7 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<SkillFunctionalDataStorage>().AsSingle().NonLazy();
 			Container.Bind<SkillGraphicalDataConverter>().AsSingle().NonLazy();
 			Container.Bind<SkillGraphicalDataStorage>().AsSingle().NonLazy();
+			Container.Bind<TagsData>().AsSingle().NonLazy();
 		}
 
 		private void BindUnityClasses()

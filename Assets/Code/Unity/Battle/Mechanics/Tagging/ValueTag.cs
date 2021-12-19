@@ -19,5 +19,7 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 		public HashSet<ValueTag> Ancestors { get; } = new HashSet<ValueTag>();
 
 		public string Name { get; set; }
+
+		public ValueTag(string name) => Name = name;
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using NDoom.Unity.EntitySystem.Loadable;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Effect
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Effect
 {
 	public class EffectData : NamedData
 	{

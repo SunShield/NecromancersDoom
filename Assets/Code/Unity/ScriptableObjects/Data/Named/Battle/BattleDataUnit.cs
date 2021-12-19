@@ -1,7 +1,7 @@
 ﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using Sirenix.OdinInspector;
 
-namespace NDoom.Unity.ScriptableObjects.Data.Battle
+namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 {
 	public class BattleDataUnit
 	{

@@ -1,4 +1,4 @@
-﻿using NDoom.Unity.ScriptableObjects.Data.Unit;
+﻿using NDoom.Unity.ScriptableObjects.Data.Named.Unit;
 
 namespace NDoom.Editor.GameManager.Tabs
 {

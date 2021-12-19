@@ -1,21 +1,33 @@
 ﻿using System.Collections.Generic;
-using NDoom.Unity.ScriptableObjects.Data.Battle;
-using NDoom.Unity.ScriptableObjects.Data.Effect;
-using NDoom.Unity.ScriptableObjects.Data.Skills;
-using NDoom.Unity.ScriptableObjects.Data.Unit;
+using NDoom.Unity.ScriptableObjects.Data.Named.Battle;
+using NDoom.Unity.ScriptableObjects.Data.Named.Effect;
+using NDoom.Unity.ScriptableObjects.Data.Named.Skills;
+using NDoom.Unity.ScriptableObjects.Data.Named.Unit;
+using NDoom.Unity.ScriptableObjects.Data.Single.Tags;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
-namespace NDoom.Unity.ScriptableObjects.Data
+namespace NDoom.Unity.ScriptableObjects.Data.Single
 {
 	[CreateAssetMenu(fileName = "All Data", menuName = "ScriptableObjects/All Data", order = 0)]
 	public class AllData : ScriptableObject
 	{
+		private static AllData _instance;
+		public static AllData Instance
+		{
+			get
+			{
+				if (_instance == null) _instance = AssetDatabase.LoadAssetAtPath<AllData>(@"Assets/Data/All Data.asset");
+				return _instance;
+			}
+		}
+
 		public List<BattleData> Battles;
 		public List<UnitData> Units;
 		public List<SkillData> Skills;
 		public List<EffectData> Effects;
-		public MainData MainData;
+		public MainDataSo m_mainDataSo;
 		public ValueTagsData TagsData;
 
 		public void Add(SerializedScriptableObject obj)
