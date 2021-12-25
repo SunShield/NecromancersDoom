@@ -27,28 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 1|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
       Data: 0
-    - Name: X
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -57,32 +36,11 @@ MonoBehaviour:
       Data: 
     - Name: RightUnits
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit,
+      Data: 1|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 3|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 6
-      Data: 
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
       Data: 0
-    - Name: X
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -90,7 +48,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Background: {fileID: 3470819074605407629, guid: 3c4d9844d965d0a46b5df4a28b6b7e47, type: 3}
-  Name: 
+  Name: TestBattle
   LeftBattlefieldSize: {x: 7, y: 4}
   LeftBattlefieldOffset: {x: 0, y: 0}
   RightBattlefieldSize: {x: 7, y: 4}
