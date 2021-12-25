@@ -5,6 +5,6 @@ namespace NDoom.Unity.Battles.Entities.Data.Concrete
 {
 	public class TagsData
 	{
-		public Dictionary<string, ValueTag> Tags = new Dictionary<string, ValueTag>();
+		public Dictionary<string, ParameterTag> Tags = new Dictionary<string, ParameterTag>();
 	}
 }

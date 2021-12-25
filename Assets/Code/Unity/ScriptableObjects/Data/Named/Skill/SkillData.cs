@@ -98,7 +98,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 				AddTagAndItsAncestorsToHashset(tag, tags, tagsData);
 			}
 
-			var parameter = new TaggedParameter(param.Name, tags.Select(tag => new ValueTag(tag)));
+			var parameter = new TaggedParameter(param.Name, tags.Select(tag => new ParameterTag(tag)));
 			return parameter;
 		}
 

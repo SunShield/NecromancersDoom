@@ -5,7 +5,9 @@ using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
+using NDoom.Unity.ScriptableObjects.Data.Single;
 using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
 namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
@@ -24,6 +26,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 		private const string LeftBattlefieldDataVerticalGroupName = BasicBattleDataHorizontalGroupName + "/LeftBattlefield";
 		private const string RightBattlefieldDataVerticalGroupName = BasicBattleDataHorizontalGroupName + "/RightBattlefield";
 		private const string BattleUnitsFoldoutGroupName = DataVerticalGroupName + "/Units";
+		private const string BattleUnitsHorizontalGroup = BattleUnitsFoldoutGroupName + "/Horizontal";
 
 		public override string DataName => Name;
 
@@ -52,9 +55,15 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 		[LabelWidth(130)]
 		public Vector2 RightBattlefieldOffset;
 
-		[FoldoutGroup(BattleUnitsFoldoutGroupName)]
+		[FoldoutGroup(BattleUnitsFoldoutGroupName)][HorizontalGroup(BattleUnitsHorizontalGroup)]
 		[TableList(ShowPaging = true, NumberOfItemsPerPage = 5)]
-		public List<BattleDataUnit> Units;
+		[ValueDropdown("GetUnitVariants")]
+		public List<BattleDataUnit> LeftUnits;
+
+		[HorizontalGroup(BattleUnitsHorizontalGroup)]
+		[TableList(ShowPaging = true, NumberOfItemsPerPage = 5)]
+		[ValueDropdown("GetUnitVariants")]
+		public List<BattleDataUnit> RightUnits;
 
 		public BattleGraphicalData ToGraphicalData()
 		{
@@ -73,8 +82,22 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 					{ BattlefieldSide.Left,  (LeftBattlefieldSize,  LeftBattlefieldOffset) },
 					{ BattlefieldSide.Right, (RightBattlefieldSize, RightBattlefieldOffset) }
 				},
-				UnitDatas = Units.Select(dataUnit => (dataUnit.Name, dataUnit.Side, dataUnit.Position.Y, dataUnit.Position.X)).ToList()
+				LeftUnitDatas =  LeftUnits.Select(dataUnit => (dataUnit.Name, dataUnit.Position.Y, dataUnit.Position.X)).ToList(),
+				RightUnitDatas = RightUnits.Select(dataUnit => (dataUnit.Name, dataUnit.Position.Y, dataUnit.Position.X)).ToList()
 			};
+		}
+
+		private ValueDropdownList<BattleDataUnit> GetUnitVariants()
+		{
+			var data = AssetDatabase.LoadAssetAtPath<AllData>(@"Assets/Data/All Data.asset");
+			var units = data.Units;
+			if (units == null || units.Count < 1) return null;
+			var result = new ValueDropdownList<BattleDataUnit>();
+			foreach (var unitData in units)
+			{
+				result.Add(unitData.Name, new BattleDataUnit() { Name = unitData.Name });
+			}
+			return result;
 		}
 	}
 }

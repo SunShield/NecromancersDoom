@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace NDoom.Unity.Battles.Mechanics.Tagging
+﻿namespace NDoom.Unity.Battles.Mechanics.Tagging
 {
 	/// <summary>
 	/// Tags represent specific "domain" value having them is related to.
@@ -9,7 +7,7 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 	/// Determined by their tags: For example "+30% Cold Damage"
 	/// will increase all values having "Cold" and "Damage".
 	/// </summary>
-	public class ValueTag
+	public class ParameterTag
 	{
 		/// <summary>
 		/// Tags can be build into the hierarchies.
@@ -20,6 +18,6 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 
 		public string Name { get; set; }
 
-		public ValueTag(string name) => Name = name;
+		public ParameterTag(string name) => Name = name;
 	}
 }

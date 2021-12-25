@@ -90,9 +90,15 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 
 		private void SpawnUnitsForBattle(Battle battle, BattleStructuralData structuralData)
 		{
-			foreach (var unitData in structuralData.UnitDatas)
+			foreach (var unitData in structuralData.LeftUnitDatas)
 			{
-				var tile = battle.Battlefields[unitData.side][unitData.row, unitData.col];
+				var tile = battle.Battlefields[BattlefieldSide.Left][unitData.row, unitData.col];
+				SpawnUnit(unitData.unitName, tile);
+			}
+
+			foreach (var unitData in structuralData.RightUnitDatas)
+			{
+				var tile = battle.Battlefields[BattlefieldSide.Right][unitData.row, unitData.col];
 				SpawnUnit(unitData.unitName, tile);
 			}
 		}

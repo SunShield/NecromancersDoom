@@ -7,7 +7,7 @@ namespace NDoom.Editor.GameManager.Tabs
 	public abstract class GameManagerNamedDataTabDrawer<TData> : GameManagerTabDrawer
 		where TData : NamedData
 	{
-		public NamedDataDrawer<TData> Drawer { get; private set; } = new NamedDataDrawer<TData>();
+		public virtual NamedDataDrawer<TData> Drawer { get; } = new NamedDataDrawer<TData>();
 		public sealed override object DrawableContent => Drawer;
 		public sealed override bool HasMenuTree => true;
 

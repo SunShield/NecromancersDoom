@@ -14,17 +14,17 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 		/// </summary>
 		public string Name { get; private set; }
 
-		public HashSet<ValueTag> Tags { get; }
+		public HashSet<ParameterTag> Tags { get; }
 		public float InnerValue { get; set; }
 
-		public TaggedParameter(string name, IEnumerable<ValueTag> tags)
+		public TaggedParameter(string name, IEnumerable<ParameterTag> tags)
 		{
-			Tags = new HashSet<ValueTag>();
+			Tags = new HashSet<ParameterTag>();
 			InnerValue = 0;
 			Name = name;
 		}
 
-		public TaggedParameter(string name, IEnumerable<ValueTag> tags, float value) : this(name, tags) => InnerValue = value;
+		public TaggedParameter(string name, IEnumerable<ParameterTag> tags, float value) : this(name, tags) => InnerValue = value;
 		public TaggedParameter(TaggedParameter parameter) : this(parameter.Name, parameter.Tags, parameter.InnerValue) {}
 
 		public static TaggedParameter operator +(TaggedParameter parameter, float another) 

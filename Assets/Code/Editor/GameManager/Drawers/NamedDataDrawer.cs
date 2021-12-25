@@ -36,7 +36,10 @@ namespace NDoom.Editor.GameManager.Drawers
 			AssetDatabase.SaveAssets();
 
 			_newObjectName = string.Empty;
+			ProcessPostCreate(newItem);
 		}
+
+		protected virtual void ProcessPostCreate(TData data) { }
 
 		[HorizontalGroup("Create New/Horizontal")][GUIColor(1f, 0.7f, 0.7f)][Button]
 		public void Delete()
