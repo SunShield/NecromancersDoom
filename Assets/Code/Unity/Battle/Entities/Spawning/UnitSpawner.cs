@@ -2,6 +2,8 @@
 using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Battles.Entities.Spawning.Args;
 using NDoom.Unity.EntitySystem.Spawning;
+using NDoom.Unity.Service.Extensions;
+using UnityEngine;
 using Zenject;
 
 namespace NDoom.Unity.Battles.Entities.Spawning
@@ -16,22 +18,29 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 
 		protected override void ProcessEntityPostChildBinding(Unit entity, UnitSpawnArgs args)
 		{
-			SetUnitGraphics(entity);
+			SetUnitGraphics(entity, args);
 			SetUnitPosition(entity, args);
 			SetUnitFunctionalData(entity);
 		}
 
-		private void SetUnitGraphics(Unit entity)
+		private void SetUnitGraphics(Unit entity, UnitSpawnArgs args)
 		{
 			var data = _graphicalDataStorage[entity.Name];
 			var processedData = _converter.Process(data);
 			entity.SetGraphics(processedData);
+			SetUnitGraphicsFlip(entity, args);
 		}
 
-		private void SetUnitPosition(Unit entity, UnitSpawnArgs args)
+		private void SetUnitGraphicsFlip(Unit unit, UnitSpawnArgs args)
 		{
-			entity.transform.position = args.Ancestor.transform.position;
+			var side = unit.Tile.Battlefield.Side;
+			if (side != Data.Concrete.Positioning.BattlefieldSide.Right) return;
+
+			var scale = unit.transform.localScale;
+			unit.transform.localScale = new Vector3(scale.x * -1, scale.y, scale.z);
 		}
+
+		private void SetUnitPosition(Unit entity, UnitSpawnArgs args) => entity.transform.position = args.Ancestor.transform.position;
 
 		private void SetUnitFunctionalData(Unit entity)
 		{
