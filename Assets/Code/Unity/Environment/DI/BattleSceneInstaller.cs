@@ -1,4 +1,6 @@
-﻿using NDoom.Unity.Battles;
+﻿using NDoom.Unity.Battle.Entities.Storaging;
+using NDoom.Unity.Battle.Mechanics.Skills.Affection;
+using NDoom.Unity.Battles;
 using NDoom.Unity.Battles.Entities.Spawning;
 using NDoom.Unity.Environment.SceneManagement.Preparation;
 using Zenject;
@@ -15,6 +17,8 @@ namespace NDoom.Unity.Environment.DI
 
 		private void BindNonUnityClasses()
 		{
+			Container.Bind<EntityRegistry>().AsSingle().NonLazy();
+			Container.Bind<AffectorSpawner>().AsSingle().NonLazy();
 			Container.Bind<SkillExecutionActionsCreator>().AsSingle().NonLazy();
 			Container.Bind<BattleEntititesSpawnFacade>().AsSingle().NonLazy();
 		}

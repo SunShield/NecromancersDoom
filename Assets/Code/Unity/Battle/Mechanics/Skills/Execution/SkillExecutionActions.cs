@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NDoom.Unity.Battle.Mechanics.Skills.Affection;
 using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Entities;
 using NDoom.Unity.Battles.Mechanics.Tagging;
@@ -16,14 +17,15 @@ namespace NDoom.Unity.Battles.Mechanics.Skills.Execution
 	public abstract class SkillExecutionActions
 	{
 		[Inject] private CoroutineRunner _coroutineRunner;
-		protected Skill Owner { get; private set; }
+		[Inject] protected AffectorSpawner AffectorSpawner { get; }
+		public Skill OwnerSkill { get; private set; }
 
 		public bool IsExecuting { get; private set; }
-		public IReadOnlyDictionary<string, TaggedParameter> Parameters => Owner.Data.Parameters;
-		public IReadOnlyDictionary<string, Affector> Affectors => Owner.Data.AffectorPrefabs;
+		public IReadOnlyDictionary<string, TaggedParameter> Parameters => OwnerSkill.Data.Parameters;
+		public IReadOnlyDictionary<string, Affector> AffectorPrefabs => OwnerSkill.Data.AffectorPrefabs;
 
 		// TODO: pass params here
-		public void Initialize(Skill skill) => Owner = skill;
+		public void Initialize(Skill skill) => OwnerSkill = skill;
 
 		/// <summary>
 		/// This method can be used to prevent execution of skill if some battlefield conditions are not met

@@ -33,7 +33,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		private BattleSpawnArgs CreateBattleSpawnArgs(string battleName)
 			=> new BattleSpawnArgs() { Name = battleName, };
 
-		private void SpawnBattlefields(Battle battle, BattleStructuralData structuralData)
+		private void SpawnBattlefields(BattleU battle, BattleStructuralData structuralData)
 		{
 			foreach (var side in Enum.GetValues(typeof(BattlefieldSide)).Cast<BattlefieldSide>())
 			{
@@ -42,14 +42,14 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			}
 		}
 
-		private void SpawnBattlefield(Battle battle, BattlefieldSide side, Vector2Int size, Vector2 offset)
+		private void SpawnBattlefield(BattleU battle, BattlefieldSide side, Vector2Int size, Vector2 offset)
 		{
 			var args = CreateBattlefieldSpawnArgs(battle, side, size, offset);
 			var battlefield = _battlefieldSpawner.Spawn(args);
 			SpawnTiles(battlefield);
 		}
 
-		private BattlefieldSpawnArgs CreateBattlefieldSpawnArgs(Battle battle, BattlefieldSide side, Vector2Int size, Vector2 offset)
+		private BattlefieldSpawnArgs CreateBattlefieldSpawnArgs(BattleU battle, BattlefieldSide side, Vector2Int size, Vector2 offset)
 		{
 			return new BattlefieldSpawnArgs()
 			{
@@ -88,7 +88,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			};
 		}
 
-		private void SpawnUnitsForBattle(Battle battle, BattleStructuralData structuralData)
+		private void SpawnUnitsForBattle(BattleU battle, BattleStructuralData structuralData)
 		{
 			foreach (var unitData in structuralData.LeftUnitDatas)
 			{

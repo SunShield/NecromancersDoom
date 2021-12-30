@@ -8,9 +8,9 @@ using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
 {
-	public class Battle 
+	public class BattleU 
 		: Entity, 
-		  IAncestorEntity<Battlefield, Battle>, 
+		  IAncestorEntity<Battlefield, BattleU>, 
 		  IGraphicalEntity<BattleGraphicalData, BattleProcessedGraphicalData>, 
 		  IStructurableEntity<BattleStructuralData>
 	{

@@ -33,6 +33,7 @@ namespace NDoom.Unity.Environment.Main
 		protected virtual void InitializeInternal() { }
 		protected virtual void DestroyInternal() { }
 		public virtual void UpdateManually() { }
+		public virtual void FixedUpdateManually() { }
 
 		private void OnDestroy() => DestroyInternal();
 	}

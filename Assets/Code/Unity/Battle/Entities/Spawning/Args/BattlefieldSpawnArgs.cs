@@ -5,7 +5,7 @@ using UnityEngine;
 namespace NDoom.Unity.Battles.Entities.Spawning.Args
 {
 	public class BattlefieldSpawnArgs
-		: PositionableEntitySpawnArgs<Battle, Battlefield, BattlefieldPositioningData>
+		: PositionableEntitySpawnArgs<BattleU, Battlefield, BattlefieldPositioningData>
 	{
 		public int Rows { get; set; }
 		public int Cols { get; set; }

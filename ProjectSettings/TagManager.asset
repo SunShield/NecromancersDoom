@@ -47,3 +47,6 @@ TagManager:
   - name: Units
     uniqueID: 181032103
     locked: 0
+  - name: Affectors
+    uniqueID: 2380296461
+    locked: 0

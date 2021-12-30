@@ -26,7 +26,14 @@ namespace NDoom.Unity.Environment.Main
 			RemoveDestroyedBehaviours();
 		}
 
-		private void AddRegistredBehaviours()
+        private void FixedUpdate()
+        {
+			AddRegistredBehaviours();
+			FixedUpdateManually();
+			RemoveDestroyedBehaviours();
+		}
+
+        private void AddRegistredBehaviours()
 		{
 			if (_registredBehaviours.Count == 0) return;
 
@@ -51,6 +58,21 @@ namespace NDoom.Unity.Environment.Main
 				{
 					if (behaviour.gameObject.activeSelf) // if GO is inactive, it shouldn't get updated
 						behaviour.UpdateManually();
+				}
+			}
+		}
+
+		private void FixedUpdateManually()
+        {
+			foreach (var id in _behaviours.Keys)
+			{
+				var behaviour = _behaviours[id];
+				if (behaviour == null)
+					MarkBehaviourAsRemoved(id);
+				else
+				{
+					if (behaviour.gameObject.activeSelf) // if GO is inactive, it shouldn't get updated
+						behaviour.FixedUpdateManually();
 				}
 			}
 		}

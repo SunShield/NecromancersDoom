@@ -1,4 +1,5 @@
-﻿using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
+﻿using NDoom.Unity.Battle.Entities.Storaging;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
 using NDoom.Unity.Battles.Entities.Data.Storaging;
 using NDoom.Unity.Battles.Entities.Spawning.Args;
 using NDoom.Unity.EntitySystem.Spawning;
@@ -13,15 +14,18 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 		[Inject] private UnitGraphicalDataConverter _converter;
 		[Inject] private UnitGraphicalDataStorage _graphicalDataStorage;
 		[Inject] private UnitFunctionalDataStorage _functionalDataStorage;
-
+		[Inject] private EntityRegistry _entityRegistry;
 		protected override string GetEntityName(UnitSpawnArgs args) => $"Unit [{args.Name}]";
 
 		protected override void ProcessEntityPostChildBinding(Unit entity, UnitSpawnArgs args)
 		{
+			RegisterUnit(entity);
 			SetUnitGraphics(entity, args);
 			SetUnitPosition(entity, args);
 			SetUnitFunctionalData(entity);
 		}
+
+		private void RegisterUnit(Unit unit) => _entityRegistry.RegisterUnit(unit);
 
 		private void SetUnitGraphics(Unit entity, UnitSpawnArgs args)
 		{

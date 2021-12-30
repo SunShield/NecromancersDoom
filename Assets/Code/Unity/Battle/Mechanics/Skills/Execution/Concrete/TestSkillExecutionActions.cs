@@ -9,7 +9,8 @@ namespace NDoom.Unity.Battles.Mechanics.Skills.Execution.Concrete
 		protected override IEnumerator ExecuteInternal()
 		{
 			yield return new WaitForSeconds(1f);
-			GameDebugger.Log("TEST", Parameters["TestParameter"].InnerValue);
+			var spawned = AffectorSpawner.SpawnAffector(this, AffectorPrefabs["TestAffector"]);
+			spawned.transform.position = OwnerSkill.transform.position;
 		}
 	}
 }

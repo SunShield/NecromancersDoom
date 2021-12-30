@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 1|NDoom.Unity.ScriptableObjects.Data.Named.Skills.SkillParam, Assembly-CSharp
     - Name: Name
       Entry: 1
-      Data: TestParameter
+      Data: Speed
     - Name: DefaultValue
       Entry: 4
       Data: 10
@@ -50,7 +50,7 @@ MonoBehaviour:
       Data: NDoom.Unity.ScriptableObjects.Data.Named.Skills.ThreeListTagHolder, Assembly-CSharp
     - Name: Tag1
       Entry: 1
-      Data: Damage
+      Data: Speed
     - Name: Tag2
       Entry: 1
       Data: 

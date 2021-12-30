@@ -6,7 +6,7 @@ using UnityEngine;
 namespace NDoom.Unity.Battles.Entities.Spawning
 {
 	public class BattlefieldSpawner 
-		: PositionableEntitySpawner<Battlefield, BattlefieldSpawnArgs, Battle, BattlefieldPositioningData>
+		: PositionableEntitySpawner<Battlefield, BattlefieldSpawnArgs, BattleU, BattlefieldPositioningData>
 	{
 		protected override string GetEntityName(BattlefieldSpawnArgs args) => $"Battlefield [{args.Position.Side}]";
 

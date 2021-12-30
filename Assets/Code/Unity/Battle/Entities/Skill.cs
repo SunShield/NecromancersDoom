@@ -17,7 +17,7 @@ namespace NDoom.Unity.Battles.Entities
 		[SerializeField] private Transform _graphicsOrigin;
 		[SerializeField] private SkillExecutionController _executionController;
 
-		public Unit Holder { get; private set; }
+		public Unit HolderUnit { get; private set; }
 		public SkillFunctionalData Data { get; private set; }
 		public SkillExecutionActions Actions { get; private set; }
 
@@ -28,7 +28,7 @@ namespace NDoom.Unity.Battles.Entities
 
 		public void SetExecutionActions(SkillExecutionActions actions) => Actions = actions;
 
-		public void BindToAncestor(Unit ancestor) => Holder = ancestor;
+		public void BindToAncestor(Unit ancestor) => HolderUnit = ancestor;
 		public void SetFromFunctionalData(SkillFunctionalData functionalData) => Data = functionalData;
 
 		public void SetGraphics(SkillProcessedGraphicalData graphicalData)
