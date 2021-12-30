@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 8548204654048760906, guid: dee0573a3ab55eb47a179ba28314e1db, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -80,7 +81,20 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|NDoom.Unity.ScriptableObjects.Data.Named.Skills.SkillAffectorData,
+        Assembly-CSharp
+    - Name: Prefab
+      Entry: 10
       Data: 0
+    - Name: Name
+      Entry: 1
+      Data: TestAffector
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

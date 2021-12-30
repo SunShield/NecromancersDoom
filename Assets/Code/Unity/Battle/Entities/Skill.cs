@@ -1,14 +1,14 @@
 ﻿using NDoom.Unity.Battles.Entities.Components.Skills;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
-using NDoom.Unity.Battles.Entities.Skills;
+using NDoom.Unity.Battles.Mechanics.Skills.Execution;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
 using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
 {
-	public class Skill
+    public class Skill
 		: Entity, 
 			IChildEntity<Unit, Skill>,
 			IGraphicalEntity<SkillGraphicalData, SkillProcessedGraphicalData>,

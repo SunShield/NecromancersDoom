@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NDoom.Unity.Battles.Affection;
+using NDoom.Unity.Battles.Entities;
 using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.Environment.Main;
 using Zenject;
 
-namespace NDoom.Unity.Battles.Entities.Skills
+namespace NDoom.Unity.Battles.Mechanics.Skills.Execution
 {
 	/// <summary>
 	/// This is an internal class for storing "What exactly skill does".
@@ -18,6 +20,7 @@ namespace NDoom.Unity.Battles.Entities.Skills
 
 		public bool IsExecuting { get; private set; }
 		public IReadOnlyDictionary<string, TaggedParameter> Parameters => Owner.Data.Parameters;
+		public IReadOnlyDictionary<string, Affector> Affectors => Owner.Data.AffectorPrefabs;
 
 		// TODO: pass params here
 		public void Initialize(Skill skill) => Owner = skill;

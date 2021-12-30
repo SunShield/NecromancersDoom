@@ -2,7 +2,7 @@
 using NDoom.Unity.Environment.Debugging;
 using UnityEngine;
 
-namespace NDoom.Unity.Battles.Entities.Skills.Concrete
+namespace NDoom.Unity.Battles.Mechanics.Skills.Execution.Concrete
 {
 	public class TestSkillExecutionActions : SkillExecutionActions
 	{
