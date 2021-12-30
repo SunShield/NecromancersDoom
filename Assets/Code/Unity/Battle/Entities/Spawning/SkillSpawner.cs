@@ -49,7 +49,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 			{
 				var overridenParam = new TaggedParameter(data.Parameters[paramValue])
 				{
-					InnerValue = args.ParamValues[paramValue]
+					Value = new Mechanics.Modifiable.ModifiableFloat(args.ParamValues[paramValue])
 				};
 				data.Parameters[paramValue] = overridenParam;
 			}

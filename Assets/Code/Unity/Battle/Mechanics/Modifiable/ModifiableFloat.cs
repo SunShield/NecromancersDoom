@@ -1,4 +1,7 @@
-﻿namespace NDoom.Unity.Battles.Mechanics.Modifiable
+﻿using NDoom.Unity.Battle.Mechanics.Modifiable;
+using System.Collections.Generic;
+
+namespace NDoom.Unity.Battles.Mechanics.Modifiable
 {
 	/// <summary>
 	/// This class wraps a float value and adds all the list of modifications from effects atc,
@@ -21,13 +24,78 @@
 			}
 		}
 
+		private Dictionary<ModificationType, List<Modification>> _allModifications = new Dictionary<ModificationType, List<Modification>>()
+		{
+			{ ModificationType.FlatBase,              new List<Modification>() },
+			{ ModificationType.IncreasementReduction, new List<Modification>() },
+			{ ModificationType.FlatAdditional,        new List<Modification>() },
+			{ ModificationType.MoreLess,              new List<Modification>() },
+		};
+
 		public float FinalValue { get; set; }
 
-		public ModifiableFloat(float baseValue) => BaseValue = baseValue;
+		public ModifiableFloat(float baseValue)
+		{ 
+			BaseValue = baseValue;
+			FinalValue = BaseValue;
+		}
+
+		public ModifiableFloat(ModifiableFloat another)
+        {
+			BaseValue = another.BaseValue;
+			FinalValue = BaseValue;
+			foreach (var modificationType in _allModifications.Keys)
+            {
+				if (!_allModifications.ContainsKey(modificationType)) _allModifications.Add(modificationType, new List<Modification>());
+				
+				foreach(var modification in another._allModifications[modificationType])
+					_allModifications[modificationType].Add(new Modification(modification));
+            }
+
+			RecalculateFinalValue();
+        }
+
+		public void AddModification(Modification modification)
+		{
+			_allModifications[modification.Type].Add(modification);
+			RecalculateFinalValue();
+		}
 
 		private void RecalculateFinalValue()
 		{
+			var baseValue = _baseValue;
+			ApplyFlatBaseModifications(ref baseValue);
+			ApplyIncreasementReductionModifications(ref baseValue);
+			ApplyFlatAdditionalModifications(ref baseValue);
+			ApplyMoreLessModifications(ref baseValue);
+			FinalValue = baseValue;
+		}
 
+		private void ApplyFlatBaseModifications(ref float _value)
+        {
+			foreach(var modification in _allModifications[ModificationType.FlatBase])
+				_value += modification.Value;
+        }
+
+		private void ApplyIncreasementReductionModifications(ref float _value)
+        {
+			float increasementReductionPercent = 0;
+			foreach (var modification in _allModifications[ModificationType.IncreasementReduction])
+				increasementReductionPercent += modification.Value;
+
+			_value = _value * (1 + increasementReductionPercent / 100f);
+		}
+
+		private void ApplyFlatAdditionalModifications(ref float _value)
+		{
+			foreach (var modification in _allModifications[ModificationType.FlatAdditional])
+				_value += modification.Value;
+		}
+
+		private void ApplyMoreLessModifications(ref float _value)
+		{
+			foreach (var modification in _allModifications[ModificationType.MoreLess])
+				_value *= (modification.Value / 100f);
 		}
 	}
 }

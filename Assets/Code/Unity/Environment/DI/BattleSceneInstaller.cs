@@ -18,7 +18,6 @@ namespace NDoom.Unity.Environment.DI
 		private void BindNonUnityClasses()
 		{
 			Container.Bind<EntityRegistry>().AsSingle().NonLazy();
-			Container.Bind<AffectorSpawner>().AsSingle().NonLazy();
 			Container.Bind<SkillExecutionActionsCreator>().AsSingle().NonLazy();
 			Container.Bind<BattleEntititesSpawnFacade>().AsSingle().NonLazy();
 		}
@@ -33,6 +32,7 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<TileSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.Bind<UnitSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.Bind<SkillSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
+			Container.Bind<AffectorSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 		}
 	}
 }

@@ -29,7 +29,7 @@ namespace NDoom.Unity.Battle.Mechanics.Skills.Affection.Behaviours.Concrete
 
         protected override void OnFixedUpdate()
         {
-            RigidBody.MovePosition(transform.position + _direction * Time.fixedDeltaTime * Parameters["Speed"].InnerValue / 100f);
+            RigidBody.MovePosition(transform.position + _direction * Time.fixedDeltaTime * Parameters["Speed"].Value.FinalValue / 100f);
         }
     }
 }

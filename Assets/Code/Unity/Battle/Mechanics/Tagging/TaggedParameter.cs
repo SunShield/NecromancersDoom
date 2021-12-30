@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using NDoom.Unity.Battles.Mechanics.Modifiable;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace NDoom.Unity.Battles.Mechanics.Tagging
 {
@@ -14,30 +16,22 @@ namespace NDoom.Unity.Battles.Mechanics.Tagging
 		/// </summary>
 		public string Name { get; private set; }
 
-		public HashSet<ParameterTag> Tags { get; }
-		public float InnerValue { get; set; }
+		public HashSet<ParameterTag> Tags { get; private set; }
+		public ModifiableFloat Value { get; set; }
 
-		public TaggedParameter(string name, IEnumerable<ParameterTag> tags)
+		public TaggedParameter(string name)
 		{
 			Tags = new HashSet<ParameterTag>();
-			InnerValue = 0;
+			Value = new ModifiableFloat(0);
 			Name = name;
 		}
 
-		public TaggedParameter(string name, IEnumerable<ParameterTag> tags, float value) : this(name, tags) => InnerValue = value;
-		public TaggedParameter(TaggedParameter parameter) : this(parameter.Name, parameter.Tags, parameter.InnerValue) {}
+		public TaggedParameter(string name, IEnumerable<ParameterTag> tags) : this(name) { Tags = tags.ToHashSet(); }
 
-		public static TaggedParameter operator +(TaggedParameter parameter, float another) 
-			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue + another);
-		public static TaggedParameter operator +(float another, TaggedParameter parameter) 
-			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue + another);
-		public static TaggedParameter operator -(TaggedParameter parameter, float another)
-			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue - another);
-		public static TaggedParameter operator *(TaggedParameter parameter, float another) 
-			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue * another);
-		public static TaggedParameter operator *(float another, TaggedParameter parameter) 
-			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue * another);
-		public static TaggedParameter operator /(TaggedParameter parameter, float another) 
-			=> new TaggedParameter(parameter.Name, parameter.Tags, parameter.InnerValue / another);
+		public TaggedParameter(string name, IEnumerable<ParameterTag> tags, float value) : this(name, tags) => Value = new ModifiableFloat(value);
+
+		public TaggedParameter(string name, IEnumerable<ParameterTag> tags, ModifiableFloat value) : this(name, tags) => Value = new ModifiableFloat(value);
+
+		public TaggedParameter(TaggedParameter parameter) : this(parameter.Name, parameter.Tags, parameter.Value) {}
 	}
 }
