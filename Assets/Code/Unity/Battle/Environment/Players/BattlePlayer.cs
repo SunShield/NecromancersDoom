@@ -34,6 +34,16 @@ namespace NDoom.Unity.Battle.Environment.Players
             _deck.Add(("Skeleton", null));
             _deck.Add(("Skeleton", null));
             _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
+            _deck.Add(("Skeleton", null));
         }
 
         private void InitializeCardsController() => _cardsController.Initialize(this);
