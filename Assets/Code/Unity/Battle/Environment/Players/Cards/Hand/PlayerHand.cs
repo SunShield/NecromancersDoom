@@ -20,6 +20,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
 
         public int HandSize { get; private set; }
         public bool IsFull => CheckHandFull();
+        public bool HasCardInFirstSpot => !_cardSpots[0].IsEmpty;
 
         public void Initialize()
         {
@@ -75,20 +76,31 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
 
         public void AddCard(PlayerCard card)
         {
-            var freeIndex = GetHighestFreeIndex();
-            if (freeIndex == NoEmptySpot) return;
-
-            var freeSpot = _cardSpots[freeIndex];
-            Debug.Log($"Spot: {freeSpot.Index} | Free: {freeIndex}");
-            freeSpot.SetCard(card);
+            var fistSpot = _cardSpots[0];
+            fistSpot.SetCard(card);
         }
 
-        private int GetHighestFreeIndex()
+        public override void UpdateManually()
         {
-            for(int i = HandSize - 1; i >= 0; i--)
-                if (_cardSpots[i].IsEmpty) return i;
+            for(int i = HandSize - 1; i >= 1; i--)
+            {
+                var currentSpot = _cardSpots[i];
+                var previousSpot = _cardSpots[i - 1];
 
-            return NoEmptySpot;
+                if (!currentSpot.IsEmpty) continue;
+                if (previousSpot.IsEmpty) continue;
+                if (!previousSpot.CardArrived) continue;
+
+                Debug.Log($"Moving card from spot {i - 1} to spot {i}");
+                MoveCardBetweenSpots(previousSpot, currentSpot);
+            }
+        }
+
+        private void MoveCardBetweenSpots(HandSpot currentSpot, HandSpot nextSpot)
+        {
+            var card = currentSpot.Card;
+            currentSpot.SetCard(null);
+            nextSpot.SetCard(card);
         }
     }
 }

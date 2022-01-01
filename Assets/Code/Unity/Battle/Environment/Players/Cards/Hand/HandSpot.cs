@@ -12,6 +12,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
 
         [ShowInInspector] public PlayerCard Card { get; private set; }
         public int Index { get; private set; }
+        public bool CardArrived { get; private set; }
         public bool IsEmpty => Card == null;
 
         public void Initialize(int index) => Index = index;
@@ -19,7 +20,9 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
         public void SetCard(PlayerCard card)
         {
             Card = card;
-            card.transform.parent = _cardOrigin;
+            CardArrived = false;
+
+            if (card != null) card.transform.parent = _cardOrigin;
         }
 
         public override void UpdateManually()
@@ -27,11 +30,19 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             if (Card == null) return;
 
             var cardTransform = Card.transform;
-            var cardY = Mathf.Clamp(cardTransform.position.y - _cardMoveSpeed * Time.deltaTime, _cardOrigin.position.y, 100f);
-            cardTransform.position = new Vector3(cardTransform.position.x, cardY, cardTransform.position.z);
+            var cardY = CalculateCardY(cardTransform);
+            MoveCardToSpot(cardTransform, cardY);
+            if (cardY == _cardOrigin.position.y) OnCardArrive();
         }
 
+        private float CalculateCardY(Transform cardTransform) 
+            => Mathf.Clamp(cardTransform.position.y - _cardMoveSpeed * Time.deltaTime, _cardOrigin.position.y, 100f);
+
+        private void MoveCardToSpot(Transform cardTransform, float cardY) 
+            => cardTransform.position = new Vector3(cardTransform.position.x, cardY, cardTransform.position.z);
+
         private void OnMouseDown() => OnCardClicked();
+        private void OnCardArrive() => CardArrived = true;
 
         private void OnCardClicked() => onCardSpotClicked?.Invoke(Index);
 
