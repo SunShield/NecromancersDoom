@@ -22,14 +22,14 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             Card = card;
             CardArrived = false;
 
-            if (card != null) card.transform.parent = _cardOrigin;
+            if (card != null) card.Transform.parent = _cardOrigin;
         }
 
         public override void UpdateManually()
         {
             if (Card == null) return;
 
-            var cardTransform = Card.transform;
+            var cardTransform = Card.Transform;
             var cardY = CalculateCardY(cardTransform);
             MoveCardToSpot(cardTransform, cardY);
             if (cardY == _cardOrigin.position.y) OnCardArrive();
@@ -41,11 +41,6 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
         private void MoveCardToSpot(Transform cardTransform, float cardY) 
             => cardTransform.position = new Vector3(cardTransform.position.x, cardY, cardTransform.position.z);
 
-        private void OnMouseDown() => OnCardClicked();
         private void OnCardArrive() => CardArrived = true;
-
-        private void OnCardClicked() => onCardSpotClicked?.Invoke(Index);
-
-        public event Action<int> onCardSpotClicked;
     }
 }

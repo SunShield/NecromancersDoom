@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using UnityEngine;
 using Zenject;
 
 namespace NDoom.Unity.Environment.Main
@@ -7,12 +8,15 @@ namespace NDoom.Unity.Environment.Main
 	{
 		[Inject] private Updater _updater;
 
+		public Transform Transform { get; private set; }
+
 		[Inject]
 		private void Initialize()
 		{
 			if (_updater == null) InjectCurrentGo();
 
 			RegisterThisBehaviourForUpdate();
+			InitializeComponents();
 			InitializeInternal();
 		}
 
@@ -29,6 +33,11 @@ namespace NDoom.Unity.Environment.Main
 			=> ProjectContext.Instance.Container.Resolve<SceneContextRegistry>().GetContainerForScene(gameObject.scene);
 
 		private void RegisterThisBehaviourForUpdate() => _updater.RegisterUpdatebleBehaviour(this);
+
+		private void InitializeComponents()
+        {
+			Transform = transform;
+        }
 
 		protected virtual void InitializeInternal() { }
 		protected virtual void DestroyInternal() { }

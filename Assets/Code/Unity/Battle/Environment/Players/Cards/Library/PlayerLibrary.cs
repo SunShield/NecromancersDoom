@@ -42,6 +42,8 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Library
 
         public PlayerCard GrabCard(int index)
         {
+            if (_cards.Count == 0) return null;
+
             var card = _cards[index];
             _cards.RemoveAt(index);
             return card;

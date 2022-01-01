@@ -1,4 +1,5 @@
 ﻿using NDoom.Unity.Environment.Main;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -28,7 +29,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             PopulateSpots();
         }
 
-        // TODO: add support for dynamic change of ahnd size
+        // TODO: add support for dynamic change of and size
         // Static size for now
         private void PopulateSpots()
         {
@@ -56,15 +57,8 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             tran.parent = _spotsOrigin;
         }
 
-        private void InitSpot(HandSpot spot, int spotIndex) 
-        { 
-            spot.Initialize(spotIndex);
-            spot.onCardSpotClicked += OnSpotClicked;
-        }
+        private void InitSpot(HandSpot spot, int spotIndex) => spot.Initialize(spotIndex);
 
-        private void OnSpotClicked(int spotIndex)
-        {
-        }
 
         public bool CheckHandFull()
         {
@@ -91,7 +85,6 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
                 if (previousSpot.IsEmpty) continue;
                 if (!previousSpot.CardArrived) continue;
 
-                Debug.Log($"Moving card from spot {i - 1} to spot {i}");
                 MoveCardBetweenSpots(previousSpot, currentSpot);
             }
         }
@@ -101,6 +94,18 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             var card = currentSpot.Card;
             currentSpot.SetCard(null);
             nextSpot.SetCard(card);
+        }
+
+        public void RemoveCard(PlayerCard card)
+        {
+            for(int i = 0; i < HandSize; i++)
+            {
+                var currentSpot = _cardSpots[i];
+                if (currentSpot.Card != card) continue;
+
+                currentSpot.SetCard(null);
+                break;
+            }
         }
     }
 }

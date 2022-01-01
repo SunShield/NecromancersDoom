@@ -19,6 +19,7 @@ namespace NDoom.Unity.Battle.Environment.Players
 
         private List<(string untiName, UnitFunctionalData overridenData)> _deck = new List<(string untiName, UnitFunctionalData overridenData)>();
         public IReadOnlyList<(string untiName, UnitFunctionalData overridenData)> Deck => _deck;
+        public IReadOnlyList<PlayerCard> Cards => _cardsController.Cards;
 
         public void Initialize(BattlefieldSide side)
         {
@@ -29,15 +30,7 @@ namespace NDoom.Unity.Battle.Environment.Players
 
         public void SetDeck()
         {
-            // TODO: some logic here later, test logic now
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
+            // TODO: later fetch this info from elsewhere?
             _deck.Add(("Skeleton", null));
             _deck.Add(("Skeleton", null));
             _deck.Add(("Skeleton", null));
