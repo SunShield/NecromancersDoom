@@ -30,6 +30,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             for (int i = 0; i < HandSize; i++)
             {
                 var spot = Instantiate(_handSpotPrefab, _leftSpotPositionMarker.position + distance * i, Quaternion.identity, _spotsOrigin);
+                spot.transform.localScale = Vector3.one;
                 _cardSpots.Add(spot);
             }
         }

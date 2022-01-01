@@ -1,4 +1,5 @@
 ﻿using NDoom.Unity.Battle.Entities.Storaging;
+using NDoom.Unity.Battle.Environment;
 using NDoom.Unity.Battle.Mechanics.Skills.Affection;
 using NDoom.Unity.Battles;
 using NDoom.Unity.Battles.Entities.Spawning;
@@ -25,6 +26,7 @@ namespace NDoom.Unity.Environment.DI
 		private void BindUnityClasses()
 		{
 			Container.Bind<BattleStarter>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+			Container.Bind<BattleEnvironment>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.BindInterfacesAndSelfTo<BattleScenePreparer>().FromComponentInHierarchy().AsSingle().NonLazy();
 
 			Container.Bind<BattleSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
