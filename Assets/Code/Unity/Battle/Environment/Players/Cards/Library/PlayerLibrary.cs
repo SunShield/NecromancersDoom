@@ -35,8 +35,18 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Library
         public PlayerCard PickCard(int index)
         {
             var card = _cards[index];
+            return card;
+        }
+
+        public PlayerCard PickTopCard() => PickCard(0);
+
+        public PlayerCard GrabCard(int index)
+        {
+            var card = _cards[index];
             _cards.RemoveAt(index);
             return card;
         }
+
+        public PlayerCard GrabTopCard() => GrabCard(0);
     }
 }

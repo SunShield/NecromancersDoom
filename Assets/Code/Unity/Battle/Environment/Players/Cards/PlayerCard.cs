@@ -16,11 +16,5 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards
             UnitName = unitName;
             OverridenData = overridenData;
         }
-
-        private void OnMouseDown() => OnCardClicked();
-
-        private void OnCardClicked() => onCardClicked?.Invoke(this);
-
-        public event Action<PlayerCard> onCardClicked;
     }
 }
