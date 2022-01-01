@@ -46,12 +46,24 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards
             _eventBus.GetEvent<OnFinishPlayerCardPlaying>().SubscribeForGlobal(OnPlayerCardPlayed);
         }
 
+        // TODO: investigate a bug with wrong cards behaviour if a lot of cards player simultaneously
         private void OnPlayerCardPlayed(PlayerCardArgs args)
         {
             if (_player.Side != args.Card.Owner.Side) return;
+
+            // if there are no cards in library, add cards from graveyard to it
+            RefillLibraryIfNeeded();
+
             var playedCard = args.Card;
-            _hand.RemoveCard(playedCard);
-            _graveyard.AddCard(playedCard);
+            MovePlayerCardOnGraveyard(playedCard);
+        }
+
+        private void RefillLibraryIfNeeded() { if (_library.Count == 0) _library.FillLibrary(_graveyard.PickAllCards()); }
+
+        private void MovePlayerCardOnGraveyard(PlayerCard card)
+        {
+            _hand.RemoveCard(card);
+            _graveyard.AddCard(card);
         }
 
         public override void UpdateManually()
@@ -60,11 +72,6 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards
 
             if (_hand.HasCardInFirstSpot) return;
             var topLibraryCard = _library.GrabTopCard();
-            if (topLibraryCard == null)
-            {
-                _library.FillLibrary(_graveyard.PickAllCards());
-                topLibraryCard = _library.GrabTopCard();
-            }
 
             _hand.AddCard(topLibraryCard);
         }

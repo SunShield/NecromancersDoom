@@ -16,8 +16,11 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Library
 
         public void FillLibrary(IReadOnlyCollection<PlayerCard> cards)
         {
-            foreach(var card in cards)
+            foreach (var card in cards)
+            {
+                ProcessCardBeforeAdding(card);
                 _cards.Add(card);
+            }
 
             Shuffle();
         }
@@ -25,9 +28,14 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Library
         public void AddCard(PlayerCard card, CardAddArgs args)
         {
             _cards.Insert(args.PositionFromTop, card);
-            card.transform.parent = _cardsOrigin;
-            card.transform.localPosition = Vector3.zero;
+            ProcessCardBeforeAdding(card);
             Shuffle();
+        }
+
+        private void ProcessCardBeforeAdding(PlayerCard card)
+        {
+            card.Transform.parent = _cardsOrigin;
+            card.Transform.localPosition = Vector3.zero;
         }
 
         public void Shuffle() => _cards.Shuffle();

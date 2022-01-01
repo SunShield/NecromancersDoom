@@ -27,7 +27,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Graveyard
 
         public List<PlayerCard> PickAllCards()
         {
-            var cards = _cards;
+            var cards = new List<PlayerCard>(_cards);
             _cards.Clear();
             return cards;
         }
