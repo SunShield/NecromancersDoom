@@ -15,6 +15,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Graveyard
         public void AddCard(PlayerCard card)
         {
             _cards.Add(card);
+            card.SetLocation(PlayerCardLocation.Graveyard);
             card.transform.parent = _cardsOrigin;
         }
 

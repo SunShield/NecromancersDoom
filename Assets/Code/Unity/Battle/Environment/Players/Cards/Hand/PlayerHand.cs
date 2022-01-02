@@ -72,6 +72,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
         {
             var fistSpot = _cardSpots[0];
             fistSpot.SetCard(card);
+            card.SetLocation(PlayerCardLocation.Hand);
         }
 
         public override void UpdateManually()

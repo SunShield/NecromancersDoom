@@ -28,6 +28,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Library
         public void AddCard(PlayerCard card, CardAddArgs args)
         {
             _cards.Insert(args.PositionFromTop, card);
+            card.SetLocation(PlayerCardLocation.Library);
             ProcessCardBeforeAdding(card);
             Shuffle();
         }
