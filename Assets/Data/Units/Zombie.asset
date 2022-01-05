@@ -36,25 +36,18 @@ MonoBehaviour:
       Data: TestSkill
     - Name: ParamValues
       Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Single,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 3|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
-        mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 2|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Unit.UnitSkillParamData,
+        Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 
-    - Name: $k
+      Data: 3|NDoom.Unity.ScriptableObjects.Data.Named.Unit.UnitSkillParamData, Assembly-CSharp
+    - Name: Name
       Entry: 1
       Data: Speed
-    - Name: $v
+    - Name: Value
       Entry: 4
       Data: 10
     - Name: 

@@ -38,6 +38,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		[FoldoutGroup(UnitSkillDataFoldoutGroupName)]
 		[ListDrawerSettings(NumberOfItemsPerPage = 1)]
 		[ValueDropdown("GetSkills")]
+		[TableList]
 		public List<UnitSkillData> Skills = new List<UnitSkillData>();
 
 		public UnitGraphicalData ToGraphicalData()
@@ -57,7 +58,9 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		{
 			return new UnitStructuralData()
 			{
-				Skills = Skills.Select(skill => (skill.Name, skill.ParamValues)).ToList()
+				Skills = Skills.Select(skill => (skill.Name, 
+					skill.ParamValues.ToDictionary(paramValue => paramValue.Name, 
+						                           paramValue => paramValue.Value))).ToList()
 			};
 		}
 
@@ -67,7 +70,9 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 			var skillsData = AssetDatabase.LoadAssetAtPath<AllData>(@"Assets/Data/All Data.asset").Skills;
 			foreach (var skillData in skillsData)
 			{
-				result.Add(skillData.Name, new UnitSkillData(skillData.Name, skillData.SkillParams.ToDictionary(param => param.Name, param => param.DefaultValue)));
+				result.Add(skillData.Name, 
+					new UnitSkillData(skillData.Name, 
+						skillData.SkillParams.Select(param => (param.Name, param.DefaultValue)).ToList()));
 			}
 			return result;
 		}
