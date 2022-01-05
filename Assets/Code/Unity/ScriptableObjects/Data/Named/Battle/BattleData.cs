@@ -57,12 +57,12 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 
 		[FoldoutGroup(BattleUnitsFoldoutGroupName)][HorizontalGroup(BattleUnitsHorizontalGroup)]
 		[TableList(ShowPaging = true, NumberOfItemsPerPage = 5)]
-		[ValueDropdown("GetUnitVariants")]
+		[ValueDropdown("GetUnitVariants", NumberOfItemsBeforeEnablingSearch = 5)]
 		public List<BattleDataUnit> LeftUnits;
 
 		[HorizontalGroup(BattleUnitsHorizontalGroup)]
 		[TableList(ShowPaging = true, NumberOfItemsPerPage = 5)]
-		[ValueDropdown("GetUnitVariants")]
+		[ValueDropdown("GetUnitVariants", NumberOfItemsBeforeEnablingSearch = 5)]
 		public List<BattleDataUnit> RightUnits;
 
 		public BattleGraphicalData ToGraphicalData()
