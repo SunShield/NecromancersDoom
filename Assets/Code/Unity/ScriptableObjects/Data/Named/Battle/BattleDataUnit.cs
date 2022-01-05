@@ -9,6 +9,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Battle
 
 		[VerticalGroup(NameVerticalGroupName)]
 		[HideLabel]
+		[ReadOnly]
 		public string Name;
 
 		[VerticalGroup(PosVerticalGroupName)]
