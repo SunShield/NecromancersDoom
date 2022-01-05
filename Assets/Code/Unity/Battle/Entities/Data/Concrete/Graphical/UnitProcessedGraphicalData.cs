@@ -5,6 +5,6 @@ namespace NDoom.Unity.Battles.Entities.Data.Concrete.Graphical
 {
 	public class UnitProcessedGraphicalData : EntityProcessedGraphicalData
 	{
-		public GameObject GraphicsInstance { get; set; }
+		public SpriteRenderer GraphicsInstance { get; set; }
 	}
 }

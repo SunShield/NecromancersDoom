@@ -36,6 +36,7 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<SkillGraphicalDataConverter>().AsSingle().NonLazy();
 			Container.Bind<SkillGraphicalDataStorage>().AsSingle().NonLazy();
 			Container.Bind<TagsData>().AsSingle().NonLazy();
+			Container.Bind<ExtendedMonoBehaviourSpawner>().AsSingle().NonLazy();
 		}
 
 		private void BindUnityClasses()

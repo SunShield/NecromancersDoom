@@ -13,6 +13,7 @@ namespace NDoom.Unity.Battles.Entities
 	{
 		[SerializeField] private Transform _unitsOrigin;
 		private Dictionary<int, Unit> _units = new Dictionary<int, Unit>();
+		public IReadOnlyDictionary<int, Unit> Units => _units;
 
 		public Battlefield Battlefield { get; private set; }
 		public int Row { get; private set; }

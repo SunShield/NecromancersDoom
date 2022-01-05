@@ -2,25 +2,27 @@
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
 {
 	public class Battlefield 
 		: Entity, 
-		  IPositionableEntity<BattlefieldPositioningData, Battle, Battlefield>, 
+		  IPositionableEntity<BattlefieldPositioningData, BattleU, Battlefield>, 
 		  IAncestorEntity<Tile, Battlefield>
 	{
 		[SerializeField] private Transform _tilesOrigin;
-		[SerializeField] [ReadOnly] private Tile[,] _tiles;
+		[SerializeField] [ReadOnly] private List<List<Tile>> _tiles = new List<List<Tile>>();
 
-		public Battle Battle { get; private set; }
+		public BattleU Battle { get; private set; }
 		public BattlefieldSide Side { get; private set; }
 		public int Rows { get; private set; }
 		public int Cols { get; private set; }
+		public List<List<Tile>> Tiles => _tiles;
 
 		public void SetPosition(BattlefieldPositioningData data) => Side = data.Side;
-		public void BindToAncestor(Battle ancestor) => Battle = ancestor;
+		public void BindToAncestor(BattleU ancestor) => Battle = ancestor;
 
 		public void SetSize(int rows, int cols)
 		{
@@ -29,16 +31,24 @@ namespace NDoom.Unity.Battles.Entities
 			InitTiles();
 		}
 
-		private void InitTiles() => _tiles = new Tile[Rows, Cols];
+		private void InitTiles() 
+		{
+			for(int y = 0; y < Rows; y++)
+				_tiles.Add(new List<Tile>());
+
+			for (int y = 0; y < Rows; y++)
+				for (int x = 0; x < Cols; x++)
+					_tiles[y].Add(null);
+		}
 
 		public void AddChild(Tile tile)
 		{
-			_tiles[tile.Row, tile.Col] = tile;
+			_tiles[tile.Row][tile.Col] = tile;
 			tile.transform.parent = _tilesOrigin;
 		}
 
-		public void RemoveChild(Tile tile) => _tiles[tile.Row, tile.Col] = null;
+		public void RemoveChild(Tile tile) => _tiles[tile.Row][tile.Col] = null;
 
-		public Tile this[int row, int col] => _tiles[row, col];
+		public Tile this[int row, int col] => _tiles[row][col];
 	}
 }

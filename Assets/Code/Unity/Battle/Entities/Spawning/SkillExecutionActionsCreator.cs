@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using NDoom.Unity.Battles.Entities.Skills;
-using NDoom.Unity.Battles.Entities.Skills.Concrete;
+using NDoom.Unity.Battles.Mechanics.Skills.Execution;
+using NDoom.Unity.Battles.Mechanics.Skills.Execution.Concrete;
 using Zenject;
 
 namespace NDoom.Unity.Battles.Entities.Spawning

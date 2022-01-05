@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
 using NDoom.Unity.Battles.Mechanics.Tagging;
@@ -66,7 +67,8 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 				Prewarm = Prewarm,
 				Cooldown = Cooldown,
 				Duration = Duration,
-				Parameters = ConstructParameters()
+				Parameters = ConstructParameters(),
+				AffectorPrefabs = ConstructAffectorPrefabs()
 			};
 		}
 
@@ -115,5 +117,10 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 				AddTagAndItsAncestorsToHashset(ancestor, tags, tagsData);
 			}
 		}
+
+		private Dictionary<string, Affector> ConstructAffectorPrefabs()
+			=> Affectors.ToDictionary(
+				affectorData => affectorData.Name, 
+				affectorData => affectorData.Prefab);
 	}
 }

@@ -10,8 +10,8 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 		private const string NameVerticalGroup = "Name";
 
 		[VerticalGroup(BaseVerticalGroup)]
-		[TableColumnWidth(130, Resizable = false)]
-		[PreviewField(Height = 128, Alignment = ObjectFieldAlignment.Center)]
+		[TableColumnWidth(66, Resizable = false)]
+		[PreviewField(Height = 64, Alignment = ObjectFieldAlignment.Center)]
 		[HideLabel]
 		public Affector Prefab;
 

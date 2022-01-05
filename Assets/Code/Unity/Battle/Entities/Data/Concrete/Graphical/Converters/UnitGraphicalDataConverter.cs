@@ -11,7 +11,7 @@ namespace NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters
 		{
 			return new UnitProcessedGraphicalData()
 			{
-				GraphicsInstance = _container.InstantiatePrefab(data.Prefab)
+				//GraphicsInstance = data.Graphics
 			};
 		}
 	}

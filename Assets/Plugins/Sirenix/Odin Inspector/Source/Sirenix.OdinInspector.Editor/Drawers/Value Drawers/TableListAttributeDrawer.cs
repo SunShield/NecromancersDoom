@@ -306,11 +306,18 @@ namespace Sirenix.OdinInspector.Editor.Drawers
                 rect.xMax = btnRect.xMin;
                 if (GUI.Button(btnRect, GUIContent.none, SirenixGUIStyles.ToolbarButton))
                 {
-                    this.picker.ShowObjectPicker(
-                        null,
-                        this.Property.GetAttribute<AssetsOnlyAttribute>() == null && !typeof(ScriptableObject).IsAssignableFrom(this.resolver.ElementType),
-                        rect,
-                        !this.Property.ValueEntry.SerializationBackend.SupportsPolymorphism);
+	                if (CollectionDrawerStaticInfo.NextCustomAddFunction != null)
+	                {
+		                CollectionDrawerStaticInfo.NextCustomAddFunction();
+	                }
+	                else
+	                {
+		                this.picker.ShowObjectPicker(
+			                null,
+			                this.Property.GetAttribute<AssetsOnlyAttribute>() == null && !typeof(ScriptableObject).IsAssignableFrom(this.resolver.ElementType),
+			                rect,
+			                !this.Property.ValueEntry.SerializationBackend.SupportsPolymorphism);
+	                }
                 }
                 EditorIcons.Plus.Draw(btnRect, 16);
             }
