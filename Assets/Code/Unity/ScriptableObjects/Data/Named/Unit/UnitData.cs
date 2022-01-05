@@ -29,7 +29,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 
 		[BoxGroup(MainVerticalGroupName)][FoldoutGroup(BasicUnitDataFoldoutGroupName)][HorizontalGroup(BasicDataHorizontalGroupName, Width = 130)]
 		[HideLabel][PreviewField(ObjectFieldAlignment.Left, Height = 128f)]
-		public GameObject Prefab;
+		public Sprite Graphics;
 
 		[VerticalGroup(BasicDataVerticalGroupName)][FoldoutGroup(UnitMainDataFoldoutGroupName)]
 		[LabelWidth(45)]
@@ -44,7 +44,7 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		{
 			return new UnitGraphicalData()
 			{
-				Prefab = Prefab
+				Graphics = Graphics
 			};
 		}
 

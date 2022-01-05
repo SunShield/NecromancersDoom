@@ -1698,6 +1698,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   _prefab: {fileID: 5275210556933210464, guid: b0899e0ffb0367f41be4e52a7bfcc511, type: 3}
+  _unitGraphicsPrefab: {fileID: 5512008101453136120, guid: 365394bc5b44dc343ba1f0ec918db36c, type: 3}
 --- !u!114 &2033294519
 MonoBehaviour:
   m_ObjectHideFlags: 0

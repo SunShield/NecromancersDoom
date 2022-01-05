@@ -5,6 +5,6 @@ namespace NDoom.Unity.Battles.Entities.Data.Concrete.Graphical
 {
 	public class UnitGraphicalData : EntityGraphicalData
 	{
-		public GameObject Prefab { get; set; }
+		public Sprite Graphics { get; set; }
 	}
 }

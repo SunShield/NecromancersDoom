@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 610ee9a40800c6e4b9e156e5de628c29, type: 3}
-  m_Name: Skeleton
+  m_Name: Lava Elemental
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -56,7 +56,7 @@ MonoBehaviour:
       Data: Speed
     - Name: $v
       Entry: 4
-      Data: 30
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -75,5 +75,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Graphics: {fileID: 21300000, guid: 179266ad943df0a4bbefd8282567fbb8, type: 3}
-  Name: Skeleton
+  Graphics: {fileID: 21300000, guid: a1913d62b3dd22b47b625df6b5ceef97, type: 3}
+  Name: Lava Elemental
