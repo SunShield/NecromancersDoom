@@ -1,6 +1,6 @@
 ﻿using NDoom.Unity.Environment.Main;
-using System;
 using System.Collections.Generic;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using UnityEngine;
 using Zenject;
 
@@ -17,15 +17,17 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
 
         [Inject] private ExtendedMonoBehaviourSpawner _spawner;
 
-        private List<HandSpot> _cardSpots = new List<HandSpot>();
+        private readonly List<HandSpot> _cardSpots = new List<HandSpot>();
 
+        public BattlefieldSide Side { get; private set; }
         public int HandSize { get; private set; }
         public bool IsFull => CheckHandFull();
         public bool HasCardInFirstSpot => !_cardSpots[0].IsEmpty;
 
-        public void Initialize()
+        public void Initialize(BattlefieldSide side)
         {
             HandSize = 4;
+            Side = side;
             PopulateSpots();
         }
 
@@ -57,8 +59,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             tran.parent = _spotsOrigin;
         }
 
-        private void InitSpot(HandSpot spot, int spotIndex) => spot.Initialize(spotIndex);
-
+        private void InitSpot(HandSpot spot, int spotIndex) => spot.Initialize(Side, spotIndex);
 
         public bool CheckHandFull()
         {

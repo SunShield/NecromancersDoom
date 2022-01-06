@@ -36,9 +36,9 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards
 
         private void InitializePlayerSystems()
         {
-            _deck.AddCards(_player.Deck, _player);
+            _deck.AddCards(_player.GetDeck(), _player);
             _library.FillLibrary(_deck.Cards);
-            _hand.Initialize();
+            _hand.Initialize(_player.Side);
         }
 
         private void SubscribeForPlayerCardEvents()

@@ -71,31 +71,31 @@ namespace NDoom.Unity.Battles.Mechanics.Modifiable
 			FinalValue = baseValue;
 		}
 
-		private void ApplyFlatBaseModifications(ref float _value)
+		private void ApplyFlatBaseModifications(ref float value)
         {
 			foreach(var modification in _allModifications[ModificationType.FlatBase])
-				_value += modification.Value;
+				value += modification.Value;
         }
 
-		private void ApplyIncreasementReductionModifications(ref float _value)
+		private void ApplyIncreasementReductionModifications(ref float value)
         {
 			float increasementReductionPercent = 0;
 			foreach (var modification in _allModifications[ModificationType.IncreasementReduction])
 				increasementReductionPercent += modification.Value;
 
-			_value = _value * (1 + increasementReductionPercent / 100f);
+			value = value * (1 + increasementReductionPercent / 100f);
 		}
 
-		private void ApplyFlatAdditionalModifications(ref float _value)
+		private void ApplyFlatAdditionalModifications(ref float value)
 		{
 			foreach (var modification in _allModifications[ModificationType.FlatAdditional])
-				_value += modification.Value;
+				value += modification.Value;
 		}
 
-		private void ApplyMoreLessModifications(ref float _value)
+		private void ApplyMoreLessModifications(ref float value)
 		{
 			foreach (var modification in _allModifications[ModificationType.MoreLess])
-				_value *= (modification.Value / 100f);
+				value *= (modification.Value / 100f);
 		}
 	}
 }

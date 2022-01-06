@@ -16,27 +16,27 @@ namespace NDoom.Unity.Battle.Environment.Players
         [SerializeField] private PlayerCardsController _cardsController;
 
         public BattlefieldSide Side { get; private set; }
-
-        private List<(string untiName, UnitFunctionalData overridenData)> _deck = new List<(string untiName, UnitFunctionalData overridenData)>();
-        public IReadOnlyList<(string untiName, UnitFunctionalData overridenData)> Deck => _deck;
-        public IReadOnlyList<PlayerCard> Cards => _cardsController.Cards;
+        public PlayerMechanicalData Data { get; private set; } = new PlayerMechanicalData();
 
         public void Initialize(BattlefieldSide side)
         {
             Side = side;
-            SetDeck();
             InitializeCardsController();
         }
 
-        public void SetDeck()
+        public List<(string untiName, UnitFunctionalData overridenData)> GetDeck()
         {
-            // TODO: later fetch this info from elsewhere?
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
-            _deck.Add(("Skeleton", null));
+	        // TODO: later fetch this info from elsewhere?
+			var result = new List<(string untiName, UnitFunctionalData overridenData)>
+			{
+				("Skeleton", null),
+				("Skeleton", null),
+				("Skeleton", null),
+				("Skeleton", null),
+				("Skeleton", null),
+				("Skeleton", null)
+			};
+			return result;
         }
 
         private void InitializeCardsController() => _cardsController.Initialize(this);

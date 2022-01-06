@@ -7,7 +7,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Graveyard
     public class PlayerGraveyard : ExtendedMonoBehaviour
     {
         [SerializeField] private Transform _cardsOrigin;
-        [SerializeField] private float _cardMoveSpeed = 10f;
+        [SerializeField] private float _cardMoveSpeed = 100f;
 
         private readonly List<PlayerCard> _cards = new List<PlayerCard>();
         public int Count => _cards.Count;

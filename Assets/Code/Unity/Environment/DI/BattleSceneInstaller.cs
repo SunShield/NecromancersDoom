@@ -1,6 +1,7 @@
 ﻿using NDoom.Unity.Battle.Entities.Storaging;
 using NDoom.Unity.Battle.Environment;
 using NDoom.Unity.Battle.Environment.Players.Cards;
+using NDoom.Unity.Battle.Environment.Systems;
 using NDoom.Unity.Battle.Mechanics.Skills.Affection;
 using NDoom.Unity.Battles;
 using NDoom.Unity.Battles.Entities.Spawning;
@@ -28,6 +29,7 @@ namespace NDoom.Unity.Environment.DI
 		{
 			Container.Bind<BattleStarter>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 			Container.Bind<BattleEnvironment>().FromComponentInHierarchy().AsSingle().NonLazy();
+			Container.Bind<PlayerCardPlayer>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 			Container.BindInterfacesAndSelfTo<BattleScenePreparer>().FromComponentInHierarchy().AsSingle().NonLazy();
 
 			Container.Bind<BattleSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
@@ -36,8 +38,6 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<UnitSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.Bind<SkillSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
 			Container.Bind<AffectorSpawner>().FromComponentInHierarchy().AsSingle().NonLazy();
-
-			Container.Bind<PlayerCardPlayer>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 		}
 	}
 }

@@ -1,8 +1,8 @@
 ﻿using NDoom.Core.Environment.EventSystem;
+using NDoom.Unity.Battle.Environment.Systems;
 using NDoom.Unity.Battles.Entities.Data.Concrete;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
 using NDoom.Unity.Battles.Entities.Data.Storaging;
-using NDoom.Unity.Battles.Entities.Spawning;
 using NDoom.Unity.Data;
 using NDoom.Unity.Environment.Main;
 using NDoom.Unity.Environment.SceneManagement.Switching;
@@ -45,6 +45,9 @@ namespace NDoom.Unity.Environment.DI
 			Container.Bind<AllDataReferenceHolder>().FromComponentInNewPrefab(_allDataReferenceHolderPrefab).AsSingle().NonLazy();
 			Container.Bind<Updater>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 			Container.Bind<GameSceneManager>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
+
+			// TODO: later find why this can't be injected in HandSpon if injected in BattleSceneInstaler
+			Container.Bind<PlayersTickController>().FromNewComponentOnNewGameObject().AsSingle().NonLazy();
 		}
 	}
 }
