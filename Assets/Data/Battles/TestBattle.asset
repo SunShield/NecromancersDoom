@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
@@ -50,90 +50,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 2|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Skeleton
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 0
-    - Name: X
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Lich
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 1
-    - Name: X
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Zombie
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 2
-    - Name: X
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Zombie
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 3
-    - Name: X
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -141,14 +57,14 @@ MonoBehaviour:
       Data: 
     - Name: RightUnits
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit,
+      Data: 2|System.Collections.Generic.List`1[[NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 7|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
+      Data: 3|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
     - Name: Name
       Entry: 1
       Data: Dark Knight
@@ -161,69 +77,6 @@ MonoBehaviour:
     - Name: X
       Entry: 3
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 8|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Lava Elemental
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 1
-    - Name: X
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 9|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Imp
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 1
-    - Name: X
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 10|NDoom.Unity.ScriptableObjects.Data.Named.Battle.BattleDataUnit, Assembly-CSharp
-    - Name: Name
-      Entry: 1
-      Data: Devourer
-    - Name: Position
-      Entry: 7
-      Data: NDoom.Unity.ScriptableObjects.Data.Named.Battle.UnitPosition, Assembly-CSharp
-    - Name: Y
-      Entry: 3
-      Data: 5
-    - Name: X
-      Entry: 3
-      Data: 2
     - Name: 
       Entry: 8
       Data: 

@@ -103,6 +103,6 @@ MonoBehaviour:
       Data: 
   Prefab: {fileID: 5826956084795943171, guid: 6922dd1d1314b064ab453c707c0297d8, type: 3}
   Name: TestSkill
-  Prewarm: 0
-  Cooldown: 0
+  Prewarm: 2
+  Cooldown: 2
   Duration: 0

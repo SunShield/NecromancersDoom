@@ -7,8 +7,8 @@ namespace NDoom.Unity.Battles.Entities.Data.Concrete.Functional
 {
 	public class SkillFunctionalData : EntityFunctionalData
 	{
-		public float Prewarm { get; set; }
-		public float Cooldown { get; set; }
+		public int PrewarmTicks { get; set; }
+		public int CooldownTicks { get; set; }
 		public float Duration { get; set; }
 		public Dictionary<string, TaggedParameter> Parameters { get; set; }
 		public Dictionary<string, Affector> AffectorPrefabs { get; set; }

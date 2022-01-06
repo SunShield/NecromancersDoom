@@ -38,11 +38,11 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 
 		[VerticalGroup(BasicDataVerticalGroupName)][FoldoutGroup(BasicDataVerticalFoldoutGroupName)][HorizontalGroup(BasicDataCooldownHorizontalGroup)]
 		[LabelWidth(65)]
-		public float Prewarm;
+		public int Prewarm;
 
 		[VerticalGroup(BasicDataVerticalGroupName)][HorizontalGroup(BasicDataCooldownHorizontalGroup)]
 		[LabelWidth(65)]
-		public float Cooldown;
+		public int Cooldown;
 
 		[VerticalGroup(BasicDataVerticalGroupName)][HorizontalGroup(BasicDataCooldownHorizontalGroup)]
 		[LabelWidth(65)]
@@ -64,8 +64,8 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 		{
 			return new SkillFunctionalData()
 			{
-				Prewarm = Prewarm,
-				Cooldown = Cooldown,
+				PrewarmTicks = Prewarm,
+				CooldownTicks = Cooldown,
 				Duration = Duration,
 				Parameters = ConstructParameters(),
 				AffectorPrefabs = ConstructAffectorPrefabs()
