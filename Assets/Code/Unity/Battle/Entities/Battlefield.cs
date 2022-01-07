@@ -3,6 +3,7 @@ using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
+using NDoom.Unity.Battle.Environment.Players;
 using UnityEngine;
 
 namespace NDoom.Unity.Battles.Entities
@@ -16,11 +17,13 @@ namespace NDoom.Unity.Battles.Entities
 		[SerializeField] [ReadOnly] private List<List<Tile>> _tiles = new List<List<Tile>>();
 
 		public BattleU Battle { get; private set; }
+		public BattlePlayer OwningPlayer { get; private set; }
 		public BattlefieldSide Side { get; private set; }
 		public int Rows { get; private set; }
 		public int Cols { get; private set; }
 		public List<List<Tile>> Tiles => _tiles;
 
+		public void SetPlayer(BattlePlayer player) => OwningPlayer = player;
 		public void SetPosition(BattlefieldPositioningData data) => Side = data.Side;
 		public void BindToAncestor(BattleU ancestor) => Battle = ancestor;
 

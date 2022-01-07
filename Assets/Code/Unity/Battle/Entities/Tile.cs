@@ -18,6 +18,7 @@ namespace NDoom.Unity.Battles.Entities
 		public Battlefield Battlefield { get; private set; }
 		public int Row { get; private set; }
 		public int Col { get; private set; }
+		public BattlefieldSide Side => Battlefield.Side;
 
 		protected override void InitializeEntityPreSpawn() {}
 		public void BindToAncestor(Battlefield ancestor) => Battlefield = ancestor;

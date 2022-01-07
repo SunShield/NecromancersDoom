@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
 using UnityEngine;
@@ -20,6 +21,7 @@ namespace NDoom.Unity.Battles.Entities
 		public Tile Tile { get; private set; }
 		public List<Skill> Skills { get; private set; } = new List<Skill>();
 		public UnitFunctionalData UnitData { get; private set; }
+		public BattlefieldSide Side => Tile.Side;
 
 		public void BindToAncestor(Tile ancestor) => Tile = ancestor;
 		public void SetFromFunctionalData(UnitFunctionalData functionalData) => UnitData = functionalData;

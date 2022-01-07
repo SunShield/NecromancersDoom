@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using NDoom.Unity.Battle.Environment.Systems;
 using NDoom.Unity.Battle.Mechanics.Skills.Affection;
 using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Entities;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.Environment.Main;
 using Zenject;
@@ -18,12 +20,15 @@ namespace NDoom.Unity.Battles.Mechanics.Skills.Execution
 	{
 		[Inject] private CoroutineRunner _coroutineRunner;
 		[Inject] protected AffectorSpawner AffectorSpawner { get; }
-		public Skill OwnerSkill { get; private set; }
 
+		protected float TickMultiplier => OwnerSkill.HolderUnit.Tile.Battlefield.OwningPlayer.TickState.ReversedRelativeTick;
+
+		public Skill OwnerSkill { get; private set; }
 		public bool IsExecuting { get; private set; }
 		public IReadOnlyDictionary<string, TaggedParameter> Parameters => OwnerSkill.Data.Parameters;
 		public IReadOnlyDictionary<string, Affector> AffectorPrefabs => OwnerSkill.Data.AffectorPrefabs;
-
+		public BattlefieldSide Side => OwnerSkill.Side;
+		
 		// TODO: pass params here
 		public void Initialize(Skill skill) => OwnerSkill = skill;
 

@@ -20,9 +20,15 @@ namespace NDoom.Unity.Battle.Environment
         {
             _humanPlayer.Initialize(BattlefieldSide.Left);
             _aiPlayer.Initialize(BattlefieldSide.Right);
-            _humanPlayer.Data.TickTime.BaseValue = 200f;
+            _humanPlayer.TickState.TickTime.BaseValue = 200f;
             _tickController.Initialize(_humanPlayer, _aiPlayer);
             _cardsPlayer.Initialize();
         }
+
+        public BattlePlayer GetPlayer(BattlefieldSide side) => side switch
+        {
+            BattlefieldSide.Left  => _humanPlayer,
+            BattlefieldSide.Right => _aiPlayer
+        };
     }
 }

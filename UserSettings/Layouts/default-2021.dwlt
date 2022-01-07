@@ -39,10 +39,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 952
+    x: 999
     y: 0
-    width: 1172
-    height: 419
+    width: 1227
+    height: 280
   m_MinSize: {x: 202, y: 141}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 928
-    width: 2124
-    height: 419
+    y: 1067
+    width: 2226
+    height: 280
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 108
+  controlID: 24
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 22
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -115,9 +115,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2124
+    x: 2226
     y: 0
-    width: 436
+    width: 334
     height: 1347
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -143,8 +143,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 367
-    height: 928
+    width: 328
+    height: 1067
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
@@ -169,8 +169,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 952
-    height: 419
+    width: 999
+    height: 280
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 17}
@@ -268,12 +268,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2124
+    width: 2226
     height: 1347
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 107
+  controlID: 23
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,12 +293,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2124
-    height: 928
+    width: 2226
+    height: 1067
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 99
+  controlID: 74
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,12 +314,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 367
+    x: 328
     y: 0
-    width: 1757
-    height: 928
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 1898
+    height: 1067
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -348,10 +348,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 275
+    x: 367
     y: 73
-    width: 1316
-    height: 765
+    width: 1755
+    height: 907
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -385,7 +385,7 @@ MonoBehaviour:
     ConfirmSlecectionOnDoubleClick: 1
   menuWidth: 207
   selectedItems:
-  - TestBattle
+  - TestSkill
   resizableMenuWidth: 1
 --- !u!114 &15
 MonoBehaviour:
@@ -407,27 +407,3639 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -31048
-    y: -31042
-    width: 1170
-    height: 398
+    x: 999
+    y: 1140
+    width: 1225
+    height: 259
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  logPanelScroll: {x: 0, y: 0}
+  logPanelScroll: {x: 0, y: -106}
   logPanelSelectedIndex: -1
   logPanelAutoScroll: 1
-  currentFrame: 7025397
+  currentFrame: 7068655
   logs:
-    lastGrabbedIndex: -1
-    lastGrabbedCount: 0
-    proEntries: []
+    lastGrabbedIndex: 2
+    lastGrabbedCount: 3
+    proEntries:
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 0
+      logOutputHeight: 27
+      listIndex: 0
+      nativeIndex: 0
+      nativeIdentifier: 0
+      originalLog: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      originalStackTrace: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!
+
+        UnityEngine.Debug:Log
+        (object)
+
+        NDoom.Unity.Environment.Debugging.GameDebugger:LogInternal
+        (string,string,object) (at Assets/Code/Unity/Environment/Debugging/GameDebugger.cs:70)
+
+        NDoom.Unity.Environment.Debugging.GameDebugger:Log
+        (NDoom.Unity.Environment.Debugging.GameDebugContext,object) (at Assets/Code/Unity/Environment/Debugging/GameDebugger.cs:33)
+
+        NDoom.Unity.Environment.SceneManagement.Preparation.ScenePreparer:LogScenePrepared
+        () (at Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25)
+
+        NDoom.Unity.Environment.SceneManagement.Preparation.ScenePreparer:Initialize
+        () (at Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19)
+
+        Zenject.InitializableManager:Initialize
+        () (at Assets/Plugins/Zenject/Source/Runtime/InitializableManager.cs:76)
+
+        Zenject.MonoKernel:Initialize
+        () (at Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38)
+
+        Zenject.MonoKernel:Start
+        () (at Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29)
+
+'
+      nativeFileName: Assets/Code/Unity/Environment/Debugging/GameDebugger.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 70
+      watchName: 
+      logText: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      logTruncatedText: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      logColumnText: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 22:32:11.077
+      timeFrame: 5
+      timeStampDateTimeNow: 22:32:11.077
+      instanceID: 0
+      collapsedCount: 1
+      cachedHeight: 19
+      cachedHeightLogWidth: 1181
+      stackEntries:
+      - fileName: Assets/Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Debugging/GameDebugger.cs:70
+        fileNameWithoutPath: GameDebugger.cs
+        fileNameWithoutPathPlusLineNumber: GameDebugger.cs:70
+        fileNamePretty: GameDebugger
+        instanceID: -1
+        className: GameDebugger
+        methodName: LogInternal
+        namespaceName: NDoom.Unity.Environment.Debugging
+        lineNumberString: 70
+        charNumber: 0
+        stackLabel: GameDebugger.LogInternal()
+        stackLabel2: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:70'
+        stackLabel1Content:
+          m_Text: GameDebugger.LogInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 172
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:70'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 371
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Debugging/GameDebugger.cs:33
+        fileNameWithoutPath: GameDebugger.cs
+        fileNameWithoutPathPlusLineNumber: GameDebugger.cs:33
+        fileNamePretty: GameDebugger
+        instanceID: -1
+        className: GameDebugger
+        methodName: Log
+        namespaceName: NDoom.Unity.Environment.Debugging
+        lineNumberString: 33
+        charNumber: 0
+        stackLabel: GameDebugger.Log()
+        stackLabel2: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:33'
+        stackLabel1Content:
+          m_Text: GameDebugger.Log()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 128
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:33'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 372
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssets: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25
+        fileNameWithoutPath: ScenePreparer.cs
+        fileNameWithoutPathPlusLineNumber: ScenePreparer.cs:25
+        fileNamePretty: ScenePreparer
+        instanceID: -1
+        className: ScenePreparer
+        methodName: LogScenePrepared
+        namespaceName: NDoom.Unity.Environment.SceneManagement.Preparation
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: ScenePreparer.LogScenePrepared()
+        stackLabel2: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25'
+        stackLabel1Content:
+          m_Text: ScenePreparer.LogScenePrepared()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 214
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 488
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssets: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19
+        fileNameWithoutPath: ScenePreparer.cs
+        fileNameWithoutPathPlusLineNumber: ScenePreparer.cs:19
+        fileNamePretty: ScenePreparer
+        instanceID: -1
+        className: ScenePreparer
+        methodName: Initialize
+        namespaceName: NDoom.Unity.Environment.SceneManagement.Preparation
+        lineNumberString: 19
+        charNumber: 0
+        stackLabel: ScenePreparer.Initialize()
+        stackLabel2: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19'
+        stackLabel1Content:
+          m_Text: ScenePreparer.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 149
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 487
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Plugins/Zenject/Source/Runtime/InitializableManager.cs
+        fileNameWithoutAssets: Plugins/Zenject/Source/Runtime/InitializableManager.cs
+        fileNameWithoutAssetsPlusLineNumber: Plugins/Zenject/Source/Runtime/InitializableManager.cs:76
+        fileNameWithoutPath: InitializableManager.cs
+        fileNameWithoutPathPlusLineNumber: InitializableManager.cs:76
+        fileNamePretty: InitializableManager
+        instanceID: -1
+        className: InitializableManager
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 76
+        charNumber: 0
+        stackLabel: InitializableManager.Initialize()
+        stackLabel2: ' at /Plugins/Zenject/Source/Runtime/InitializableManager.cs:76'
+        stackLabel1Content:
+          m_Text: InitializableManager.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 179
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Plugins/Zenject/Source/Runtime/InitializableManager.cs:76'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 372
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssets: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssetsPlusLineNumber: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38
+        fileNameWithoutPath: MonoKernel.cs
+        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:38
+        fileNamePretty: MonoKernel
+        instanceID: -1
+        className: MonoKernel
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 38
+        charNumber: 0
+        stackLabel: MonoKernel.Initialize()
+        stackLabel2: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38'
+        stackLabel1Content:
+          m_Text: MonoKernel.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 130
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 373
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssets: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssetsPlusLineNumber: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29
+        fileNameWithoutPath: MonoKernel.cs
+        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:29
+        fileNamePretty: MonoKernel
+        instanceID: -1
+        className: MonoKernel
+        methodName: Start
+        namespaceName: Zenject
+        lineNumberString: 29
+        charNumber: 0
+        stackLabel: MonoKernel.Start()
+        stackLabel2: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29'
+        stackLabel1Content:
+          m_Text: MonoKernel.Start()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 112
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 372
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 1
+      logOutputHeight: 27
+      listIndex: 1
+      nativeIndex: 1
+      nativeIdentifier: 0
+      originalLog: Playing card!
+      originalStackTrace: 'Playing card!
+
+        UnityEngine.Debug:Log (object)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCardPlayer:OnPlayerCardStartPlaying
+        (NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs) (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21)
+
+        NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>:InvokeForGlobal
+        (NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs) (at Assets/Code/Core/EventSystem/GameEvent.cs:38)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCard:OnCardClicked
+        () (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCard:OnMouseDown
+        () (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31)
+
+        UnityEngine.SendMouseEvents:DoSendMouseEvents
+        (int)
+
+'
+      nativeFileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 21
+      watchName: 
+      logText: Playing card!
+      logTruncatedText: Playing card!
+      logColumnText: Playing card!
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 22:32:16.366
+      timeFrame: 1833
+      timeStampDateTimeNow: 22:32:16.366
+      instanceID: 0
+      collapsedCount: 1
+      cachedHeight: 19
+      cachedHeightLogWidth: 1181
+      stackEntries:
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21
+        fileNameWithoutPath: PlayerCardPlayer.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCardPlayer.cs:21
+        fileNamePretty: PlayerCardPlayer
+        instanceID: -1
+        className: PlayerCardPlayer
+        methodName: OnPlayerCardStartPlaying
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 21
+        charNumber: 0
+        stackLabel: PlayerCardPlayer.OnPlayerCardStartPlaying()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21'
+        stackLabel1Content:
+          m_Text: PlayerCardPlayer.OnPlayerCardStartPlaying()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 271
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 439
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Core/EventSystem/GameEvent.cs
+        fileNameWithoutAssets: Code/Core/EventSystem/GameEvent.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Core/EventSystem/GameEvent.cs:38
+        fileNameWithoutPath: GameEvent.cs
+        fileNameWithoutPathPlusLineNumber: GameEvent.cs:38
+        fileNamePretty: GameEvent
+        instanceID: -1
+        className: NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>
+        methodName: InvokeForGlobal
+        namespaceName: None
+        lineNumberString: 38
+        charNumber: 0
+        stackLabel: NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>.InvokeForGlobal()
+        stackLabel2: ' at /Code/Core/EventSystem/GameEvent.cs:38'
+        stackLabel1Content:
+          m_Text: NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>.InvokeForGlobal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 778
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Core/EventSystem/GameEvent.cs:38'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 278
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37
+        fileNameWithoutPath: PlayerCard.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCard.cs:37
+        fileNamePretty: PlayerCard
+        instanceID: -1
+        className: PlayerCard
+        methodName: OnCardClicked
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 37
+        charNumber: 0
+        stackLabel: PlayerCard.OnCardClicked()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37'
+        stackLabel1Content:
+          m_Text: PlayerCard.OnCardClicked()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 168
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 404
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31
+        fileNameWithoutPath: PlayerCard.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCard.cs:31
+        fileNamePretty: PlayerCard
+        instanceID: -1
+        className: PlayerCard
+        methodName: OnMouseDown
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 31
+        charNumber: 0
+        stackLabel: PlayerCard.OnMouseDown()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31'
+        stackLabel1Content:
+          m_Text: PlayerCard.OnMouseDown()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 167
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 403
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: None
+        fileNameWithoutAssets: None
+        fileNameWithoutAssetsPlusLineNumber: None
+        fileNameWithoutPath: None
+        fileNameWithoutPathPlusLineNumber: None
+        fileNamePretty: None
+        instanceID: -1
+        className: SendMouseEvents
+        methodName: DoSendMouseEvents
+        namespaceName: UnityEngine
+        lineNumberString: 0
+        charNumber: 0
+        stackLabel: SendMouseEvents.DoSendMouseEvents()
+        stackLabel2: 
+        stackLabel1Content:
+          m_Text: SendMouseEvents.DoSendMouseEvents()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 247
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 4
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 2
+      logOutputHeight: 27
+      listIndex: 2
+      nativeIndex: 2
+      nativeIdentifier: 0
+      originalLog: 'NullReferenceException: Object reference not set to an instance
+        of an object'
+      originalStackTrace: 'NullReferenceException: Object reference not set to an
+        instance of an object
+
+        NDoom.Unity.Battle.Environment.Players.Cards.Hand.PlayerHand.AddCard
+        (NDoom.Unity.Battle.Environment.Players.Cards.PlayerCard card) (at Assets/Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCardsController.UpdateManually
+        () (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76)
+
+        NDoom.Unity.Environment.Main.Updater.UpdateBehavioursInternal
+        () (at Assets/Code/Unity/Environment/Main/Updater.cs:60)
+
+        NDoom.Unity.Environment.Main.Updater.Update
+        () (at Assets/Code/Unity/Environment/Main/Updater.cs:25)
+
+'
+      nativeFileName: Assets/Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 76
+      watchName: 
+      logText: 'NullReferenceException: Object reference not set to an instance of
+        an object'
+      logTruncatedText: 'NullReferenceException: Object reference not set to an instance
+        of an object'
+      logColumnText: 'NullReferenceException: Object reference not set to an instance
+        of an object'
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 1
+      timeStamp: 22:32:23.788
+      timeFrame: 4010
+      timeStampDateTimeNow: 22:32:23.788
+      instanceID: -32756
+      collapsedCount: 1
+      cachedHeight: 19
+      cachedHeightLogWidth: 1181
+      stackEntries:
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76
+        fileNameWithoutPath: PlayerHand.cs
+        fileNameWithoutPathPlusLineNumber: PlayerHand.cs:76
+        fileNamePretty: PlayerHand
+        instanceID: -1
+        className: PlayerHand
+        methodName: AddCard
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards.Hand
+        lineNumberString: 76
+        charNumber: 0
+        stackLabel: PlayerHand.AddCard()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76'
+        stackLabel1Content:
+          m_Text: PlayerHand.AddCard()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 135
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 442
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '74:       var fistSpot = _cardSpots[0];'
+        - '75:       fistSpot.SetCard(card);'
+        - '76:       card.SetLocation(PlayerCardLocation.Hand);'
+        - '77:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76
+        fileNameWithoutPath: PlayerCardsController.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCardsController.cs:76
+        fileNamePretty: PlayerCardsController
+        instanceID: -1
+        className: PlayerCardsController
+        methodName: UpdateManually
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 76
+        charNumber: 0
+        stackLabel: PlayerCardsController.UpdateManually()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76'
+        stackLabel1Content:
+          m_Text: PlayerCardsController.UpdateManually()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 240
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 469
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '74:           var topLibraryCard = _library.GrabTopCard();'
+        - '76:           _hand.AddCard(topLibraryCard);'
+        - '77:       }'
+        - '78:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Main/Updater.cs:60
+        fileNameWithoutPath: Updater.cs
+        fileNameWithoutPathPlusLineNumber: Updater.cs:60
+        fileNamePretty: Updater
+        instanceID: -1
+        className: Updater
+        methodName: UpdateBehavioursInternal
+        namespaceName: NDoom.Unity.Environment.Main
+        lineNumberString: 60
+        charNumber: 0
+        stackLabel: Updater.UpdateBehavioursInternal()
+        stackLabel2: ' at /Code/Unity/Environment/Main/Updater.cs:60'
+        stackLabel1Content:
+          m_Text: Updater.UpdateBehavioursInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 215
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Main/Updater.cs:60'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 291
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '58:       {'
+        - '59:           if (behaviour.gameObject.activeSelf) // if GO is inactive,
+          it shouldn''t get updated'
+        - '60:               behaviour.UpdateManually();'
+        - '61:       }'
+        - '62:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Main/Updater.cs:25
+        fileNameWithoutPath: Updater.cs
+        fileNameWithoutPathPlusLineNumber: Updater.cs:25
+        fileNamePretty: Updater
+        instanceID: -1
+        className: Updater
+        methodName: Update
+        namespaceName: NDoom.Unity.Environment.Main
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: Updater.Update()
+        stackLabel2: ' at /Code/Unity/Environment/Main/Updater.cs:25'
+        stackLabel1Content:
+          m_Text: Updater.Update()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 106
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Main/Updater.cs:25'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 290
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '23:   {'
+        - '24:       AddRegistredBehaviours();'
+        - '25:       UpdateBehavioursInternal();'
+        - '26:       RemoveDestroyedBehaviours();'
+        - '27:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Exception
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 8431dd01-c980-4fad-956f-5a119ca11a80
+        filterName: 
+        mainColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 1
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8c9ed77f-7434-4788-b4a6-4532b253bce5
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 3eca55a6-6cb3-4cc9-b652-bf0d7b31c6f6
+                logType: 4
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 2894e421-44ce-47cf-a964-b1150c59b8af
+                logType: 7
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: c280326a-6eac-401f-a3e3-5337da374132
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: X
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 1
+      belongsToStandardFilters:
+      - name: Exception
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 8431dd01-c980-4fad-956f-5a119ca11a80
+        filterName: 
+        mainColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 1
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8c9ed77f-7434-4788-b4a6-4532b253bce5
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 3eca55a6-6cb3-4cc9-b652-bf0d7b31c6f6
+                logType: 4
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 2894e421-44ce-47cf-a964-b1150c59b8af
+                logType: 7
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: c280326a-6eac-401f-a3e3-5337da374132
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: X
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 1
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
     newEntries: []
     resetCompilerErrorEntries: 1
     compilerErrorEntries: []
     timeFrames: 
-    _filteredEntries: []
+    _filteredEntries:
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 0
+      logOutputHeight: 27
+      listIndex: 0
+      nativeIndex: 0
+      nativeIdentifier: 0
+      originalLog: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      originalStackTrace: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!
+
+        UnityEngine.Debug:Log
+        (object)
+
+        NDoom.Unity.Environment.Debugging.GameDebugger:LogInternal
+        (string,string,object) (at Assets/Code/Unity/Environment/Debugging/GameDebugger.cs:70)
+
+        NDoom.Unity.Environment.Debugging.GameDebugger:Log
+        (NDoom.Unity.Environment.Debugging.GameDebugContext,object) (at Assets/Code/Unity/Environment/Debugging/GameDebugger.cs:33)
+
+        NDoom.Unity.Environment.SceneManagement.Preparation.ScenePreparer:LogScenePrepared
+        () (at Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25)
+
+        NDoom.Unity.Environment.SceneManagement.Preparation.ScenePreparer:Initialize
+        () (at Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19)
+
+        Zenject.InitializableManager:Initialize
+        () (at Assets/Plugins/Zenject/Source/Runtime/InitializableManager.cs:76)
+
+        Zenject.MonoKernel:Initialize
+        () (at Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38)
+
+        Zenject.MonoKernel:Start
+        () (at Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29)
+
+'
+      nativeFileName: Assets/Code/Unity/Environment/Debugging/GameDebugger.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 70
+      watchName: 
+      logText: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      logTruncatedText: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      logColumnText: '[<color=#e38512ff>PREPARATION</color>]: Scene Battle prepared!'
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 22:32:11.077
+      timeFrame: 5
+      timeStampDateTimeNow: 22:32:11.077
+      instanceID: 0
+      collapsedCount: 1
+      cachedHeight: 19
+      cachedHeightLogWidth: 1181
+      stackEntries:
+      - fileName: Assets/Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Debugging/GameDebugger.cs:70
+        fileNameWithoutPath: GameDebugger.cs
+        fileNameWithoutPathPlusLineNumber: GameDebugger.cs:70
+        fileNamePretty: GameDebugger
+        instanceID: -1
+        className: GameDebugger
+        methodName: LogInternal
+        namespaceName: NDoom.Unity.Environment.Debugging
+        lineNumberString: 70
+        charNumber: 0
+        stackLabel: GameDebugger.LogInternal()
+        stackLabel2: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:70'
+        stackLabel1Content:
+          m_Text: GameDebugger.LogInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 172
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:70'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 371
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Debugging/GameDebugger.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Debugging/GameDebugger.cs:33
+        fileNameWithoutPath: GameDebugger.cs
+        fileNameWithoutPathPlusLineNumber: GameDebugger.cs:33
+        fileNamePretty: GameDebugger
+        instanceID: -1
+        className: GameDebugger
+        methodName: Log
+        namespaceName: NDoom.Unity.Environment.Debugging
+        lineNumberString: 33
+        charNumber: 0
+        stackLabel: GameDebugger.Log()
+        stackLabel2: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:33'
+        stackLabel1Content:
+          m_Text: GameDebugger.Log()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 128
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Debugging/GameDebugger.cs:33'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 372
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssets: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25
+        fileNameWithoutPath: ScenePreparer.cs
+        fileNameWithoutPathPlusLineNumber: ScenePreparer.cs:25
+        fileNamePretty: ScenePreparer
+        instanceID: -1
+        className: ScenePreparer
+        methodName: LogScenePrepared
+        namespaceName: NDoom.Unity.Environment.SceneManagement.Preparation
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: ScenePreparer.LogScenePrepared()
+        stackLabel2: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25'
+        stackLabel1Content:
+          m_Text: ScenePreparer.LogScenePrepared()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 214
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:25'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 488
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssets: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19
+        fileNameWithoutPath: ScenePreparer.cs
+        fileNameWithoutPathPlusLineNumber: ScenePreparer.cs:19
+        fileNamePretty: ScenePreparer
+        instanceID: -1
+        className: ScenePreparer
+        methodName: Initialize
+        namespaceName: NDoom.Unity.Environment.SceneManagement.Preparation
+        lineNumberString: 19
+        charNumber: 0
+        stackLabel: ScenePreparer.Initialize()
+        stackLabel2: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19'
+        stackLabel1Content:
+          m_Text: ScenePreparer.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 149
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/SceneManagement/Preparation/ScenePreparer.cs:19'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 487
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Plugins/Zenject/Source/Runtime/InitializableManager.cs
+        fileNameWithoutAssets: Plugins/Zenject/Source/Runtime/InitializableManager.cs
+        fileNameWithoutAssetsPlusLineNumber: Plugins/Zenject/Source/Runtime/InitializableManager.cs:76
+        fileNameWithoutPath: InitializableManager.cs
+        fileNameWithoutPathPlusLineNumber: InitializableManager.cs:76
+        fileNamePretty: InitializableManager
+        instanceID: -1
+        className: InitializableManager
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 76
+        charNumber: 0
+        stackLabel: InitializableManager.Initialize()
+        stackLabel2: ' at /Plugins/Zenject/Source/Runtime/InitializableManager.cs:76'
+        stackLabel1Content:
+          m_Text: InitializableManager.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 179
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Plugins/Zenject/Source/Runtime/InitializableManager.cs:76'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 372
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssets: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssetsPlusLineNumber: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38
+        fileNameWithoutPath: MonoKernel.cs
+        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:38
+        fileNamePretty: MonoKernel
+        instanceID: -1
+        className: MonoKernel
+        methodName: Initialize
+        namespaceName: Zenject
+        lineNumberString: 38
+        charNumber: 0
+        stackLabel: MonoKernel.Initialize()
+        stackLabel2: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38'
+        stackLabel1Content:
+          m_Text: MonoKernel.Initialize()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 130
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:38'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 373
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssets: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs
+        fileNameWithoutAssetsPlusLineNumber: Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29
+        fileNameWithoutPath: MonoKernel.cs
+        fileNameWithoutPathPlusLineNumber: MonoKernel.cs:29
+        fileNamePretty: MonoKernel
+        instanceID: -1
+        className: MonoKernel
+        methodName: Start
+        namespaceName: Zenject
+        lineNumberString: 29
+        charNumber: 0
+        stackLabel: MonoKernel.Start()
+        stackLabel2: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29'
+        stackLabel1Content:
+          m_Text: MonoKernel.Start()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 112
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Plugins/Zenject/Source/Runtime/Kernels/MonoKernel.cs:29'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 372
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 1
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 1
+      logOutputHeight: 27
+      listIndex: 1
+      nativeIndex: 1
+      nativeIdentifier: 0
+      originalLog: Playing card!
+      originalStackTrace: 'Playing card!
+
+        UnityEngine.Debug:Log (object)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCardPlayer:OnPlayerCardStartPlaying
+        (NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs) (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21)
+
+        NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>:InvokeForGlobal
+        (NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs) (at Assets/Code/Core/EventSystem/GameEvent.cs:38)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCard:OnCardClicked
+        () (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCard:OnMouseDown
+        () (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31)
+
+        UnityEngine.SendMouseEvents:DoSendMouseEvents
+        (int)
+
+'
+      nativeFileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 21
+      watchName: 
+      logText: Playing card!
+      logTruncatedText: Playing card!
+      logColumnText: Playing card!
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 0
+      timeStamp: 22:32:16.366
+      timeFrame: 1833
+      timeStampDateTimeNow: 22:32:16.366
+      instanceID: 0
+      collapsedCount: 1
+      cachedHeight: 19
+      cachedHeightLogWidth: 1181
+      stackEntries:
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21
+        fileNameWithoutPath: PlayerCardPlayer.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCardPlayer.cs:21
+        fileNamePretty: PlayerCardPlayer
+        instanceID: -1
+        className: PlayerCardPlayer
+        methodName: OnPlayerCardStartPlaying
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 21
+        charNumber: 0
+        stackLabel: PlayerCardPlayer.OnPlayerCardStartPlaying()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21'
+        stackLabel1Content:
+          m_Text: PlayerCardPlayer.OnPlayerCardStartPlaying()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 271
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardPlayer.cs:21'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 439
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Core/EventSystem/GameEvent.cs
+        fileNameWithoutAssets: Code/Core/EventSystem/GameEvent.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Core/EventSystem/GameEvent.cs:38
+        fileNameWithoutPath: GameEvent.cs
+        fileNameWithoutPathPlusLineNumber: GameEvent.cs:38
+        fileNamePretty: GameEvent
+        instanceID: -1
+        className: NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>
+        methodName: InvokeForGlobal
+        namespaceName: None
+        lineNumberString: 38
+        charNumber: 0
+        stackLabel: NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>.InvokeForGlobal()
+        stackLabel2: ' at /Code/Core/EventSystem/GameEvent.cs:38'
+        stackLabel1Content:
+          m_Text: NDoom.Core.Environment.EventSystem.GameEvent`1<NDoom.Core.EventSystem.Concrete.Args.PlayerCardArgs>.InvokeForGlobal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 778
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Core/EventSystem/GameEvent.cs:38'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 278
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37
+        fileNameWithoutPath: PlayerCard.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCard.cs:37
+        fileNamePretty: PlayerCard
+        instanceID: -1
+        className: PlayerCard
+        methodName: OnCardClicked
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 37
+        charNumber: 0
+        stackLabel: PlayerCard.OnCardClicked()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37'
+        stackLabel1Content:
+          m_Text: PlayerCard.OnCardClicked()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 168
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:37'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 404
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31
+        fileNameWithoutPath: PlayerCard.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCard.cs:31
+        fileNamePretty: PlayerCard
+        instanceID: -1
+        className: PlayerCard
+        methodName: OnMouseDown
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 31
+        charNumber: 0
+        stackLabel: PlayerCard.OnMouseDown()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31'
+        stackLabel1Content:
+          m_Text: PlayerCard.OnMouseDown()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 167
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCard.cs:31'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 403
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      - fileName: None
+        fileNameWithoutAssets: None
+        fileNameWithoutAssetsPlusLineNumber: None
+        fileNameWithoutPath: None
+        fileNameWithoutPathPlusLineNumber: None
+        fileNamePretty: None
+        instanceID: -1
+        className: SendMouseEvents
+        methodName: DoSendMouseEvents
+        namespaceName: UnityEngine
+        lineNumberString: 0
+        charNumber: 0
+        stackLabel: SendMouseEvents.DoSendMouseEvents()
+        stackLabel2: 
+        stackLabel1Content:
+          m_Text: SendMouseEvents.DoSendMouseEvents()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 247
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 0
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode: []
+        sourceCodeUpdated: 0
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      belongsToStandardFilters:
+      - name: Log
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: a57224fd-93d8-4a8a-a1f7-237a785d6958
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: e73a3ad6-d052-4e5a-b052-66d9252db0b1
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 6a1cad85-d4be-4450-888f-e9af08284888
+                logType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 9b4a58e7-feeb-4a2d-93f3-491d08581b55
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPLOGICON
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
+    - logType: 4
+      ignore: 0
+      processed: 1
+      tempFilterProcessed: 1
+      remoteEndPoint: Local
+      logPanelVisible: 1
+      logPanelIndex: 2
+      logOutputHeight: 27
+      listIndex: 2
+      nativeIndex: 2
+      nativeIdentifier: 0
+      originalLog: 'NullReferenceException: Object reference not set to an instance
+        of an object'
+      originalStackTrace: 'NullReferenceException: Object reference not set to an
+        instance of an object
+
+        NDoom.Unity.Battle.Environment.Players.Cards.Hand.PlayerHand.AddCard
+        (NDoom.Unity.Battle.Environment.Players.Cards.PlayerCard card) (at Assets/Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76)
+
+        NDoom.Unity.Battle.Environment.Players.Cards.PlayerCardsController.UpdateManually
+        () (at Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76)
+
+        NDoom.Unity.Environment.Main.Updater.UpdateBehavioursInternal
+        () (at Assets/Code/Unity/Environment/Main/Updater.cs:60)
+
+        NDoom.Unity.Environment.Main.Updater.Update
+        () (at Assets/Code/Unity/Environment/Main/Updater.cs:25)
+
+'
+      nativeFileName: Assets/Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs
+      nativeFileNamePretty: 
+      nativeLineNumber: 76
+      watchName: 
+      logText: 'NullReferenceException: Object reference not set to an instance of
+        an object'
+      logTruncatedText: 'NullReferenceException: Object reference not set to an instance
+        of an object'
+      logColumnText: 'NullReferenceException: Object reference not set to an instance
+        of an object'
+      fileName: 
+      className: 
+      namespaceName: 
+      lineCount: 1
+      hasSourceCode: 1
+      timeStamp: 22:32:23.788
+      timeFrame: 4010
+      timeStampDateTimeNow: 22:32:23.788
+      instanceID: -32756
+      collapsedCount: 1
+      cachedHeight: 19
+      cachedHeightLogWidth: 1181
+      stackEntries:
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76
+        fileNameWithoutPath: PlayerHand.cs
+        fileNameWithoutPathPlusLineNumber: PlayerHand.cs:76
+        fileNamePretty: PlayerHand
+        instanceID: -1
+        className: PlayerHand
+        methodName: AddCard
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards.Hand
+        lineNumberString: 76
+        charNumber: 0
+        stackLabel: PlayerHand.AddCard()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76'
+        stackLabel1Content:
+          m_Text: PlayerHand.AddCard()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 135
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/Hand/PlayerHand.cs:76'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 442
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '74:       var fistSpot = _cardSpots[0];'
+        - '75:       fistSpot.SetCard(card);'
+        - '76:       card.SetLocation(PlayerCardLocation.Hand);'
+        - '77:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs
+        fileNameWithoutAssets: Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76
+        fileNameWithoutPath: PlayerCardsController.cs
+        fileNameWithoutPathPlusLineNumber: PlayerCardsController.cs:76
+        fileNamePretty: PlayerCardsController
+        instanceID: -1
+        className: PlayerCardsController
+        methodName: UpdateManually
+        namespaceName: NDoom.Unity.Battle.Environment.Players.Cards
+        lineNumberString: 76
+        charNumber: 0
+        stackLabel: PlayerCardsController.UpdateManually()
+        stackLabel2: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76'
+        stackLabel1Content:
+          m_Text: PlayerCardsController.UpdateManually()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 240
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Battle/Environment/Players/Cards/PlayerCardsController.cs:76'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 469
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '74:           var topLibraryCard = _library.GrabTopCard();'
+        - '76:           _hand.AddCard(topLibraryCard);'
+        - '77:       }'
+        - '78:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Main/Updater.cs:60
+        fileNameWithoutPath: Updater.cs
+        fileNameWithoutPathPlusLineNumber: Updater.cs:60
+        fileNamePretty: Updater
+        instanceID: -1
+        className: Updater
+        methodName: UpdateBehavioursInternal
+        namespaceName: NDoom.Unity.Environment.Main
+        lineNumberString: 60
+        charNumber: 0
+        stackLabel: Updater.UpdateBehavioursInternal()
+        stackLabel2: ' at /Code/Unity/Environment/Main/Updater.cs:60'
+        stackLabel1Content:
+          m_Text: Updater.UpdateBehavioursInternal()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 215
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Main/Updater.cs:60'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 291
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '58:       {'
+        - '59:           if (behaviour.gameObject.activeSelf) // if GO is inactive,
+          it shouldn''t get updated'
+        - '60:               behaviour.UpdateManually();'
+        - '61:       }'
+        - '62:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      - fileName: Assets/Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssets: Code/Unity/Environment/Main/Updater.cs
+        fileNameWithoutAssetsPlusLineNumber: Code/Unity/Environment/Main/Updater.cs:25
+        fileNameWithoutPath: Updater.cs
+        fileNameWithoutPathPlusLineNumber: Updater.cs:25
+        fileNamePretty: Updater
+        instanceID: -1
+        className: Updater
+        methodName: Update
+        namespaceName: NDoom.Unity.Environment.Main
+        lineNumberString: 25
+        charNumber: 0
+        stackLabel: Updater.Update()
+        stackLabel2: ' at /Code/Unity/Environment/Main/Updater.cs:25'
+        stackLabel1Content:
+          m_Text: Updater.Update()
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel1Width: 106
+        stackLabel1Height: 25
+        stackLabel2Content:
+          m_Text: ' at /Code/Unity/Environment/Main/Updater.cs:25'
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        stackLabel2Width: 290
+        stackLabel2Height: 25
+        stackSourceLineHeight: 17
+        sourceCode:
+        - '23:   {'
+        - '24:       AddRegistredBehaviours();'
+        - '25:       UpdateBehavioursInternal();'
+        - '26:       RemoveDestroyedBehaviours();'
+        - '27:   }'
+        sourceCodeUpdated: 1
+        showSource: 1
+      ignoredStackEntries: []
+      lastMatchedCount: 1
+      belongsToFilters:
+      - name: Exception
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 8431dd01-c980-4fad-956f-5a119ca11a80
+        filterName: 
+        mainColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 1
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8c9ed77f-7434-4788-b4a6-4532b253bce5
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 3eca55a6-6cb3-4cc9-b652-bf0d7b31c6f6
+                logType: 4
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 2894e421-44ce-47cf-a964-b1150c59b8af
+                logType: 7
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: c280326a-6eac-401f-a3e3-5337da374132
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: X
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 1
+      belongsToStandardFilters:
+      - name: Exception
+        isEnabled: 1
+        collapsed: 1
+        itemGUID: 8431dd01-c980-4fad-956f-5a119ca11a80
+        filterName: 
+        mainColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        isStandardFilter: 1
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 1
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 0.616, g: 0, b: 1, a: 0.7}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 1
+        useIconTexture: 0
+        filterFormatVersion: 1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list:
+          - name: 
+            isEnabled: 1
+            collapsed: 0
+            itemGUID: 8c9ed77f-7434-4788-b4a6-4532b253bce5
+            searchString: <Any>
+            searchType: 1
+            removeSearchStringFromLog: 0
+            logTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 3eca55a6-6cb3-4cc9-b652-bf0d7b31c6f6
+                logType: 4
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: 2894e421-44ce-47cf-a964-b1150c59b8af
+                logType: 7
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            columnTypeList:
+              list:
+              - name: 
+                isEnabled: 1
+                collapsed: 0
+                itemGUID: c280326a-6eac-401f-a3e3-5337da374132
+                columnType: 1
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+            sourceCodeList:
+              list: []
+              selectionList: 0
+              collapsable: 1
+              collapsed: 0
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 3
+          iconType2: 1
+          iconText: X
+          useIconTextFirstLetter: 0
+          useIconLogColor: 0
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 7
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 1
+      assignedTempFilter:
+        name: 
+        isEnabled: 1
+        collapsed: 0
+        itemGUID: 
+        filterName: 
+        mainColor: {r: 1, g: 1, b: 1, a: 1}
+        isStandardFilter: 0
+        isTempFilter: 0
+        filterOnly: 0
+        useAdvancedColors: 0
+        customTextColor: {r: 1, g: 1, b: 1, a: 1}
+        customBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
+        swallowStandard: 1
+        standardCanSwallow: 0
+        overrideStandardColors: 1
+        overrideStandardIcon: 1
+        collapseIconBackground: 0
+        collapseIconSymbol: 0
+        collapseIconLetter: 0
+        collapseIconTexture: 0
+        useIconBackground: 1
+        useIconSymbol: 0
+        useIconLetter: 0
+        useIconTexture: 0
+        filterFormatVersion: -1
+        iconColorize: 0
+        useAndOpForSearchList: 0
+        searchList:
+          list: []
+          selectionList: 0
+          collapsable: 1
+          collapsed: 0
+        iconLetter:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconSymbol:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconBackground:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        iconTexture:
+          name: 
+          isEnabled: 1
+          collapsed: 0
+          itemGUID: 
+          iconType: 1
+          iconType2: 1
+          iconText: A
+          useIconTextFirstLetter: 1
+          useIconLogColor: 1
+          iconColor: {r: 1, g: 1, b: 1, a: 1}
+          iconBuiltInID: BACKGROUNDS_ECPBGROUNDEDSQUARE
+          iconTextureGUID: 
+          useIconShadow: 1
+          iconOffset: {x: 0, y: 0}
+          iconShadowOffset: {x: 0.5, y: 0.5}
+          iconSize: 13
+        showInToolbar: 1
+        hideLabelInToolbar: 0
+        hideWhenNoMatches: 0
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -477,9 +4089,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 1001
-    width: 951
-    height: 398
+    y: 1140
+    width: 998
+    height: 259
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -512,7 +4124,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 644}
     m_SelectedIDs: ea580000
     m_LastClickedID: 22762
-    m_ExpandedIDs: 00000000b6580000b8580000ba580000bc580000be580000c0580000c2580000c4580000c6580000c8580000ca580000cc580000ce580000d0580000d2580000d4580000d6580000d8580000da580000dc580000de580000e0580000e2580000e4580000e6580000e8580000ea580000ec580000ee580000f0580000f2580000f4580000f6580000f85800000459000000ca9a3b
+    m_ExpandedIDs: 00000000b6580000b8580000ba580000bc580000be580000c0580000c2580000c4580000c6580000c8580000ca580000cc580000ce580000d0580000d2580000d4580000d6580000d8580000da580000dc580000de580000e0580000e2580000e4580000e6580000e8580000ea580000ec580000ee580000f0580000f2580000f4580000f6580000f85800000259000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -616,9 +4228,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2124
+    x: 2226
     y: 73
-    width: 435
+    width: 333
     height: 1326
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -659,8 +4271,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 366
-    height: 907
+    width: 327
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -670,7 +4282,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffff
+      m_ExpandedIDs: 2080ffff2cfbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -714,10 +4326,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 367
+    x: 328
     y: 73
-    width: 1755
-    height: 907
+    width: 1896
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1019,10 +4631,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 275
+    x: 328
     y: 73
-    width: 1316
-    height: 659
+    width: 1896
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1033,7 +4645,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1316, y: 638}
+  m_TargetSize: {x: 1896, y: 1025}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1048,10 +4660,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -658
-    m_HBaseRangeMax: 658
-    m_VBaseRangeMin: -319
-    m_VBaseRangeMax: 319
+    m_HBaseRangeMin: -948
+    m_HBaseRangeMax: 948
+    m_VBaseRangeMin: -512.5
+    m_VBaseRangeMax: 512.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1069,23 +4681,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1316
-      height: 638
+      width: 1896
+      height: 1025
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 658, y: 319}
+    m_Translation: {x: 948, y: 512.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -658
-      y: -319
-      width: 1316
-      height: 638
+      x: -948
+      y: -512.5
+      width: 1896
+      height: 1025
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1316, y: 659}
+  m_LastWindowPixelSize: {x: 1896, y: 1046}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

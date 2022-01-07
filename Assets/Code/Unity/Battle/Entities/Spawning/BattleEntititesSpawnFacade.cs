@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NDoom.Unity.Battle.Environment;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.Battles.Entities.Data.Storaging;
@@ -14,6 +15,7 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 	{
 		[Inject] private BattleStructuralDataStorage _battleStructuralDataStorage;
 		[Inject] private UnitStructuralDataStorage _unitStructuralDataStorage;
+		[Inject] private BattleEnvironment _environment;
 
 		[Inject] private BattleSpawner _battleSpawner;
 		[Inject] private BattlefieldSpawner _battlefieldSpawner;
@@ -57,7 +59,8 @@ namespace NDoom.Unity.Battles.Entities.Spawning
 				Position = new BattlefieldPositioningData() { Side = side },
 				Rows = size.x,
 				Cols = size.y,
-				Offset = offset
+				Offset = offset,
+				Player = _environment.GetPlayer(side)
 			};
 		}
 

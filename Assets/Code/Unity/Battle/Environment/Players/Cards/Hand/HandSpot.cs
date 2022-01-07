@@ -3,7 +3,6 @@ using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Environment.Main;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Zenject;
 
 namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
 {
@@ -12,17 +11,17 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
         [SerializeField] private Transform _cardOrigin;
         [SerializeField] private float _cardMoveSpeed = 20f;
 
-        [Inject] private PlayersTickController _tickController;
+        private BattlePlayer _owner;
 
         [ShowInInspector] public PlayerCard Card { get; private set; }
-        public BattlefieldSide Side { get; private set; }
         public int Index { get; private set; }
         public bool CardArrived { get; private set; }
+        public BattlefieldSide Side => _owner.Side;
         public bool IsEmpty => Card == null;
 
-        public void Initialize(BattlefieldSide side, int index)
+        public void Initialize(BattlePlayer owner, int index)
         {
-	        Side = side;
+	        _owner = owner;
 	        Index = index;
         }
 
@@ -47,7 +46,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
         private float CalculateCardY(Transform cardTransform) 
             => Mathf.Clamp(cardTransform.position.y - _cardMoveSpeed * Time.deltaTime * GetRelativeTick(), _cardOrigin.position.y, 100f);
 
-        private float GetRelativeTick() => _tickController.PlayerTickStates[Side].ReversedRelativeTickSize;
+        private float GetRelativeTick() => _owner.TickState.ReversedRelativeTick;
 
         private void MoveCardToSpot(Transform cardTransform, float cardY) 
             => cardTransform.position = new Vector3(cardTransform.position.x, cardY, cardTransform.position.z);

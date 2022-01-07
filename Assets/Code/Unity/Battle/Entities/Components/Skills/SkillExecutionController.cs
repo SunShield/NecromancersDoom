@@ -2,7 +2,6 @@
 using NDoom.Core.Environment.EventSystem.Concrete.Events.Tick;
 using NDoom.Core.EventSystem.Concrete.Args;
 using NDoom.Unity.EntitySystem.Components;
-using UnityEngine;
 using Zenject;
 
 namespace NDoom.Unity.Battles.Entities.Components.Skills

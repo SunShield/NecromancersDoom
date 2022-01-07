@@ -4,6 +4,8 @@ using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.Environment.Main;
 using System.Collections.Generic;
+using NDoom.Unity.Battle.Environment.Systems;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using UnityEngine;
 using Zenject;
 
@@ -19,12 +21,13 @@ namespace NDoom.Unity.Battle.Affection
 		[Inject] protected AffectorSpawner AffectorSpawner { get; }
 		[Inject] protected EntityRegistry Registry { get; }
 
-		public Affector OwnerAffector { get; private set; }
 		protected bool IsInitialized { get; private set; }
 		protected Rigidbody2D RigidBody { get; private set; }
-
+		protected float TickMultiplier => OwnerAffector.SkillActions.OwnerSkill.HolderUnit.Tile.Battlefield.OwningPlayer.TickState.ReversedRelativeTick;
 		protected IReadOnlyDictionary<string, TaggedParameter> Parameters => OwnerAffector.Parameters;
 		protected IReadOnlyDictionary<string, Affector> AffectorPrefabs => OwnerAffector.AffectorPrefabs;
+		protected BattlefieldSide Side => OwnerAffector.Side;
+		public Affector OwnerAffector { get; private set; }
 
 		public void Initialize(Affector owner)
         {

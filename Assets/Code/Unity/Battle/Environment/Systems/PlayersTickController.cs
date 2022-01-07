@@ -82,20 +82,28 @@ namespace NDoom.Unity.Battle.Environment.Systems
 		private const float SecondsToMsMultiplier = 0.001f;
 
 		private readonly BattlePlayer _player;
+		private float _previousTickTimeMs;
 		public float _tickTimer;
 
-		public float PreviousTickTime { get; private set; }
-		public float TickTimeMs => _player.Data.TickTime.FinalValue * SecondsToMsMultiplier;
+		public float PreviousTickTime
+		{
+			get => _player.TickState.PreviousTickTime;
+			set => _player.TickState.PreviousTickTime = value;
+		}
+
+		public float TickTime => _player.TickState.TickTime.FinalValue;
+
+		public float TickTimeMs => TickTime * SecondsToMsMultiplier;
 		public bool TickIsFinished => _tickTimer == 0f;
 		public float TickProgress => 1 - _tickTimer / PreviousTickTime;
-		public float ReversedRelativeTickSize => PlayerConstants.DefaultTickMs / (PreviousTickTime / SecondsToMsMultiplier);
 
 		public PlayerTickState(BattlePlayer player) => _player = player;
 
 		public void StartTick()
 		{
-			PreviousTickTime = TickTimeMs;
-			_tickTimer = PreviousTickTime;
+			PreviousTickTime = TickTime;
+			_previousTickTimeMs = TickTimeMs;
+			_tickTimer = _previousTickTimeMs;
 		}
 
 		public void AdvanceTimer() => _tickTimer = MathF.Max(_tickTimer - Time.deltaTime, 0f);

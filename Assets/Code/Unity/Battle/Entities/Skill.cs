@@ -1,6 +1,7 @@
 ﻿using NDoom.Unity.Battles.Entities.Components.Skills;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Battles.Mechanics.Skills.Execution;
 using NDoom.Unity.EntitySystem;
 using NDoom.Unity.EntitySystem.Interfaces;
@@ -20,6 +21,7 @@ namespace NDoom.Unity.Battles.Entities
 		public Unit HolderUnit { get; private set; }
 		public SkillFunctionalData Data { get; private set; }
 		public SkillExecutionActions Actions { get; private set; }
+		public BattlefieldSide Side => HolderUnit.Side;
 
 		public override void InitializeEntityPostSpawn()
 		{

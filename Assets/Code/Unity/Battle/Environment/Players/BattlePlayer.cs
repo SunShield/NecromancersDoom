@@ -17,6 +17,7 @@ namespace NDoom.Unity.Battle.Environment.Players
 
         public BattlefieldSide Side { get; private set; }
         public PlayerMechanicalData Data { get; private set; } = new PlayerMechanicalData();
+        public PlayerTickState TickState { get; private set; } = new PlayerTickState();
 
         public void Initialize(BattlefieldSide side)
         {

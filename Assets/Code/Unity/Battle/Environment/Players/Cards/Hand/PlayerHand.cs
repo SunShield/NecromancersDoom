@@ -17,17 +17,18 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
 
         [Inject] private ExtendedMonoBehaviourSpawner _spawner;
 
+        private BattlePlayer _owner;
         private readonly List<HandSpot> _cardSpots = new List<HandSpot>();
 
-        public BattlefieldSide Side { get; private set; }
         public int HandSize { get; private set; }
         public bool IsFull => CheckHandFull();
         public bool HasCardInFirstSpot => !_cardSpots[0].IsEmpty;
+        public BattlefieldSide Side => _owner.Side;
 
-        public void Initialize(BattlefieldSide side)
+        public void Initialize(BattlePlayer owner)
         {
+	        _owner = owner;
             HandSize = 4;
-            Side = side;
             PopulateSpots();
         }
 
@@ -59,7 +60,7 @@ namespace NDoom.Unity.Battle.Environment.Players.Cards.Hand
             tran.parent = _spotsOrigin;
         }
 
-        private void InitSpot(HandSpot spot, int spotIndex) => spot.Initialize(Side, spotIndex);
+        private void InitSpot(HandSpot spot, int spotIndex) => spot.Initialize(_owner, spotIndex);
 
         public bool CheckHandFull()
         {
