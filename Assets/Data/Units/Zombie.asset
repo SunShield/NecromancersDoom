@@ -70,3 +70,8 @@ MonoBehaviour:
       Data: 
   Graphics: {fileID: 21300000, guid: 1d4e5b4b2e846724f822500ad9814155, type: 3}
   Name: Zombie
+  MaxHealth: 60
+  ResourceType: 0
+  StartingResource: 0
+  MaxResource: 40
+  ResourceRegen: 5

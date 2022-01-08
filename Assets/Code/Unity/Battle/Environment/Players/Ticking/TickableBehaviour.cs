@@ -1,5 +1,5 @@
-﻿using NDoom.Core.Environment.EventSystem.Concrete.Events.Tick;
-using NDoom.Core.EventSystem.Concrete.Args;
+﻿using NDoom.Core.Environment.EventSystem;
+using NDoom.Core.Environment.EventSystem.Concrete.Events.Tick;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Environment.Main;
 
@@ -11,27 +11,23 @@ namespace NDoom.Unity.Battle.Environment.Players.Ticking
 		protected BattlefieldSide Side => Player.Side;
 		protected float ReversedRelativeTick => Player.TickState.ReversedRelativeTick;
 
-		public void SetPlayer(BattlePlayer player) => Player = player;
-
-		protected sealed override void InitializeInternal()
+		public void SetPlayer(BattlePlayer player)
 		{
-			EventBus.GetEvent<OnPlayerTickEvent>().SubscribeForGlobal(OnPlayerTick);
-			InitializeTickableBehaviour();
+			Player = player;
+
+			if (Player.Side == BattlefieldSide.Left)  EventBus.GetEvent<OnLeftPlayerTickEvent>().SubscribeForGlobal(DoTick);
+			if (Player.Side == BattlefieldSide.Right) EventBus.GetEvent<OnRightPlayerTickEvent>().SubscribeForGlobal(DoTick);
 		}
 
-		private void OnPlayerTick(PlayerTickArgs args)
+		protected sealed override void DestroyInternal()
 		{
-			if (Player.Side != args.PlayerSide) return;
-
-			OnTick();
-		}
-
-		protected override void DestroyInternal()
-		{
-			EventBus.GetEvent<OnPlayerTickEvent>().UnsubscribeFromGlobal(OnPlayerTick);
 			DestroyTickableBehaviour();
+
+			if (Player.Side == BattlefieldSide.Left)  EventBus.GetEvent<OnLeftPlayerTickEvent>().UnsubscribeFromGlobal(DoTick);
+			if (Player.Side == BattlefieldSide.Right) EventBus.GetEvent<OnRightPlayerTickEvent>().UnsubscribeFromGlobal(DoTick);
 		}
 
+		private void DoTick(GameEventArgs args) => OnTick();
 		protected virtual void OnTick() { }
 		protected virtual void InitializeTickableBehaviour() {}
 		protected virtual void DestroyTickableBehaviour() {}

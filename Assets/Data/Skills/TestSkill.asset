@@ -106,3 +106,5 @@ MonoBehaviour:
   Prewarm: 2
   Cooldown: 2
   Duration: 0
+  ResourceType: 0
+  Cost: 10

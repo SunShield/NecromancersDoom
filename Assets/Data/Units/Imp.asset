@@ -70,3 +70,8 @@ MonoBehaviour:
       Data: 
   Graphics: {fileID: 21300000, guid: 86e33d0978f46fa4784d268056f1fcdb, type: 3}
   Name: Imp
+  MaxHealth: 30
+  ResourceType: 0
+  StartingResource: 0
+  MaxResource: 20
+  ResourceRegen: 5

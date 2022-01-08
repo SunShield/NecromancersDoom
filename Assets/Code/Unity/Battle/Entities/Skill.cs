@@ -29,6 +29,8 @@ namespace NDoom.Unity.Battles.Entities
 			_executionController.SetPlayer(HolderUnit.Tile.Battlefield.OwningPlayer);
 		}
 
+		public bool CanBePaid() => Data.Cost <= HolderUnit.Data.Resource.Current;
+
 		public void SetExecutionActions(SkillExecutionActions actions) => Actions = actions;
 
 		public void BindToAncestor(Unit ancestor) => HolderUnit = ancestor;

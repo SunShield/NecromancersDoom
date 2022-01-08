@@ -3,6 +3,7 @@ using System.Linq;
 using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Mechanical.Unit.UResources;
 using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
@@ -21,14 +22,16 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 	{
 		private const string MainVerticalGroupName = "Skill";
 		private const string BasicSkillDataFoldoutGroupName = MainVerticalGroupName + "/Basic Data";
-		private const string BasicDataHorizontalGroupName = BasicSkillDataFoldoutGroupName + "/Horizontal";
-		private const string BasicDataVerticalGroupName = BasicDataHorizontalGroupName + "/Vertical";
+		private const string SkillDataHorizontalGroupName = BasicSkillDataFoldoutGroupName + "/Horizontal";
+		private const string BasicDataVerticalGroupName = SkillDataHorizontalGroupName + "/Vertical";
 		private const string BasicDataVerticalFoldoutGroupName = BasicDataVerticalGroupName +  "/Base Data";
-		private const string BasicDataCooldownHorizontalGroup = BasicDataVerticalFoldoutGroupName + "/Cooldown";
+		private const string BasicDataHorizontalGroup = BasicDataVerticalFoldoutGroupName + "/Cooldown";
+		private const string BasicDataCooldownVerticalGroup = BasicDataHorizontalGroup + "/Vertical1";
+		private const string BasicDataCostVerticalGroup = BasicDataHorizontalGroup + "/Vertical2";
 
 		public override string DataName => Name;
 
-		[BoxGroup(MainVerticalGroupName)][FoldoutGroup(BasicSkillDataFoldoutGroupName)][HorizontalGroup(BasicDataHorizontalGroupName, Width = 130)]
+		[BoxGroup(MainVerticalGroupName)][FoldoutGroup(BasicSkillDataFoldoutGroupName)][HorizontalGroup(SkillDataHorizontalGroupName, Width = 130)]
 		[HideLabel][PreviewField(ObjectFieldAlignment.Left, Height = 128f)]
 		public GameObject Prefab;
 
@@ -36,17 +39,25 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 		[LabelWidth(45)]
 		public string Name;
 
-		[VerticalGroup(BasicDataVerticalGroupName)][FoldoutGroup(BasicDataVerticalFoldoutGroupName)][HorizontalGroup(BasicDataCooldownHorizontalGroup)]
+		[VerticalGroup(BasicDataVerticalGroupName)][FoldoutGroup(BasicDataVerticalFoldoutGroupName)][HorizontalGroup(BasicDataHorizontalGroup, Width = 120)][VerticalGroup(BasicDataCooldownVerticalGroup)]
 		[LabelWidth(65)]
 		public int Prewarm;
 
-		[VerticalGroup(BasicDataVerticalGroupName)][HorizontalGroup(BasicDataCooldownHorizontalGroup)]
+		[VerticalGroup(BasicDataCooldownVerticalGroup)]
 		[LabelWidth(65)]
 		public int Cooldown;
 
-		[VerticalGroup(BasicDataVerticalGroupName)][HorizontalGroup(BasicDataCooldownHorizontalGroup)]
+		[VerticalGroup(BasicDataCooldownVerticalGroup)]
 		[LabelWidth(65)]
 		public float Duration;
+
+		[HorizontalGroup(BasicDataHorizontalGroup, Width = 120)][VerticalGroup(BasicDataCostVerticalGroup)]
+		[HideLabel]
+		public UnitResourceType ResourceType;
+
+		[VerticalGroup(BasicDataCostVerticalGroup)]
+		[LabelWidth(65)]
+		public float Cost;
 
 		[VerticalGroup(BasicDataVerticalGroupName)]
 		[TableList(ShowPaging = true, NumberOfItemsPerPage = 3)]
@@ -67,6 +78,8 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Skills
 				PrewarmTicks = Prewarm,
 				CooldownTicks = Cooldown,
 				Duration = Duration,
+				ResourceType = ResourceType,
+				Cost = Cost,
 				Parameters = ConstructParameters(),
 				AffectorPrefabs = ConstructAffectorPrefabs()
 			};

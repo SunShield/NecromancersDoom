@@ -72,6 +72,6 @@ MonoBehaviour:
   Name: Devourer
   MaxHealth: 100
   ResourceType: 0
-  StartingResource: 0
-  MaxResource: 0
-  ResourceRegen: 0
+  StartingResource: 100
+  MaxResource: 100
+  ResourceRegen: 20

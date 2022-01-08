@@ -37,16 +37,27 @@ namespace NDoom.Unity.Battle.Environment.Players.Ticking
 
 		[Inject] private EventBus _eventBus;
 		
-		private OnPlayerTickEvent _storedEvent;
-		private PlayerTickArgs _storedArgs = new PlayerTickArgs();
+		private OnLeftPlayerTickEvent _storedEventLeft;
+		private OnRightPlayerTickEvent _storedEventRight;
 		private bool _isInitialized;
 
 		public void Initialize(BattlePlayer left, BattlePlayer right)
 		{
+			InitTickStates(left, right);
+			StoreEvents();
+			_isInitialized = true;
+		}
+
+		private void InitTickStates(BattlePlayer left, BattlePlayer right)
+		{
 			_playerTickStates[BattlefieldSide.Left]  = new PlayerTickState(left);
 			_playerTickStates[BattlefieldSide.Right] = new PlayerTickState(right);
-			_storedEvent = _eventBus.GetEvent<OnPlayerTickEvent>();
-			_isInitialized = true;
+		}
+
+		private void StoreEvents()
+		{
+			_storedEventLeft = _eventBus.GetEvent<OnLeftPlayerTickEvent>();
+			_storedEventRight = _eventBus.GetEvent<OnRightPlayerTickEvent>();
 		}
 
 		public override void UpdateManually()
@@ -71,8 +82,8 @@ namespace NDoom.Unity.Battle.Environment.Players.Ticking
 
 		private void FireTickEvent(BattlefieldSide side)
 		{
-			_storedArgs.PlayerSide = side;
-			_storedEvent.InvokeForGlobal(_storedArgs);
+			if(side == BattlefieldSide.Left) _storedEventLeft.InvokeForGlobal(null);
+			else _storedEventRight.InvokeForGlobal(null);
 		}
 	}
 

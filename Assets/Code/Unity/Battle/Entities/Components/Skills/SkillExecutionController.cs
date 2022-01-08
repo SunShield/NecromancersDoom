@@ -30,7 +30,7 @@ namespace NDoom.Unity.Battles.Entities.Components.Skills
 
 			AdvanceCooldownTimer();
 
-			if (!Parent.Actions.CanBeExecuted() || IsCooldowning) return;
+			if (!Parent.Actions.CanBeExecuted() || !Parent.CanBePaid() || IsCooldowning) return;
 
 			ExecuteSkill();
 		}
@@ -41,6 +41,7 @@ namespace NDoom.Unity.Battles.Entities.Components.Skills
 
 		private void ExecuteSkill()
 		{
+			Parent.HolderUnit.PaySkill(Parent);
 			Parent.Actions.Execute();
 			_wasExecuted = true;
 		}

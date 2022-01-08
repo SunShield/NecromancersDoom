@@ -70,3 +70,8 @@ MonoBehaviour:
       Data: 
   Graphics: {fileID: 21300000, guid: a1913d62b3dd22b47b625df6b5ceef97, type: 3}
   Name: Lava Elemental
+  MaxHealth: 110
+  ResourceType: 1
+  StartingResource: 40
+  MaxResource: 40
+  ResourceRegen: 10

@@ -75,7 +75,14 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 
 		public UnitFunctionalData ToFunctionalData()
 		{
-			return new UnitFunctionalData();
+			return new UnitFunctionalData()
+			{
+				MaxHealth = MaxHealth,
+				ResourceType = ResourceType,
+				StartingResource = StartingResource,
+				MaxResource = MaxResource,
+				ResourceRegen = ResourceRegen
+			};
 		}
 
 		public UnitStructuralData ToStructuralData()
