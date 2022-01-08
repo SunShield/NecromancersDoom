@@ -2,6 +2,7 @@
 using System.Linq;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Functional;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical;
+using NDoom.Unity.Battles.Entities.Data.Concrete.Mechanical.Unit.UResources;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Structural;
 using NDoom.Unity.EntitySystem.Loadable;
 using NDoom.Unity.EntitySystem.Loadable.Interfaces;
@@ -22,7 +23,10 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		private const string BasicUnitDataFoldoutGroupName = MainVerticalGroupName + "/Basic Data";
 		private const string BasicDataHorizontalGroupName = BasicUnitDataFoldoutGroupName + "/Horizontal";
 		private const string BasicDataVerticalGroupName = BasicDataHorizontalGroupName + "/Vertical";
-		private const string UnitMainDataFoldoutGroupName = BasicDataVerticalGroupName + "/MainDataSo";
+		private const string UnitMainDataFoldoutGroupName = BasicDataVerticalGroupName + "/MainData";
+		private const string UnitMainDataHorGroupName = UnitMainDataFoldoutGroupName + "/Horizantal";
+		private const string MainDataBaseDataVerticalGroupName = UnitMainDataHorGroupName + "/Base";
+		private const string ResourceDataBaseDataVerticalGroupName = UnitMainDataHorGroupName + "/Resources";
 		private const string UnitSkillDataFoldoutGroupName = BasicDataVerticalGroupName + "/Skills";
 		
 		public override string DataName => Name;
@@ -34,6 +38,26 @@ namespace NDoom.Unity.ScriptableObjects.Data.Named.Unit
 		[VerticalGroup(BasicDataVerticalGroupName)][FoldoutGroup(UnitMainDataFoldoutGroupName)]
 		[LabelWidth(45)]
 		public string Name;
+
+		[FoldoutGroup(UnitMainDataFoldoutGroupName)][HorizontalGroup(UnitMainDataHorGroupName, Width = 120)][VerticalGroup(MainDataBaseDataVerticalGroupName)]
+		[LabelWidth(80)]
+		public int MaxHealth;
+
+		[HorizontalGroup(UnitMainDataHorGroupName, Width = 100)][VerticalGroup(ResourceDataBaseDataVerticalGroupName)]
+		[HideLabel]
+		public UnitResourceType ResourceType;
+
+		[VerticalGroup(ResourceDataBaseDataVerticalGroupName)]
+		[LabelWidth(110)]
+		public int StartingResource;
+
+		[VerticalGroup(ResourceDataBaseDataVerticalGroupName)]
+		[LabelWidth(100)]
+		public int MaxResource;
+
+		[VerticalGroup(ResourceDataBaseDataVerticalGroupName)]
+		[LabelWidth(100)]
+		public int ResourceRegen;
 
 		[FoldoutGroup(UnitSkillDataFoldoutGroupName)]
 		[ListDrawerSettings(NumberOfItemsPerPage = 1)]

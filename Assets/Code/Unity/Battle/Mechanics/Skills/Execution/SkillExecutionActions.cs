@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using NDoom.Unity.Battle.Environment.Systems;
 using NDoom.Unity.Battle.Mechanics.Skills.Affection;
 using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Entities;

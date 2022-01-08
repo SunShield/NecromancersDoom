@@ -1,8 +1,8 @@
-﻿using NDoom.Unity.Environment.Main;
+﻿using NDoom.Unity.Battle.Environment.Players.Ticking;
 
 namespace NDoom.Unity.EntitySystem.Components
 {
-	public abstract class EntityComponent<TEntity> : ExtendedMonoBehaviour
+	public abstract class EntityComponent<TEntity> : TickableBehaviour
 		where TEntity : Entity
 	{
 		protected TEntity Parent { get; private set; }

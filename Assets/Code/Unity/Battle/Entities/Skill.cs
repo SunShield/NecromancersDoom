@@ -26,6 +26,7 @@ namespace NDoom.Unity.Battles.Entities
 		public override void InitializeEntityPostSpawn()
 		{
 			_executionController.Initialize(this);
+			_executionController.SetPlayer(HolderUnit.Tile.Battlefield.OwningPlayer);
 		}
 
 		public void SetExecutionActions(SkillExecutionActions actions) => Actions = actions;

@@ -1,6 +1,6 @@
 ﻿using NDoom.Unity.Battle.Environment.Players;
 using NDoom.Unity.Battle.Environment.Players.Cards;
-using NDoom.Unity.Battle.Environment.Systems;
+using NDoom.Unity.Battle.Environment.Players.Ticking;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using NDoom.Unity.Environment.Main;
 using UnityEngine;

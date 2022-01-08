@@ -15,8 +15,8 @@ MonoBehaviour:
   issuesFinderSettings:
     filtersTabIndex: 0
     tabState:
-      selection: 
-      compaction: 
+      selection: 01
+      compaction: 00
       scrollPosition: {x: 0, y: 0}
     sortingType: 2
     sortingDirection: 0
@@ -58,12 +58,64 @@ MonoBehaviour:
       m_Columns:
       - width: 705
         sortedAscending: 1
+        headerContent:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        contextMenuText: 
+        headerTextAlignment: 0
+        sortingArrowAlignment: 1
+        minWidth: 20
+        maxWidth: 1000000
+        autoResize: 1
+        allowToggleVisibility: 1
+        canSort: 1
+        userData: 0
       - width: 100
         sortedAscending: 1
+        headerContent:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        contextMenuText: 
+        headerTextAlignment: 0
+        sortingArrowAlignment: 1
+        minWidth: 20
+        maxWidth: 1000000
+        autoResize: 1
+        allowToggleVisibility: 1
+        canSort: 1
+        userData: 0
       - width: 100
         sortedAscending: 0
+        headerContent:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        contextMenuText: 
+        headerTextAlignment: 0
+        sortingArrowAlignment: 1
+        minWidth: 20
+        maxWidth: 1000000
+        autoResize: 1
+        allowToggleVisibility: 1
+        canSort: 1
+        userData: 0
       - width: 33
         sortedAscending: 0
+        headerContent:
+          m_Text: 
+          m_Image: {fileID: 0}
+          m_Tooltip: 
+        contextMenuText: 
+        headerTextAlignment: 0
+        sortingArrowAlignment: 1
+        minWidth: 20
+        maxWidth: 1000000
+        autoResize: 1
+        allowToggleVisibility: 1
+        canSort: 1
+        userData: 0
       m_VisibleColumns: 00000000010000000200000003000000
       m_SortedColumns: 0300000000000000
     hierarchyReferencesTreeViewState:

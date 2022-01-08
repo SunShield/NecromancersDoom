@@ -4,13 +4,12 @@ using NDoom.Unity.Environment.Main;
 using System.Collections.Generic;
 using NDoom.Core.Environment.EventSystem.Concrete.Events.Tick;
 using NDoom.Core.EventSystem.Concrete.Args;
-using NDoom.Unity.Battle.Environment.Players;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using Sirenix.Utilities;
 using UnityEngine;
 using Zenject;
 
-namespace NDoom.Unity.Battle.Environment.Systems
+namespace NDoom.Unity.Battle.Environment.Players.Ticking
 {
 	/// <summary>
 	/// Tick is one of the main game mechanics

@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using NDoom.Core.Environment.EventSystem;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
 
@@ -7,6 +8,7 @@ namespace NDoom.Unity.Environment.Main
 	public class ExtendedMonoBehaviour : SerializedMonoBehaviour
 	{
 		[Inject] private Updater _updater;
+		[Inject] protected EventBus EventBus { get; }
 
 		public Transform Transform { get; private set; }
 

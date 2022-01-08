@@ -1,5 +1,5 @@
 ﻿using NDoom.Core.Environment.EventSystem;
-using NDoom.Unity.Battle.Environment.Systems;
+using NDoom.Unity.Battle.Environment.Players.Ticking;
 using NDoom.Unity.Battles.Entities.Data.Concrete;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Graphical.Converters;
 using NDoom.Unity.Battles.Entities.Data.Storaging;

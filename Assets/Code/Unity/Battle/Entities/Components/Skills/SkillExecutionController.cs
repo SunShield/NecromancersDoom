@@ -1,15 +1,9 @@
-﻿using NDoom.Core.Environment.EventSystem;
-using NDoom.Core.Environment.EventSystem.Concrete.Events.Tick;
-using NDoom.Core.EventSystem.Concrete.Args;
-using NDoom.Unity.EntitySystem.Components;
-using Zenject;
+﻿using NDoom.Unity.EntitySystem.Components;
 
 namespace NDoom.Unity.Battles.Entities.Components.Skills
 {
 	public class SkillExecutionController : EntityComponent<Skill>
 	{
-		[Inject] private EventBus _eventBus;
-
 		private int _prewarmTicks;
 		private int _cooldownTicks;
 
@@ -17,16 +11,10 @@ namespace NDoom.Unity.Battles.Entities.Components.Skills
 		private bool IsPrewarming => _prewarmTicks > 0;
 		private bool IsCooldowning => _cooldownTicks > 0;
 
-		protected override void InitializeComponent()
-		{
-			_prewarmTicks = Parent.Data.PrewarmTicks;
-			_eventBus.GetEvent<OnPlayerTickEvent>().SubscribeForGlobal(OnTick);
-		}
+		protected override void InitializeComponent() => _prewarmTicks = Parent.Data.PrewarmTicks;
 
-		private void OnTick(PlayerTickArgs args)
+		protected override void OnTick()
 		{
-			if (args.PlayerSide != Parent.HolderUnit.Tile.Battlefield.Side) return;
-
 			if (IsPrewarming)
 			{
 				AdvancePrewarmTimer();

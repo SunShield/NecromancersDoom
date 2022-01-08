@@ -1,7 +1,6 @@
 ﻿using NDoom.Unity.Battle.Entities.Storaging;
 using NDoom.Unity.Battle.Environment;
 using NDoom.Unity.Battle.Environment.Players.Cards;
-using NDoom.Unity.Battle.Environment.Systems;
 using NDoom.Unity.Battle.Mechanics.Skills.Affection;
 using NDoom.Unity.Battles;
 using NDoom.Unity.Battles.Entities.Spawning;

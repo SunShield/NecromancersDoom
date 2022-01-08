@@ -4,7 +4,6 @@ using NDoom.Unity.Battles.Affection;
 using NDoom.Unity.Battles.Mechanics.Tagging;
 using NDoom.Unity.Environment.Main;
 using System.Collections.Generic;
-using NDoom.Unity.Battle.Environment.Systems;
 using NDoom.Unity.Battles.Entities.Data.Concrete.Positioning;
 using UnityEngine;
 using Zenject;
